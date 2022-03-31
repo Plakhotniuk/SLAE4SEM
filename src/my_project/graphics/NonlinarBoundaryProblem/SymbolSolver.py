@@ -8,6 +8,12 @@ data1 = sympy.linsolve([A + B + C + D + E,
                 2*A + 1/2*B + 1/2*D + 2*E - 1/h**2,
                 -4/3* A - 1/6 * B + 1/6 * D + 4/3 * E,
                 2/3*A + 1/24*B + 1/24*D + 2/3*E], [A, B, C, D, E])
+#first derivative
+data11 = sympy.linsolve([A + B + C + D + E,
+                -2*A - B + D + 2*E - 1/h,
+                2*A + 1/2*B + 1/2*D + 2*E ,
+                -4/3* A - 1/6 * B + 1/6 * D + 4/3 * E,
+                2/3*A + 1/24*B + 1/24*D + 2/3*E], [A, B, C, D, E])
 # i = 1
 data2 = sympy.linsolve([A + B + C + D + E,
                 -A + C + 2*D + 3*E,

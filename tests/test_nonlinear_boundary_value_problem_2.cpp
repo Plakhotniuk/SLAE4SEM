@@ -60,6 +60,7 @@ TEST(NONLINEARBOUNDARYVALUEPROBLEM, TEST) {
                                                                      max_number_of_splits, a, b, f);
     for(int i=0; i < solution.size(); ++i){
         file << solution[i] << " " << x[i];
+
         file << '\n';
     }
     file << '\n';

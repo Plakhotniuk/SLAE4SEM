@@ -95,8 +95,8 @@ namespace Slae::Matrix{
         data_[ind][0] = a;
         data_[ind][1] = b;
         data_[ind][2] = c;
-        data_[ind][3] = b;
-        data_[ind][4] = c;
+        data_[ind][3] = d;
+        data_[ind][4] = e;
     }
     void FiveDiagonalMatrix::check_diagonal_domimance() const {
         bool one_strict_inequality = false;
@@ -123,7 +123,7 @@ namespace Slae::Matrix{
             data_[ind][i] *= val;
     }
 
-    void FiveDiagonalMatrix::substract_row1_from_row2(unsigned int ind1, unsigned int ind2) {
+    void FiveDiagonalMatrix::substract_row2_from_row1(unsigned int ind2, unsigned int ind1) {
         for(int i = 0; i < 5; ++i){
             data_[ind1][i] -= data_[ind2][i];
         }

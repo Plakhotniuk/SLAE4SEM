@@ -25,7 +25,7 @@ TEST(NONLINEARBOUNDARYVALUEPROBLEM2, TEST) {
     double left_bound_y = 1.;
     double right_bound_y = -1.;
 
-    int max_number_of_splits = 220;
+    int max_number_of_splits = 250;
     std::fstream file;
     file.open("test_4.txt", std::fstream::out);
 
