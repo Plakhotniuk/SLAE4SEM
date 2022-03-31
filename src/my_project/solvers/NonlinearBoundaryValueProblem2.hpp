@@ -15,17 +15,17 @@
 #include "ostream"
 
 double GetCoef1(std::function<double(double)>& a, double h, double x){
-    return 1/pow(h, 2) - a(x)/(2*h);
+    return 1/(h*h) - a(x)/(2*h);
 }
 
 
 double GetCoef2(std::function<double(double)>& b, double h, double x){
-    return -2/pow(h, 2) + b(x);
+    return -2/(h*h) + b(x);
 }
 
 
 double GetCoef3(std::function<double(double)>& a, double h, double x){
-    return 1/pow(h, 2) + a(x)/(2*h);
+    return 1/(h*h) + a(x)/(2*h);
 }
 
 std::vector<double> NonlinearBoundaryValueProblem2(double left_bound_x, double right_bound_x, double left_bound_y,

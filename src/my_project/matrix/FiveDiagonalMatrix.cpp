@@ -124,8 +124,8 @@ namespace Slae::Matrix{
     }
 
     void FiveDiagonalMatrix::substract_row2_from_row1(unsigned int ind2, unsigned int ind1) {
-        for(int i = 0; i < 5; ++i){
-            data_[ind1][i] -= data_[ind2][i];
+        for(int i = 1; i < 5; ++i){
+            data_[ind1][i] -= data_[ind2][i-1];
         }
     }
 

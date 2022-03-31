@@ -17,63 +17,77 @@
 
 
 double GetCoef1_1(std::function<double(double)>& a, double h, double x){
-    return 11/(12*pow(h, 2)) - 0.25*a(x)/h;
+    return 11/(12*(h*h)) - 0.25*a(x)/h;
 }
 
 double GetCoef2_1(std::function<double(double)>& a, std::function<double(double)>& b, double h, double x){
-    return -5 / (3*pow(h, 2)) - 5/(6*h) * a(x) + b(x);
+    return -5 / (3*(h*h)) - 5/(6*h) * a(x) + b(x);
 }
 
 double GetCoef3_1(std::function<double(double)>& a, double h, double x){
-    return 0.5/pow(h, 2) + 1.5 * a(x) / h;
+    return 0.5/(h*h) + 1.5 * a(x) / h;
 }
 
 double GetCoef4_1(std::function<double(double)>& a, double h, double x){
-    return 1/(3*pow(h, 2)) - 0.5/h * a(x);
+    return 1/(3*(h*h)) - 0.5/h * a(x);
 }
 
 double GetCoef5_1(std::function<double(double)>& a, double h, double x){
-    return -1/(12*pow(h, 2)) + 1/(12*h) * a(x);
+    return -1/(12*(h*h)) + 1/(12*h) * a(x);
 }
 
 double GetCoef1_i(std::function<double(double)>& a, double h, double x){
-    return -1/(12*pow(h, 2)) + a(x)/(12*h);
+    return -1/(12*(h*h)) + a(x)/(12*h);
 }
 
 double GetCoef2_i(std::function<double(double)>& a, double h, double x){
-    return 4/(3 * pow(h, 2)) - 2/(3*h) * a(x);
+    return 4/(3 * (h*h)) - 2/(3*h) * a(x);
 }
 
 double GetCoef3_i(std::function<double(double)>& a,std::function<double(double)>& b, double h, double x){
-    return b(x) - 2.5/pow(h, 2);
+    return b(x) - 2.5/(h*h);
 }
 
 double GetCoef4_i(std::function<double(double)>& a, double h, double x){
-    return 4/(3*pow(h, 2)) + 2/(3*h) * a(x);
+    return 4/(3*(h*h)) + 2/(3*h) * a(x);
 }
 
 double GetCoef5_i(std::function<double(double)>& a, double h, double x){
-    return -1/(12*pow(h, 2)) - 1/(12*h) * a(x);
+    return -1/(12*(h*h)) - 1/(12*h) * a(x);
 }
 
 double GetCoef1_n_2(std::function<double(double)>& a, double h, double x){
-    return -1/(12*pow(h, 2)) - a(x)*1/(12*h);
+    return -1/(12*(h*h)) - a(x)*1/(12*h);
 }
 
 double GetCoef2_n_2(std::function<double(double)>& a, double h, double x){
-    return 1 / (3*pow(h, 2)) + 1/(2*h) * a(x);
+    return 1 / (3*(h*h)) + 1/(2*h) * a(x);
 }
 
 double GetCoef3_n_2(std::function<double(double)>& a, double h, double x){
-    return 0.5/pow(h, 2) - 1.5 * a(x) / h;
+    return 0.5/(h*h) - 1.5 * a(x) / h;
 }
 
 double GetCoef4_n_2(std::function<double(double)>& a, std::function<double(double)>& b, double h, double x){
-    return -5/(3*pow(h, 2)) + 5/(6*h) * a(x) + b(x);
+    return -5/(3*(h*h)) + 5/(6*h) * a(x) + b(x);
 }
 
 double GetCoef5_n_2(std::function<double(double)>& a, double h, double x){
-    return 11/(12*pow(h, 2)) + 1/(4*h) * a(x);
+    return 11/(12*(h*h)) + 1/(4*h) * a(x);
+}
+
+double GetCoef1(std::function<double(double)>& a, double h, double x){
+    return 1/(h*h) - a(x)/(2*h);
+}
+
+
+double GetCoef2(std::function<double(double)>& b, double h, double x){
+    return -2/(h*h) + b(x);
+}
+
+
+double GetCoef3(std::function<double(double)>& a, double h, double x){
+    return 1/(h*h) + a(x)/(2*h);
 }
 
 std::vector<double> NonlinearBoundaryValueProblem4(double left_bound_x,double right_bound_x, double left_bound_y,
@@ -90,12 +104,25 @@ std::vector<double> NonlinearBoundaryValueProblem4(double left_bound_x,double ri
     Slae::Matrix::FiveDiagonalMatrix data = Slae::Matrix::FiveDiagonalMatrix(number_of_splits + 1);
     data(0, 2) = 1;
     data(data.rows() - 1, 2) = 1;
-    data.fill_row(1, GetCoef1_1(a, h, x[1]), GetCoef2_1(a, b, h, x[1]),
-                  GetCoef3_1(a, h, x[1]),GetCoef4_1(a, h, x[1]), GetCoef5_1(a, h, x[1]));
 
-    data.fill_row(data.rows() - 2, GetCoef1_n_2(a, h, x[x.size() - 2]),
-                  GetCoef2_n_2(a, h, x[x.size() - 2]), GetCoef3_n_2(a, h, x[x.size() - 2]),
-                  GetCoef4_n_2(a, b, h, x[x.size() - 2]), GetCoef5_n_2(a, h, x[x.size() - 2]));
+    //Использование коэффициентов для 3х диагональной матрицы
+    data.fill_row(1, 0, GetCoef1(a, h, x[1]),
+                  GetCoef2(b, h, x[1]),GetCoef3(a, h, x[1]), 0);
+
+    data.fill_row(data.rows() - 2, 0,
+                  GetCoef1(a, h, x[x.size() - 2]), GetCoef2(b, h, x[x.size() - 2]),
+                  GetCoef3(a, h, x[x.size() - 2]), 0);
+
+//    data.fill_row(1, 0,GetCoef1_1(a, h, x[1]), GetCoef2_1(a,b, h, x[1]),
+//                  GetCoef3_1(a, h, x[1]), GetCoef4_1(a, h, x[1]));
+//    data.multiply_row_by_value(1, GetCoef5_i(a, h, x[2]) / GetCoef5_1(a, h, x[1]));
+//    data.substract_row2_from_row1(2, 1);
+//
+//
+//    data.fill_row(data.rows() - 2, GetCoef2_n_2(a, h, x[x.size() - 2]), GetCoef3_n_2(a, h, x[x.size() - 2]),
+//                  GetCoef4_n_2(a, b, h, x[x.size() - 2]), GetCoef5_n_2(a, h, x[x.size() - 2]), 0);
+//    data.multiply_row_by_value(data.rows() - 2, GetCoef1_i(a, h, x[x.size() - 3]) / GetCoef1_n_2(a, h, x[x.size() - 2]));
+//    data.substract_row2_from_row1(data.rows() - 3, data.rows() - 2);
 
 
     for(int i = 2; i < data.rows() - 2; ++i){
@@ -110,34 +137,14 @@ std::vector<double> NonlinearBoundaryValueProblem4(double left_bound_x,double ri
     }
     y[y.size() - 1] = right_bound_y;
 
-    data.multiply_row_by_value(1, data(2, 4)/data(1, 4));
-    y[1] *= data(2, 4)/data(1, 4);
-    data.substract_row2_from_row1(2, 1);
+    y[1] *= GetCoef5_i(a, h, x[2]) / GetCoef5_1(a, h, x[1]);
+
     y[1] -= y[2];
 
-    data.fill_row(1, 0, data(1, 0), data(1, 1), data(1, 2), data(1, 3));
+    y[data.rows() - 2] *= GetCoef1_i(a, h, x[x.size() - 3]) / GetCoef1_n_2(a, h, x[x.size() - 2]);
 
-//    for(int i = 0; i<5; ++i){
-//        std::cout<< data(data.rows() - 2,i) <<std::endl;
-//    }
-//    std::cout<<"-------"<<std::endl;
-
-    data.multiply_row_by_value(data.rows() - 2, data(data.rows() - 3, 0)/data(data.rows() - 2, 0));
-    y[data.rows() - 2] *= data(data.rows() - 3, 0)/data(data.rows() - 2, 0);
-    data.substract_row2_from_row1(data.rows() - 3, data.rows() - 2);
     y[data.rows() - 2] -= y[data.rows() - 3];
 
-    for(int i = 0; i<5; ++i){
-        std::cout<< data(data.rows() - 2,i) <<std::endl;
-    }
-    data.fill_row(data.rows() - 2, data(data.rows() - 2, 1),
-                  data(data.rows() - 2, 2), data(data.rows() - 2, 3),
-                  data(data.rows() - 2, 4), 0);
-
-
-//    for(int i = 0; i<data.rows(); ++i){
-//        std::cout<< data(i,0) <<" "<< data(i,1) <<" "<< data(i,2) <<" "<< data(i,3) <<" "<< data(i,4) <<" "<<std::endl;
-//    }
 
     return Slae::Solvers::solveFiveDiagonal(data, y);
 }
