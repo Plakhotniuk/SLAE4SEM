@@ -1,0 +1,904 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="my_project"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;CMake Files\tests\;CMake Files\tests\googletest-master\;CMake Files\tests\googletest-master\googlemock\;CMake Files\tests\googletest-master\googlemock\cmake\;CMake Files\tests\googletest-master\googletest\;CMake Files\tests\googletest-master\googletest\cmake\;CMake Files\src\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="install/strip">
+				<Option working_dir="/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/Makefile&quot;  VERBOSE=1 install/strip"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="install">
+				<Option working_dir="/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/Makefile&quot;  VERBOSE=1 install"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="list_install_components">
+				<Option working_dir="/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/Makefile&quot;  VERBOSE=1 list_install_components"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="install/local">
+				<Option working_dir="/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/Makefile&quot;  VERBOSE=1 install/local"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="test">
+				<Option working_dir="/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/Makefile&quot;  VERBOSE=1 test"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="my_project">
+				<Option output="/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/src/libmy_project.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/src"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/arseniy/Desktop/SLAE4SEM/src"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/12.0.5/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 my_project"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="my_project/fast">
+				<Option output="/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/src/libmy_project.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/src"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/arseniy/Desktop/SLAE4SEM/src"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/12.0.5/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 my_project/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="run_test_solver">
+				<Option output="/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/run_test_solver" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/arseniy/Desktop/SLAE4SEM/src"/>
+					<Add directory="/Users/arseniy/Desktop/SLAE4SEM/tests/googletest-master/googletest/include"/>
+					<Add directory="/Users/arseniy/Desktop/SLAE4SEM/tests/googletest-master/googletest"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/12.0.5/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 run_test_solver"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="run_test_solver/fast">
+				<Option output="/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/run_test_solver" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/arseniy/Desktop/SLAE4SEM/src"/>
+					<Add directory="/Users/arseniy/Desktop/SLAE4SEM/tests/googletest-master/googletest/include"/>
+					<Add directory="/Users/arseniy/Desktop/SLAE4SEM/tests/googletest-master/googletest"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/12.0.5/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 run_test_solver/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="run_test_simple_iteration_method">
+				<Option output="/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/run_test_simple_iteration_method" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/arseniy/Desktop/SLAE4SEM/src"/>
+					<Add directory="/Users/arseniy/Desktop/SLAE4SEM/tests/googletest-master/googletest/include"/>
+					<Add directory="/Users/arseniy/Desktop/SLAE4SEM/tests/googletest-master/googletest"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/12.0.5/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 run_test_simple_iteration_method"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="run_test_simple_iteration_method/fast">
+				<Option output="/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/run_test_simple_iteration_method" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/arseniy/Desktop/SLAE4SEM/src"/>
+					<Add directory="/Users/arseniy/Desktop/SLAE4SEM/tests/googletest-master/googletest/include"/>
+					<Add directory="/Users/arseniy/Desktop/SLAE4SEM/tests/googletest-master/googletest"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/12.0.5/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 run_test_simple_iteration_method/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="run_test_cg">
+				<Option output="/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/run_test_cg" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/arseniy/Desktop/SLAE4SEM/src"/>
+					<Add directory="/Users/arseniy/Desktop/SLAE4SEM/tests/googletest-master/googletest/include"/>
+					<Add directory="/Users/arseniy/Desktop/SLAE4SEM/tests/googletest-master/googletest"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/12.0.5/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 run_test_cg"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="run_test_cg/fast">
+				<Option output="/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/run_test_cg" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/arseniy/Desktop/SLAE4SEM/src"/>
+					<Add directory="/Users/arseniy/Desktop/SLAE4SEM/tests/googletest-master/googletest/include"/>
+					<Add directory="/Users/arseniy/Desktop/SLAE4SEM/tests/googletest-master/googletest"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/12.0.5/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 run_test_cg/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="run_test_nonlinear_boundary_value_problem_4">
+				<Option output="/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/run_test_nonlinear_boundary_value_problem_4" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/arseniy/Desktop/SLAE4SEM/src"/>
+					<Add directory="/Users/arseniy/Desktop/SLAE4SEM/tests/googletest-master/googletest/include"/>
+					<Add directory="/Users/arseniy/Desktop/SLAE4SEM/tests/googletest-master/googletest"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/12.0.5/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 run_test_nonlinear_boundary_value_problem_4"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="run_test_nonlinear_boundary_value_problem_4/fast">
+				<Option output="/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/run_test_nonlinear_boundary_value_problem_4" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/arseniy/Desktop/SLAE4SEM/src"/>
+					<Add directory="/Users/arseniy/Desktop/SLAE4SEM/tests/googletest-master/googletest/include"/>
+					<Add directory="/Users/arseniy/Desktop/SLAE4SEM/tests/googletest-master/googletest"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/12.0.5/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 run_test_nonlinear_boundary_value_problem_4/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="run_test_nonlinear_boundary_value_problem_2">
+				<Option output="/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/run_test_nonlinear_boundary_value_problem_2" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/arseniy/Desktop/SLAE4SEM/src"/>
+					<Add directory="/Users/arseniy/Desktop/SLAE4SEM/tests/googletest-master/googletest/include"/>
+					<Add directory="/Users/arseniy/Desktop/SLAE4SEM/tests/googletest-master/googletest"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/12.0.5/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 run_test_nonlinear_boundary_value_problem_2"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="run_test_nonlinear_boundary_value_problem_2/fast">
+				<Option output="/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/run_test_nonlinear_boundary_value_problem_2" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/arseniy/Desktop/SLAE4SEM/src"/>
+					<Add directory="/Users/arseniy/Desktop/SLAE4SEM/tests/googletest-master/googletest/include"/>
+					<Add directory="/Users/arseniy/Desktop/SLAE4SEM/tests/googletest-master/googletest"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/12.0.5/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 run_test_nonlinear_boundary_value_problem_2/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="run_test_five_diag_matrix">
+				<Option output="/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/run_test_five_diag_matrix" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/arseniy/Desktop/SLAE4SEM/src"/>
+					<Add directory="/Users/arseniy/Desktop/SLAE4SEM/tests/googletest-master/googletest/include"/>
+					<Add directory="/Users/arseniy/Desktop/SLAE4SEM/tests/googletest-master/googletest"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/12.0.5/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 run_test_five_diag_matrix"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="run_test_five_diag_matrix/fast">
+				<Option output="/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/run_test_five_diag_matrix" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/arseniy/Desktop/SLAE4SEM/src"/>
+					<Add directory="/Users/arseniy/Desktop/SLAE4SEM/tests/googletest-master/googletest/include"/>
+					<Add directory="/Users/arseniy/Desktop/SLAE4SEM/tests/googletest-master/googletest"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/12.0.5/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 run_test_five_diag_matrix/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="run_test_dense_matrix">
+				<Option output="/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/run_test_dense_matrix" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/arseniy/Desktop/SLAE4SEM/src"/>
+					<Add directory="/Users/arseniy/Desktop/SLAE4SEM/tests/googletest-master/googletest/include"/>
+					<Add directory="/Users/arseniy/Desktop/SLAE4SEM/tests/googletest-master/googletest"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/12.0.5/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 run_test_dense_matrix"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="run_test_dense_matrix/fast">
+				<Option output="/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/run_test_dense_matrix" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/arseniy/Desktop/SLAE4SEM/src"/>
+					<Add directory="/Users/arseniy/Desktop/SLAE4SEM/tests/googletest-master/googletest/include"/>
+					<Add directory="/Users/arseniy/Desktop/SLAE4SEM/tests/googletest-master/googletest"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/12.0.5/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 run_test_dense_matrix/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="run_test_exception">
+				<Option output="/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/run_test_exception" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/arseniy/Desktop/SLAE4SEM/src"/>
+					<Add directory="/Users/arseniy/Desktop/SLAE4SEM/tests/googletest-master/googletest/include"/>
+					<Add directory="/Users/arseniy/Desktop/SLAE4SEM/tests/googletest-master/googletest"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/12.0.5/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 run_test_exception"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="run_test_exception/fast">
+				<Option output="/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/run_test_exception" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/arseniy/Desktop/SLAE4SEM/src"/>
+					<Add directory="/Users/arseniy/Desktop/SLAE4SEM/tests/googletest-master/googletest/include"/>
+					<Add directory="/Users/arseniy/Desktop/SLAE4SEM/tests/googletest-master/googletest"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/12.0.5/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 run_test_exception/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="run_test_csr_matrix">
+				<Option output="/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/run_test_csr_matrix" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/arseniy/Desktop/SLAE4SEM/src"/>
+					<Add directory="/Users/arseniy/Desktop/SLAE4SEM/tests/googletest-master/googletest/include"/>
+					<Add directory="/Users/arseniy/Desktop/SLAE4SEM/tests/googletest-master/googletest"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/12.0.5/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 run_test_csr_matrix"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="run_test_csr_matrix/fast">
+				<Option output="/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/run_test_csr_matrix" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/arseniy/Desktop/SLAE4SEM/src"/>
+					<Add directory="/Users/arseniy/Desktop/SLAE4SEM/tests/googletest-master/googletest/include"/>
+					<Add directory="/Users/arseniy/Desktop/SLAE4SEM/tests/googletest-master/googletest"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/12.0.5/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 run_test_csr_matrix/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="gmock">
+				<Option output="/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/lib/libgmockd.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/googletest-master/googlemock"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/arseniy/Desktop/SLAE4SEM/tests/googletest-master/googlemock/include"/>
+					<Add directory="/Users/arseniy/Desktop/SLAE4SEM/tests/googletest-master/googlemock"/>
+					<Add directory="/Users/arseniy/Desktop/SLAE4SEM/tests/googletest-master/googletest/include"/>
+					<Add directory="/Users/arseniy/Desktop/SLAE4SEM/tests/googletest-master/googletest"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/12.0.5/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/googletest-master/googlemock/Makefile&quot;  VERBOSE=1 gmock"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/googletest-master/googlemock/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/googletest-master/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/googletest-master/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="gmock/fast">
+				<Option output="/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/lib/libgmockd.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/googletest-master/googlemock"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/arseniy/Desktop/SLAE4SEM/tests/googletest-master/googlemock/include"/>
+					<Add directory="/Users/arseniy/Desktop/SLAE4SEM/tests/googletest-master/googlemock"/>
+					<Add directory="/Users/arseniy/Desktop/SLAE4SEM/tests/googletest-master/googletest/include"/>
+					<Add directory="/Users/arseniy/Desktop/SLAE4SEM/tests/googletest-master/googletest"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/12.0.5/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/googletest-master/googlemock/Makefile&quot;  VERBOSE=1 gmock/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/googletest-master/googlemock/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/googletest-master/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/googletest-master/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="gmock_main">
+				<Option output="/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/lib/libgmock_maind.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/googletest-master/googlemock"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/arseniy/Desktop/SLAE4SEM/tests/googletest-master/googlemock/include"/>
+					<Add directory="/Users/arseniy/Desktop/SLAE4SEM/tests/googletest-master/googlemock"/>
+					<Add directory="/Users/arseniy/Desktop/SLAE4SEM/tests/googletest-master/googletest/include"/>
+					<Add directory="/Users/arseniy/Desktop/SLAE4SEM/tests/googletest-master/googletest"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/12.0.5/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/googletest-master/googlemock/Makefile&quot;  VERBOSE=1 gmock_main"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/googletest-master/googlemock/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/googletest-master/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/googletest-master/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="gmock_main/fast">
+				<Option output="/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/lib/libgmock_maind.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/googletest-master/googlemock"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/arseniy/Desktop/SLAE4SEM/tests/googletest-master/googlemock/include"/>
+					<Add directory="/Users/arseniy/Desktop/SLAE4SEM/tests/googletest-master/googlemock"/>
+					<Add directory="/Users/arseniy/Desktop/SLAE4SEM/tests/googletest-master/googletest/include"/>
+					<Add directory="/Users/arseniy/Desktop/SLAE4SEM/tests/googletest-master/googletest"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/12.0.5/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/googletest-master/googlemock/Makefile&quot;  VERBOSE=1 gmock_main/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/googletest-master/googlemock/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/googletest-master/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/googletest-master/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="gtest_main">
+				<Option output="/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/lib/libgtest_maind.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/googletest-master/googletest"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/arseniy/Desktop/SLAE4SEM/tests/googletest-master/googletest/include"/>
+					<Add directory="/Users/arseniy/Desktop/SLAE4SEM/tests/googletest-master/googletest"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/12.0.5/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/googletest-master/googletest/Makefile&quot;  VERBOSE=1 gtest_main"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/googletest-master/googletest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/googletest-master/googletest/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/googletest-master/googletest/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="gtest_main/fast">
+				<Option output="/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/lib/libgtest_maind.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/googletest-master/googletest"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/arseniy/Desktop/SLAE4SEM/tests/googletest-master/googletest/include"/>
+					<Add directory="/Users/arseniy/Desktop/SLAE4SEM/tests/googletest-master/googletest"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/12.0.5/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/googletest-master/googletest/Makefile&quot;  VERBOSE=1 gtest_main/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/googletest-master/googletest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/googletest-master/googletest/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/googletest-master/googletest/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="gtest">
+				<Option output="/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/lib/libgtestd.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/googletest-master/googletest"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/arseniy/Desktop/SLAE4SEM/tests/googletest-master/googletest/include"/>
+					<Add directory="/Users/arseniy/Desktop/SLAE4SEM/tests/googletest-master/googletest"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/12.0.5/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/googletest-master/googletest/Makefile&quot;  VERBOSE=1 gtest"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/googletest-master/googletest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/googletest-master/googletest/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/googletest-master/googletest/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="gtest/fast">
+				<Option output="/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/lib/libgtestd.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/googletest-master/googletest"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/arseniy/Desktop/SLAE4SEM/tests/googletest-master/googletest/include"/>
+					<Add directory="/Users/arseniy/Desktop/SLAE4SEM/tests/googletest-master/googletest"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/12.0.5/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/googletest-master/googletest/Makefile&quot;  VERBOSE=1 gtest/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/googletest-master/googletest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/googletest-master/googletest/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/googletest-master/googletest/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/Users/arseniy/Desktop/SLAE4SEM/src/my_project/SlaeBaseException.cpp">
+			<Option target="my_project"/>
+		</Unit>
+		<Unit filename="/Users/arseniy/Desktop/SLAE4SEM/src/my_project/SlaeBaseException.hpp">
+			<Option target="my_project"/>
+		</Unit>
+		<Unit filename="/Users/arseniy/Desktop/SLAE4SEM/src/my_project/dense/Densematrix.hpp">
+			<Option target="my_project"/>
+		</Unit>
+		<Unit filename="/Users/arseniy/Desktop/SLAE4SEM/src/my_project/matrix/FiveDiagonalMatrix.cpp">
+			<Option target="my_project"/>
+		</Unit>
+		<Unit filename="/Users/arseniy/Desktop/SLAE4SEM/src/my_project/matrix/FiveDiagonalMatrix.hpp">
+			<Option target="my_project"/>
+		</Unit>
+		<Unit filename="/Users/arseniy/Desktop/SLAE4SEM/src/my_project/matrix/ThreeDiagonalMatrix.cpp">
+			<Option target="my_project"/>
+		</Unit>
+		<Unit filename="/Users/arseniy/Desktop/SLAE4SEM/src/my_project/matrix/ThreeDiagonalMatrix.hpp">
+			<Option target="my_project"/>
+		</Unit>
+		<Unit filename="/Users/arseniy/Desktop/SLAE4SEM/src/my_project/solvers/CG.hpp">
+			<Option target="my_project"/>
+		</Unit>
+		<Unit filename="/Users/arseniy/Desktop/SLAE4SEM/src/my_project/solvers/Chebyshev.hpp">
+			<Option target="my_project"/>
+		</Unit>
+		<Unit filename="/Users/arseniy/Desktop/SLAE4SEM/src/my_project/solvers/FiveDiagonalSolver.cpp">
+			<Option target="my_project"/>
+		</Unit>
+		<Unit filename="/Users/arseniy/Desktop/SLAE4SEM/src/my_project/solvers/FiveDiagonalSolver.hpp">
+			<Option target="my_project"/>
+		</Unit>
+		<Unit filename="/Users/arseniy/Desktop/SLAE4SEM/src/my_project/solvers/GaussSeidel.hpp">
+			<Option target="my_project"/>
+		</Unit>
+		<Unit filename="/Users/arseniy/Desktop/SLAE4SEM/src/my_project/solvers/Jacobi.hpp">
+			<Option target="my_project"/>
+		</Unit>
+		<Unit filename="/Users/arseniy/Desktop/SLAE4SEM/src/my_project/solvers/NonlinearBoundaryValueProblem2.hpp">
+			<Option target="my_project"/>
+		</Unit>
+		<Unit filename="/Users/arseniy/Desktop/SLAE4SEM/src/my_project/solvers/NonlinearBoundaryValueProblem4.hpp">
+			<Option target="my_project"/>
+		</Unit>
+		<Unit filename="/Users/arseniy/Desktop/SLAE4SEM/src/my_project/solvers/SimpleIteration.hpp">
+			<Option target="my_project"/>
+		</Unit>
+		<Unit filename="/Users/arseniy/Desktop/SLAE4SEM/src/my_project/solvers/ThreeDiadonalSolver.cpp">
+			<Option target="my_project"/>
+		</Unit>
+		<Unit filename="/Users/arseniy/Desktop/SLAE4SEM/src/my_project/solvers/ThreeDiadonalSolver.hpp">
+			<Option target="my_project"/>
+		</Unit>
+		<Unit filename="/Users/arseniy/Desktop/SLAE4SEM/src/my_project/solvers/steepest_gradient_descent.hpp">
+			<Option target="my_project"/>
+		</Unit>
+		<Unit filename="/Users/arseniy/Desktop/SLAE4SEM/src/my_project/sparse/CSR.hpp">
+			<Option target="my_project"/>
+		</Unit>
+		<Unit filename="/Users/arseniy/Desktop/SLAE4SEM/src/my_project/utility/Norm.hpp">
+			<Option target="my_project"/>
+		</Unit>
+		<Unit filename="/Users/arseniy/Desktop/SLAE4SEM/src/my_project/utility/Overloads.hpp">
+			<Option target="my_project"/>
+		</Unit>
+		<Unit filename="/Users/arseniy/Desktop/SLAE4SEM/src/my_project/utility/Triplet.hpp">
+			<Option target="my_project"/>
+		</Unit>
+		<Unit filename="/Users/arseniy/Desktop/SLAE4SEM/tests/googletest-master/googlemock/src/gmock-all.cc">
+			<Option target="gmock"/>
+		</Unit>
+		<Unit filename="/Users/arseniy/Desktop/SLAE4SEM/tests/googletest-master/googlemock/src/gmock_main.cc">
+			<Option target="gmock_main"/>
+		</Unit>
+		<Unit filename="/Users/arseniy/Desktop/SLAE4SEM/tests/googletest-master/googletest/src/gtest-all.cc">
+			<Option target="gtest"/>
+		</Unit>
+		<Unit filename="/Users/arseniy/Desktop/SLAE4SEM/tests/googletest-master/googletest/src/gtest_main.cc">
+			<Option target="gtest_main"/>
+		</Unit>
+		<Unit filename="/Users/arseniy/Desktop/SLAE4SEM/tests/test_cg.cpp">
+			<Option target="run_test_cg"/>
+		</Unit>
+		<Unit filename="/Users/arseniy/Desktop/SLAE4SEM/tests/test_csr_matrix.cpp">
+			<Option target="run_test_csr_matrix"/>
+		</Unit>
+		<Unit filename="/Users/arseniy/Desktop/SLAE4SEM/tests/test_dense_matrix.cpp">
+			<Option target="run_test_dense_matrix"/>
+		</Unit>
+		<Unit filename="/Users/arseniy/Desktop/SLAE4SEM/tests/test_exception.cpp">
+			<Option target="run_test_exception"/>
+		</Unit>
+		<Unit filename="/Users/arseniy/Desktop/SLAE4SEM/tests/test_five_diag_matrix.cpp">
+			<Option target="run_test_five_diag_matrix"/>
+		</Unit>
+		<Unit filename="/Users/arseniy/Desktop/SLAE4SEM/tests/test_nonlinear_boundary_value_problem_2.cpp">
+			<Option target="run_test_nonlinear_boundary_value_problem_2"/>
+		</Unit>
+		<Unit filename="/Users/arseniy/Desktop/SLAE4SEM/tests/test_nonlinear_boundary_value_problem_4.cpp">
+			<Option target="run_test_nonlinear_boundary_value_problem_4"/>
+		</Unit>
+		<Unit filename="/Users/arseniy/Desktop/SLAE4SEM/tests/test_simple_iteration_method.cpp">
+			<Option target="run_test_simple_iteration_method"/>
+		</Unit>
+		<Unit filename="/Users/arseniy/Desktop/SLAE4SEM/tests/test_solver.cpp">
+			<Option target="run_test_solver"/>
+		</Unit>
+		<Unit filename="/Users/arseniy/Desktop/SLAE4SEM/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/Users/arseniy/Desktop/SLAE4SEM/tests/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\tests\"/>
+		</Unit>
+		<Unit filename="/Users/arseniy/Desktop/SLAE4SEM/tests/googletest-master/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\tests\googletest-master\"/>
+		</Unit>
+		<Unit filename="/Users/arseniy/Desktop/SLAE4SEM/tests/googletest-master/googlemock/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\tests\googletest-master\googlemock\"/>
+		</Unit>
+		<Unit filename="/Users/arseniy/Desktop/SLAE4SEM/tests/googletest-master/googlemock/cmake/gmock.pc.in">
+			<Option virtualFolder="CMake Files\tests\googletest-master\googlemock\cmake\"/>
+		</Unit>
+		<Unit filename="/Users/arseniy/Desktop/SLAE4SEM/tests/googletest-master/googlemock/cmake/gmock_main.pc.in">
+			<Option virtualFolder="CMake Files\tests\googletest-master\googlemock\cmake\"/>
+		</Unit>
+		<Unit filename="/Users/arseniy/Desktop/SLAE4SEM/tests/googletest-master/googletest/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\tests\googletest-master\googletest\"/>
+		</Unit>
+		<Unit filename="/Users/arseniy/Desktop/SLAE4SEM/tests/googletest-master/googletest/cmake/Config.cmake.in">
+			<Option virtualFolder="CMake Files\tests\googletest-master\googletest\cmake\"/>
+		</Unit>
+		<Unit filename="/Users/arseniy/Desktop/SLAE4SEM/tests/googletest-master/googletest/cmake/gtest.pc.in">
+			<Option virtualFolder="CMake Files\tests\googletest-master\googletest\cmake\"/>
+		</Unit>
+		<Unit filename="/Users/arseniy/Desktop/SLAE4SEM/tests/googletest-master/googletest/cmake/gtest_main.pc.in">
+			<Option virtualFolder="CMake Files\tests\googletest-master\googletest\cmake\"/>
+		</Unit>
+		<Unit filename="/Users/arseniy/Desktop/SLAE4SEM/tests/googletest-master/googletest/cmake/internal_utils.cmake">
+			<Option virtualFolder="CMake Files\tests\googletest-master\googletest\cmake\"/>
+		</Unit>
+		<Unit filename="/Users/arseniy/Desktop/SLAE4SEM/src/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\src\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
