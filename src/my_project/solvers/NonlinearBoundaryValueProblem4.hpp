@@ -5,14 +5,14 @@
 #ifndef MY_PROJECT_NONLINEARBOUNDARYVALUEPROBLEM4_HPP
 #define MY_PROJECT_NONLINEARBOUNDARYVALUEPROBLEM4_HPP
 
-#include </Users/arseniy/Desktop/SLAE4SEM/SLAE4SEM/src/my_project/utility/Overloads.hpp>
+#include <my_project/utility/Overloads.hpp>
 #include "../sparse/CSR.hpp"
 #include <sstream>
-#include </Users/arseniy/Desktop/SLAE4SEM/SLAE4SEM/src/my_project/SlaeBaseException.hpp>
+#include <my_project/SlaeBaseException.hpp>
 #include <functional>
-#include </Users/arseniy/Desktop/SLAE4SEM/SLAE4SEM/src/my_project/matrix/FiveDiagonalMatrix.hpp>
+#include <my_project/matrix/FiveDiagonalMatrix.hpp>
 #include "cmath"
-#include "/Users/arseniy/Desktop/SLAE4SEM/SLAE4SEM/src/my_project/solvers/FiveDiagonalSolver.hpp"
+#include "my_project/solvers/FiveDiagonalSolver.hpp"
 #include "ostream"
 
 
@@ -110,21 +110,20 @@ std::vector<double> NonlinearBoundaryValueProblem4(double left_bound_x,double ri
     }
     y[y.size() - 1] = right_bound_y;
 
-    data.multiply_row_by_value(1, data(2, 3)/data(1, 4));
-    y[1] *= data(2, 3)/data(1, 4);
+    data.multiply_row_by_value(1, data(2, 4)/data(1, 4));
+    y[1] *= data(2, 4)/data(1, 4);
     data.substract_row1_from_row2(1, 2);
     y[1] -= y[2];
     data.fill_row(1, 0, data(1, 0), data(1, 1), data(1, 2), data(1, 3));
 
-    data.multiply_row_by_value(data.rows() - 2, data(data.rows() - 3, 1)/data(data.rows() - 2, 0));
-    y[data.rows() - 2] *= data(data.rows() - 3, 1)/data(data.rows() - 2, 0);
+    data.multiply_row_by_value(data.rows() - 2, data(data.rows() - 3, 0)/data(data.rows() - 2, 0));
+    y[data.rows() - 2] *= data(data.rows() - 3, 0)/data(data.rows() - 2, 0);
     data.substract_row1_from_row2(data.rows() - 2, data.rows() - 3);
     y[data.rows() - 2] -= y[data.rows() - 3];
 
     data.fill_row(data.rows() - 2, data(data.rows() - 2, 1),
                   data(data.rows() - 2, 2), data(data.rows() - 2, 3),
                   data(data.rows() - 2, 4), 0);
-
 
 
     return Slae::Solvers::solveFiveDiagonal(data, y);

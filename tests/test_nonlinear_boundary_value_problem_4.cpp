@@ -3,7 +3,7 @@
 //
 #include "gtest/gtest.h"
 #include <my_project/utility/Overloads.hpp>
-#include </Users/arseniy/Desktop/SLAE4SEM/SLAE4SEM/src/my_project/solvers/NonlinearBoundaryValueProblem4.hpp>
+#include <my_project/solvers/NonlinearBoundaryValueProblem4.hpp>
 #include <iostream>
 #include "functional"
 #include <cmath>
@@ -25,29 +25,34 @@ TEST(NONLINEARBOUNDARYVALUEPROBLEM2, TEST) {
     double left_bound_y = 1.;
     double right_bound_y = -1.;
 
-    int max_number_of_splits = 220;
+    int max_number_of_splits = 20;
     std::fstream file;
     file.open("test_4.txt", std::fstream::out);
-    for(int j = 20; j < max_number_of_splits; j += 10){
-        std::vector<double> solution = NonlinearBoundaryValueProblem4(left_bound_x, right_bound_x,
-                                                                      left_bound_y, right_bound_y,
-                                                                      j, a, b, f);
-        std::vector<double> x(j + 1);
-        std::vector<double> y(j + 1);
 
-        double h = (right_bound_x - left_bound_x)/j;
-        for(int i = 0; i < x.size(); ++i){
-            x[i] = left_bound_x + h * i;
-            y[i] = y_func(x[i]);
-        }
-        std::vector<double> err(j);
-        for(int i=0; i<j; i++){
-            err[i] = abs(solution[i] - y[i]);
-        }
-        double max = *std::max_element(err.begin(), err.end());
-        file << j << " "<< max << " ";
-        file << '\n';
+    std::vector<double> solution = NonlinearBoundaryValueProblem4(left_bound_x, right_bound_x,
+                                                                  left_bound_y, right_bound_y,
+                                                                  max_number_of_splits, a, b, f);
+    std::vector<double> x(max_number_of_splits + 1);
+    std::vector<double> y(max_number_of_splits + 1);
+
+    double h = (right_bound_x - left_bound_x)/max_number_of_splits;
+    for(int i = 0; i < x.size(); ++i){
+        x[i] = left_bound_x + h * i;
+        y[i] = y_func(x[i]);
     }
+    std::vector<double> err(max_number_of_splits);
+    std::cout << "[";
+    for(int i=0; i<max_number_of_splits; i++){
+        err[i] = abs(solution[i] - y[i]);
+        std::cout << solution[i] << " ";
+    }
+    std::cout << "]";
+    std::cout<< std::endl;
+    double max = *std::max_element(err.begin(), err.end());
+    file << max_number_of_splits << " "<< max << " ";
+    file << '\n';
+
+    
     file.close();
 }
 
