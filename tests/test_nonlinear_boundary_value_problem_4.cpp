@@ -12,7 +12,7 @@
 
 
 TEST(NONLINEARBOUNDARYVALUEPROBLEM2, TEST) {
-    std::function<double(double)> f = [](double x) { return 1.; };
+    std::function<double(double)> f = [](double x) { return 0.; };
 
     std::function<double(double)> a = [](double x) { return 0.; };
 
@@ -25,7 +25,7 @@ TEST(NONLINEARBOUNDARYVALUEPROBLEM2, TEST) {
     double left_bound_y = 1.;
     double right_bound_y = -1.;
 
-    int max_number_of_splits = 20;
+    int max_number_of_splits = 220;
     std::fstream file;
     file.open("test_4.txt", std::fstream::out);
 
@@ -45,11 +45,13 @@ TEST(NONLINEARBOUNDARYVALUEPROBLEM2, TEST) {
     for(int i=0; i<max_number_of_splits; i++){
         err[i] = abs(solution[i] - y[i]);
         std::cout << solution[i] << " ";
+        file << solution[i] << " "<< x[i];
+        file << '\n';
     }
     std::cout << "]";
     std::cout<< std::endl;
     double max = *std::max_element(err.begin(), err.end());
-    file << max_number_of_splits << " "<< max << " ";
+//    file << max_number_of_splits << " "<< max << " ";
     file << '\n';
 
     

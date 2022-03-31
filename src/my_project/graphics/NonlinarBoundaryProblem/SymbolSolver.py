@@ -37,4 +37,8 @@ data5 = sympy.linsolve([A + B + C + D + E,
                 1/6* A - 1/6 * C - 4/3 * D - 9/2 * E,
                 1/24*A + 1/24*C + 2/3*D + 27/8*E], [A, B, C, D, E])
 
-sympy.pprint(data5)
+sympy.pprint(data4)
+#0.91(6) = 11/12
+#1.(6) = 5/3
+#0.083 = 1/12
+#0.83 = 5/6

@@ -16,15 +16,15 @@
 #include "ostream"
 
 
-double GetСoef1_1(std::function<double(double)>& a, double h, double x){
+double GetCoef1_1(std::function<double(double)>& a, double h, double x){
     return 11/(12*pow(h, 2)) - 0.25*a(x)/h;
 }
 
-double GetСoef2_1(std::function<double(double)>& a, std::function<double(double)>& b, double h, double x){
+double GetCoef2_1(std::function<double(double)>& a, std::function<double(double)>& b, double h, double x){
     return -5 / (3*pow(h, 2)) - 5/(6*h) * a(x) + b(x);
 }
 
-double GetСoef3_1(std::function<double(double)>& a, double h, double x){
+double GetCoef3_1(std::function<double(double)>& a, double h, double x){
     return 0.5/pow(h, 2) - 1.5 * a(x) / h;
 }
 
@@ -33,18 +33,18 @@ double GetCoef4_1(std::function<double(double)>& a, double h, double x){
 }
 
 double GetCoef5_1(std::function<double(double)>& a, double h, double x){
-    return 1/(12*pow(h, 2)) - 1/(12*h) * a(x);
+    return -1/(12*pow(h, 2)) + 1/(12*h) * a(x);
 }
 
-double GetСoef1_i(std::function<double(double)>& a, double h, double x){
+double GetCoef1_i(std::function<double(double)>& a, double h, double x){
     return -1/(12*pow(h, 2)) + a(x)/(12*h);
 }
 
-double GetСoef2_i(std::function<double(double)>& a, double h, double x){
+double GetCoef2_i(std::function<double(double)>& a, double h, double x){
     return 4/(3 * pow(h, 2)) - 2/(3*h) * a(x);
 }
 
-double GetСoef3_i(std::function<double(double)>& a,std::function<double(double)>& b, double h, double x){
+double GetCoef3_i(std::function<double(double)>& a,std::function<double(double)>& b, double h, double x){
     return b(x) - 2.5/pow(h, 2);
 }
 
@@ -56,24 +56,24 @@ double GetCoef5_i(std::function<double(double)>& a, double h, double x){
     return -1/(12*pow(h, 2)) - 1/(12*h) * a(x);
 }
 
-double GetСoef1_n_2(std::function<double(double)>& a, double h, double x){
+double GetCoef1_n_2(std::function<double(double)>& a, double h, double x){
     return 1/(12*pow(h, 2)) - a(x)*1/(12*h);
 }
 
-double GetСoef2_n_2(std::function<double(double)>& a, double h, double x){
+double GetCoef2_n_2(std::function<double(double)>& a, double h, double x){
     return 1 / (3*pow(h, 2)) - 1/(2*h) * a(x);
 }
 
-double GetСoef3_n_2(std::function<double(double)>& a, double h, double x){
+double GetCoef3_n_2(std::function<double(double)>& a, double h, double x){
     return 0.5/pow(h, 2) - 1.5 * a(x) / h;
 }
 
 double GetCoef4_n_2(std::function<double(double)>& a, std::function<double(double)>& b, double h, double x){
-    return -5/(3*pow(h, 2)) + 5/(6*h) * a(x) + b(x);
+    return -5/(3*pow(h, 2)) + 11/(12*h) * a(x) + b(x);
 }
 
 double GetCoef5_n_2(std::function<double(double)>& a, double h, double x){
-    return 11/(12*pow(h, 2)) - 1/(4*h) * a(x);
+    return 11/(12*pow(h, 2)) + 1/(4*h) * a(x);
 }
 
 std::vector<double> NonlinearBoundaryValueProblem4(double left_bound_x,double right_bound_x, double left_bound_y,
@@ -88,18 +88,18 @@ std::vector<double> NonlinearBoundaryValueProblem4(double left_bound_x,double ri
     }
 
     Slae::Matrix::FiveDiagonalMatrix data = Slae::Matrix::FiveDiagonalMatrix(number_of_splits + 1);
-    data(0, 1) = 1;
-    data(data.rows() - 1, 1) = 1;
-    data.fill_row(1, GetСoef1_1(a, h, x[1]), GetСoef2_1(a, b, h, x[1]),
-                  GetСoef3_1(a, h, x[1]),GetCoef4_1(a, h, x[1]), GetCoef5_1(a, h, x[1]));
+    data(0, 2) = 1;
+    data(data.rows() - 1, 2) = 1;
+    data.fill_row(1, GetCoef1_1(a, h, x[1]), GetCoef2_1(a, b, h, x[1]),
+                  GetCoef3_1(a, h, x[1]),GetCoef4_1(a, h, x[1]), GetCoef5_1(a, h, x[1]));
 
-    data.fill_row(data.rows() - 2, GetСoef1_n_2(a, h, x[data.rows() - 2]),
-                  GetСoef2_n_2(a, h, x[data.rows() - 2]), GetСoef3_n_2(a, h, x[data.rows() - 2]),
+    data.fill_row(data.rows() - 2, GetCoef1_n_2(a, h, x[data.rows() - 2]),
+                  GetCoef2_n_2(a, h, x[data.rows() - 2]), GetCoef3_n_2(a, h, x[data.rows() - 2]),
                   GetCoef4_n_2(a, b, h, x[data.rows() - 2]), GetCoef5_n_2(a, h, x[data.rows() - 2]));
 
 
     for(int i = 2; i < data.rows() - 2; ++i){
-        data.fill_row(i, GetСoef1_i(a, h, x[i]), GetСoef2_i(a, h, x[i]), GetСoef3_i(a, b, h, x[i]),
+        data.fill_row(i, GetCoef1_i(a, h, x[i]), GetCoef2_i(a, h, x[i]), GetCoef3_i(a, b, h, x[i]),
                       GetCoef4_i(a, h, x[i]), GetCoef5_i(a, h, x[i]));
     }
 
