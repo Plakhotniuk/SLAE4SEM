@@ -112,29 +112,46 @@ std::vector<double> NonlinearBoundaryValueProblem4(double left_bound_x,double ri
     data.fill_row(data.rows() - 2, 0,
                   GetCoef1(a, h, x[x.size() - 2]), GetCoef2(b, h, x[x.size() - 2]),
                   GetCoef3(a, h, x[x.size() - 2]), 0);
+    //Элементарные преобразования и заполнение коэффициентов 5ти диагональной матрицы
 
-//    data.fill_row(1, 0,GetCoef1_1(a, h, x[1]), GetCoef2_1(a,b, h, x[1]),
-//                  GetCoef3_1(a, h, x[1]), GetCoef4_1(a, h, x[1]));
-//    data.multiply_row_by_value(1, GetCoef5_i(a, h, x[2]) / GetCoef5_1(a, h, x[1]));
-//    data.substract_row2_from_row1(2, 1);
-//
-//
-//    data.fill_row(data.rows() - 2, GetCoef2_n_2(a, h, x[x.size() - 2]), GetCoef3_n_2(a, h, x[x.size() - 2]),
-//                  GetCoef4_n_2(a, b, h, x[x.size() - 2]), GetCoef5_n_2(a, h, x[x.size() - 2]), 0);
-//    data.multiply_row_by_value(data.rows() - 2, GetCoef1_i(a, h, x[x.size() - 3]) / GetCoef1_n_2(a, h, x[x.size() - 2]));
-//    data.substract_row2_from_row1(data.rows() - 3, data.rows() - 2);
-
-
+    // 1 < i < n - 2
     for(int i = 2; i < data.rows() - 2; ++i){
         data.fill_row(i, GetCoef1_i(a, h, x[i]), GetCoef2_i(a, h, x[i]), GetCoef3_i(a, b, h, x[i]),
                       GetCoef4_i(a, h, x[i]), GetCoef5_i(a, h, x[i]));
     }
+    //i = 1
+//    data.fill_row(1, 0,GetCoef1_1(a, h, x[1]),
+//                  GetCoef2_1(a,b, h, x[1]),
+//                  GetCoef3_1(a, h, x[1]),
+//                  GetCoef4_1(a, h, x[1]));
+
+//    data.multiply_row_by_value(1, GetCoef5_i(a, h, x[2]) / GetCoef5_1(a, h, x[1]));
+//    data.fill_row(1, 0, data(1, 1) - data(2, 0),
+//                  data(1, 2) - data(2, 1),
+//                  data(1, 3) - data(2, 2),
+//                  data(1, 4) - data(2, 3));
+
+    // i = n - 2
+//    data.fill_row(data.rows() - 2, GetCoef2_n_2(a, h, x[data.rows() - 2]),
+//                  GetCoef3_n_2(a, h, x[data.rows() - 2]) ,
+//                  GetCoef4_n_2(a, b, h, x[data.rows() - 2]),
+//                  GetCoef5_n_2(a, h, x[data.rows() - 2]), 0);
+//
+//
+//    data.multiply_row_by_value(data.rows() - 2,
+//                               GetCoef1_i(a, h, x[x.size() - 3]) / GetCoef1_n_2(a, h, x[x.size() - 2]));
+//
+//    data.fill_row(data.rows() - 2, data(data.rows() - 2, 0) - data(data.rows() - 3, 1),
+//                  data(data.rows() - 2, 1) - data(data.rows() - 3, 2),
+//                  data(data.rows() - 2, 2) - data(data.rows() - 3, 3),
+//                  data(data.rows() - 2, 3) - data(data.rows() - 3, 4), 0);
 
     std::vector<double> y(number_of_splits + 1);
     y[0] = left_bound_y;
     for(int i = 1; i < y.size() - 1; ++i){
         y[i] = f(x[i]);
     }
+
     y[y.size() - 1] = right_bound_y;
 
     y[1] *= GetCoef5_i(a, h, x[2]) / GetCoef5_1(a, h, x[1]);

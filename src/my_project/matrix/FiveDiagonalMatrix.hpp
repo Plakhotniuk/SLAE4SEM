@@ -77,7 +77,6 @@ namespace Slae::Matrix{
 
         void multiply_row_by_value(unsigned ind, double val);
 
-        void substract_row2_from_row1(unsigned ind1, unsigned ind2);
 
         void check_diagonal_domimance() const;
 
