@@ -112,6 +112,7 @@ std::vector<double> NonlinearBoundaryValueProblem4(double left_bound_x,double ri
     data.fill_row(data.rows() - 2, 0,
                   GetCoef1(a, h, x[x.size() - 2]), GetCoef2(b, h, x[x.size() - 2]),
                   GetCoef3(a, h, x[x.size() - 2]), 0);
+
     //Элементарные преобразования и заполнение коэффициентов 5ти диагональной матрицы
 
     // 1 < i < n - 2

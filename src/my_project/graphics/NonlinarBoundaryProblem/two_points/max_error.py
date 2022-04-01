@@ -2,7 +2,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 plt.figure()
 fig, ax = plt.subplots()
-data = np.loadtxt(f'/Users/arseniy/Desktop/SLAE4SEM/SLAE4SEM/cmake-build-debug/tests/test_1.txt')
+data = np.loadtxt(f'/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/test_2_err3.txt')
 print(data)
 x = data[:, 0]
 y = data[:, 1]
@@ -17,7 +17,8 @@ print(f)
 plt.plot(xp, f(xp), '-', label=f'Коэффициент наклона: k = {round(f[1], 2)}')
 ax.grid()
 plt.legend()
+plt.title('Трехдиагональная прогонка')
 plt.xlabel('Логарифм количества узлов')
 plt.ylabel('Логарифм максимального отклонения')
-plt.savefig('graphic_max_error.png')
+plt.savefig('graphic_max_error3.png')
 plt.show()

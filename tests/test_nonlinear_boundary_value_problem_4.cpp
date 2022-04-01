@@ -12,22 +12,22 @@
 
 
 TEST(NONLINEARBOUNDARYVALUEPROBLEM2, TEST) {
-    std::function<double(double)> f = [](double x) { return 0.; };
+    std::function<double(double)> f = [](double x) { return 2*x; };
 
     std::function<double(double)> a = [](double x) { return 0.; };
 
-    std::function<double(double)> b = [](double x) { return 1.; };
+    std::function<double(double)> b = [](double x) { return -1.; };
 
-    std::function<double(double)> y_func = [](double x) { return cos(x); };
+    std::function<double(double)> y_func = [](double x) { return sinh(x) / sinh(1.) - 2*x; };
 
     double left_bound_x = 0.;
-    double right_bound_x = M_PI;
-    double left_bound_y = 1.;
+    double right_bound_x = 1.;
+    double left_bound_y = 0.;
     double right_bound_y = -1.;
 
     int max_number_of_splits = 250;
     std::fstream file;
-    file.open("test_4_func.txt", std::fstream::out);
+    file.open("test_4_func3.txt", std::fstream::out);
 
     std::vector<double> solution = NonlinearBoundaryValueProblem4(left_bound_x, right_bound_x,
                                                                   left_bound_y, right_bound_y,
@@ -45,7 +45,7 @@ TEST(NONLINEARBOUNDARYVALUEPROBLEM2, TEST) {
     for(int i=0; i<max_number_of_splits; i++){
         err[i] = abs(solution[i] - y[i]);
         std::cout << solution[i] << " ";
-        file << solution[i] << " "<< x[i];
+        file << solution[i] << " "<< x[i] <<" "<< y[i];
         file << '\n';
     }
     std::cout << "]";
@@ -57,22 +57,22 @@ TEST(NONLINEARBOUNDARYVALUEPROBLEM2, TEST) {
 }
 
 TEST(MAXERROR, TEST){
-    std::function<double(double)> f = [](double x) { return 0.; };
+    std::function<double(double)> f = [](double x) { return 2*x; };
 
     std::function<double(double)> a = [](double x) { return 0.; };
 
-    std::function<double(double)> b = [](double x) { return 1.; };
+    std::function<double(double)> b = [](double x) { return -1.; };
 
-    std::function<double(double)> y_func = [](double x) { return cos(x); };
+    std::function<double(double)> y_func = [](double x) { return sinh(x) / sinh(1.) - 2*x; };
 
     double left_bound_x = 0.;
-    double right_bound_x = M_PI;
-    double left_bound_y = 1.;
+    double right_bound_x = 1.;
+    double left_bound_y = 0.;
     double right_bound_y = -1.;
 
     int max_number_of_splits = 220;
     std::fstream file;
-    file.open("test_4_err.txt", std::fstream::out);
+    file.open("test_4_err3.txt", std::fstream::out);
 
     for(int j = 20; j < max_number_of_splits; j += 10){
         std::vector<double> solution = NonlinearBoundaryValueProblem4(left_bound_x, right_bound_x,
