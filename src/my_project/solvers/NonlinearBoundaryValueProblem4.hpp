@@ -15,80 +15,56 @@
 #include "my_project/solvers/FiveDiagonalSolver.hpp"
 #include "ostream"
 
+double GetCoef(std::pair<std::string, int> index, std::function<double(double)>& a,
+               std::function<double(double)>& b, double h, double x){
+    if(index.first == "1")
+    {
+        if(index.second == 1) return 11/(12*(h*h)) - 0.25*a(x)/h;
 
-double GetCoef1_1(std::function<double(double)>& a, double h, double x){
-    return 11/(12*(h*h)) - 0.25*a(x)/h;
+        if(index.second == 2) return -5 / (3*(h*h)) - 5/(6*h) * a(x) + b(x);
+
+        if(index.second == 3) return 0.5/(h*h) + 1.5 * a(x) / h;
+
+        if(index.second == 4) return 1/(3*(h*h)) - 0.5/h * a(x);
+
+        if(index.second == 5) return -1/(12*(h*h)) + 1/(12*h) * a(x);
+    }
+
+    if(index.first == "i")
+    {
+        if(index.second == 1) return -1/(12*(h*h)) + a(x)/(12*h);
+
+        if(index.second == 2) return 4/(3 * (h*h)) - 2/(3*h) * a(x);
+
+        if(index.second == 3) return  b(x) - 2.5/(h*h);
+
+        if(index.second == 4) return 4/(3*(h*h)) + 2/(3*h) * a(x);
+
+        if(index.second == 5) return -1/(12*(h*h)) - 1/(12*h) * a(x);
+    }
+    if(index.first == "n-2")
+    {
+        if(index.second == 1) return -1/(12*(h*h)) - a(x)*1/(12*h);
+
+        if(index.second == 2) return 1 / (3*(h*h)) + 1/(2*h) * a(x);
+
+        if(index.second == 3) return  0.5/(h*h) - 1.5 * a(x) / h;
+
+        if(index.second == 4) return -5/(3*(h*h)) + 5/(6*h) * a(x) + b(x);
+
+        if(index.second == 5) return 11/(12*(h*h)) + 1/(4*h) * a(x);
+    }
+    if(index.first == "three diag")
+    {
+        if(index.second == 1) return 1/(h*h) - a(x)/(2*h);
+
+        if(index.second == 2) return -2/(h*h) + b(x);
+
+        if(index.second == 3) return 1/(h*h) + a(x)/(2*h);
+    }
+    return 0.;
 }
 
-double GetCoef2_1(std::function<double(double)>& a, std::function<double(double)>& b, double h, double x){
-    return -5 / (3*(h*h)) - 5/(6*h) * a(x) + b(x);
-}
-
-double GetCoef3_1(std::function<double(double)>& a, double h, double x){
-    return 0.5/(h*h) + 1.5 * a(x) / h;
-}
-
-double GetCoef4_1(std::function<double(double)>& a, double h, double x){
-    return 1/(3*(h*h)) - 0.5/h * a(x);
-}
-
-double GetCoef5_1(std::function<double(double)>& a, double h, double x){
-    return -1/(12*(h*h)) + 1/(12*h) * a(x);
-}
-
-double GetCoef1_i(std::function<double(double)>& a, double h, double x){
-    return -1/(12*(h*h)) + a(x)/(12*h);
-}
-
-double GetCoef2_i(std::function<double(double)>& a, double h, double x){
-    return 4/(3 * (h*h)) - 2/(3*h) * a(x);
-}
-
-double GetCoef3_i(std::function<double(double)>& a,std::function<double(double)>& b, double h, double x){
-    return b(x) - 2.5/(h*h);
-}
-
-double GetCoef4_i(std::function<double(double)>& a, double h, double x){
-    return 4/(3*(h*h)) + 2/(3*h) * a(x);
-}
-
-double GetCoef5_i(std::function<double(double)>& a, double h, double x){
-    return -1/(12*(h*h)) - 1/(12*h) * a(x);
-}
-
-double GetCoef1_n_2(std::function<double(double)>& a, double h, double x){
-    return -1/(12*(h*h)) - a(x)*1/(12*h);
-}
-
-double GetCoef2_n_2(std::function<double(double)>& a, double h, double x){
-    return 1 / (3*(h*h)) + 1/(2*h) * a(x);
-}
-
-double GetCoef3_n_2(std::function<double(double)>& a, double h, double x){
-    return 0.5/(h*h) - 1.5 * a(x) / h;
-}
-
-double GetCoef4_n_2(std::function<double(double)>& a, std::function<double(double)>& b, double h, double x){
-    return -5/(3*(h*h)) + 5/(6*h) * a(x) + b(x);
-}
-
-double GetCoef5_n_2(std::function<double(double)>& a, double h, double x){
-    return 11/(12*(h*h)) + 1/(4*h) * a(x);
-}
-
-double GetCoef1(std::function<double(double)>& a, double h, double x){
-    return 1/(h*h) - a(x)/(2*h);
-}
-
-
-double GetCoef2(std::function<double(double)>& b, double h, double x){
-    return -2/(h*h) + b(x);
-}
-
-
-double GetCoef3(std::function<double(double)>& a, double h, double x){
-    return 1/(h*h) + a(x)/(2*h);
-}
 
 std::vector<double> NonlinearBoundaryValueProblem4(double left_bound_x,double right_bound_x, double left_bound_y,
                                                   double right_bound_y, int number_of_splits,
@@ -106,19 +82,25 @@ std::vector<double> NonlinearBoundaryValueProblem4(double left_bound_x,double ri
     data(data.rows() - 1, 2) = 1;
 
     //Использование коэффициентов для 3х диагональной матрицы
-    data.fill_row(1, 0, GetCoef1(a, h, x[1]),
-                  GetCoef2(b, h, x[1]),GetCoef3(a, h, x[1]), 0);
+    data.fill_row(1, 0,
+                  GetCoef({"three diag", 1}, a, b, h, x[1]),
+                  GetCoef({"three diag", 2}, a, b, h, x[1]),
+                  GetCoef({"three diag", 3}, a, b, h, x[1]), 0);
 
     data.fill_row(data.rows() - 2, 0,
-                  GetCoef1(a, h, x[x.size() - 2]), GetCoef2(b, h, x[x.size() - 2]),
-                  GetCoef3(a, h, x[x.size() - 2]), 0);
+                  GetCoef({"three diag", 1}, a, b, h, x[x.size() - 2]),
+                  GetCoef({"three diag", 2}, a, b, h, x[x.size() - 2]),
+                  GetCoef({"three diag", 3}, a, b, h, x[x.size() - 2]), 0);
 
     //Элементарные преобразования и заполнение коэффициентов 5ти диагональной матрицы
 
     // 1 < i < n - 2
     for(int i = 2; i < data.rows() - 2; ++i){
-        data.fill_row(i, GetCoef1_i(a, h, x[i]), GetCoef2_i(a, h, x[i]), GetCoef3_i(a, b, h, x[i]),
-                      GetCoef4_i(a, h, x[i]), GetCoef5_i(a, h, x[i]));
+        data.fill_row(i, GetCoef({"i", 1}, a, b, h, x[i]),
+                      GetCoef({"i", 2},a, b, h, x[i]),
+                      GetCoef({"i", 3},a, b, h, x[i]),
+                      GetCoef({"i", 4},a, b, h, x[i]),
+                      GetCoef({"i", 5},a, b, h, x[i]));
     }
     //i = 1
 //    data.fill_row(1, 0,GetCoef1_1(a, h, x[1]),
@@ -155,11 +137,11 @@ std::vector<double> NonlinearBoundaryValueProblem4(double left_bound_x,double ri
 
     y[y.size() - 1] = right_bound_y;
 
-    y[1] *= GetCoef5_i(a, h, x[2]) / GetCoef5_1(a, h, x[1]);
+    y[1] *= GetCoef({"i", 5}, a, b, h, x[2]) / GetCoef({"1", 5}, a, b, h, x[1]);
 
     y[1] -= y[2];
 
-    y[data.rows() - 2] *= GetCoef1_i(a, h, x[x.size() - 3]) / GetCoef1_n_2(a, h, x[x.size() - 2]);
+    y[data.rows() - 2] *= GetCoef({"i", 1}, a, b, h, x[x.size() - 3]) / GetCoef({"n-2", 5}, a, b, h, x[x.size() - 2]);
 
     y[data.rows() - 2] -= y[data.rows() - 3];
 

@@ -4,8 +4,8 @@
 #include "gtest/gtest.h"
 #include <my_project/solvers/SimpleIteration.hpp>
 #include <my_project/utility/Overloads.hpp>
-#include </Users/arseniy/Desktop/SLAE4SEM/SLAE4SEM/src/my_project/solvers/steepest_gradient_descent.hpp>
-#include </Users/arseniy/Desktop/SLAE4SEM/SLAE4SEM/src/my_project/solvers/CG.hpp>
+#include <my_project/solvers/steepest_gradient_descent.hpp>
+#include <my_project/solvers/CG.hpp>
 TEST(SIMPLEITERATION, TEST) {
     double tolerance = 1e-5;
     std::set<Triplet<double>> data{{0, 0, 7.}, {1, 1, 5.}, {2, 2, 9.}};

@@ -103,8 +103,6 @@ public:
         matrix.erase(matrix.end() - W, matrix.end());
         --H;
     };
-
-
 };
 template<typename T>
 std::ostream &operator<<(std::ostream &os, const DenseMatrix<T> &A){

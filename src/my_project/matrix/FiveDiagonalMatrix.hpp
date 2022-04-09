@@ -11,6 +11,13 @@
 #include <string>
 
 namespace Slae::Matrix{
+
+    enum class DIAG_DOM {
+        DIAG_DOM_STRICT=0,
+        DIAG_DOM = 1,
+        NO_DIAG_DOM = 2
+    };
+
     class FiveDiagonalMatrix{
 
     private:
@@ -78,7 +85,7 @@ namespace Slae::Matrix{
         void multiply_row_by_value(unsigned ind, double val);
 
 
-        void check_diagonal_domimance() const;
+        [[nodiscard]] DIAG_DOM check_diagonal_domimance() const;
 
     };
 

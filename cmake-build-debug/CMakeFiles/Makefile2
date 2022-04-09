@@ -116,6 +116,7 @@ tests/all: tests/CMakeFiles/run_test_solver.dir/all
 tests/all: tests/CMakeFiles/run_test_simple_iteration_method.dir/all
 tests/all: tests/CMakeFiles/run_test_cg.dir/all
 tests/all: tests/CMakeFiles/run_test_nonlinear_boundary_value_problem_4.dir/all
+tests/all: tests/CMakeFiles/run_test_gmres.dir/all
 tests/all: tests/CMakeFiles/run_test_nonlinear_boundary_value_problem_2.dir/all
 tests/all: tests/CMakeFiles/run_test_five_diag_matrix.dir/all
 tests/all: tests/CMakeFiles/run_test_dense_matrix.dir/all
@@ -135,6 +136,7 @@ tests/clean: tests/CMakeFiles/run_test_solver.dir/clean
 tests/clean: tests/CMakeFiles/run_test_simple_iteration_method.dir/clean
 tests/clean: tests/CMakeFiles/run_test_cg.dir/clean
 tests/clean: tests/CMakeFiles/run_test_nonlinear_boundary_value_problem_4.dir/clean
+tests/clean: tests/CMakeFiles/run_test_gmres.dir/clean
 tests/clean: tests/CMakeFiles/run_test_nonlinear_boundary_value_problem_2.dir/clean
 tests/clean: tests/CMakeFiles/run_test_five_diag_matrix.dir/clean
 tests/clean: tests/CMakeFiles/run_test_dense_matrix.dir/clean
@@ -235,12 +237,12 @@ src/CMakeFiles/my_project.dir/clean:
 # Target rules for target tests/CMakeFiles/run_test_solver.dir
 
 # All Build rule for target.
+tests/CMakeFiles/run_test_solver.dir/all: src/CMakeFiles/my_project.dir/all
 tests/CMakeFiles/run_test_solver.dir/all: tests/googletest-master/googletest/CMakeFiles/gtest_main.dir/all
 tests/CMakeFiles/run_test_solver.dir/all: tests/googletest-master/googletest/CMakeFiles/gtest.dir/all
-tests/CMakeFiles/run_test_solver.dir/all: src/CMakeFiles/my_project.dir/all
 	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/run_test_solver.dir/build.make tests/CMakeFiles/run_test_solver.dir/depend
 	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/run_test_solver.dir/build.make tests/CMakeFiles/run_test_solver.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/CMakeFiles --progress-num=31,32 "Built target run_test_solver"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/CMakeFiles --progress-num=33,34 "Built target run_test_solver"
 .PHONY : tests/CMakeFiles/run_test_solver.dir/all
 
 # Build rule for subdir invocation for target.
@@ -264,12 +266,12 @@ tests/CMakeFiles/run_test_solver.dir/clean:
 # Target rules for target tests/CMakeFiles/run_test_simple_iteration_method.dir
 
 # All Build rule for target.
+tests/CMakeFiles/run_test_simple_iteration_method.dir/all: src/CMakeFiles/my_project.dir/all
 tests/CMakeFiles/run_test_simple_iteration_method.dir/all: tests/googletest-master/googletest/CMakeFiles/gtest_main.dir/all
 tests/CMakeFiles/run_test_simple_iteration_method.dir/all: tests/googletest-master/googletest/CMakeFiles/gtest.dir/all
-tests/CMakeFiles/run_test_simple_iteration_method.dir/all: src/CMakeFiles/my_project.dir/all
 	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/run_test_simple_iteration_method.dir/build.make tests/CMakeFiles/run_test_simple_iteration_method.dir/depend
 	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/run_test_simple_iteration_method.dir/build.make tests/CMakeFiles/run_test_simple_iteration_method.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/CMakeFiles --progress-num=29,30 "Built target run_test_simple_iteration_method"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/CMakeFiles --progress-num=31,32 "Built target run_test_simple_iteration_method"
 .PHONY : tests/CMakeFiles/run_test_simple_iteration_method.dir/all
 
 # Build rule for subdir invocation for target.
@@ -293,9 +295,9 @@ tests/CMakeFiles/run_test_simple_iteration_method.dir/clean:
 # Target rules for target tests/CMakeFiles/run_test_cg.dir
 
 # All Build rule for target.
+tests/CMakeFiles/run_test_cg.dir/all: src/CMakeFiles/my_project.dir/all
 tests/CMakeFiles/run_test_cg.dir/all: tests/googletest-master/googletest/CMakeFiles/gtest_main.dir/all
 tests/CMakeFiles/run_test_cg.dir/all: tests/googletest-master/googletest/CMakeFiles/gtest.dir/all
-tests/CMakeFiles/run_test_cg.dir/all: src/CMakeFiles/my_project.dir/all
 	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/run_test_cg.dir/build.make tests/CMakeFiles/run_test_cg.dir/depend
 	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/run_test_cg.dir/build.make tests/CMakeFiles/run_test_cg.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/CMakeFiles --progress-num=15,16 "Built target run_test_cg"
@@ -322,12 +324,12 @@ tests/CMakeFiles/run_test_cg.dir/clean:
 # Target rules for target tests/CMakeFiles/run_test_nonlinear_boundary_value_problem_4.dir
 
 # All Build rule for target.
+tests/CMakeFiles/run_test_nonlinear_boundary_value_problem_4.dir/all: src/CMakeFiles/my_project.dir/all
 tests/CMakeFiles/run_test_nonlinear_boundary_value_problem_4.dir/all: tests/googletest-master/googletest/CMakeFiles/gtest_main.dir/all
 tests/CMakeFiles/run_test_nonlinear_boundary_value_problem_4.dir/all: tests/googletest-master/googletest/CMakeFiles/gtest.dir/all
-tests/CMakeFiles/run_test_nonlinear_boundary_value_problem_4.dir/all: src/CMakeFiles/my_project.dir/all
 	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/run_test_nonlinear_boundary_value_problem_4.dir/build.make tests/CMakeFiles/run_test_nonlinear_boundary_value_problem_4.dir/depend
 	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/run_test_nonlinear_boundary_value_problem_4.dir/build.make tests/CMakeFiles/run_test_nonlinear_boundary_value_problem_4.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/CMakeFiles --progress-num=27,28 "Built target run_test_nonlinear_boundary_value_problem_4"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/CMakeFiles --progress-num=29,30 "Built target run_test_nonlinear_boundary_value_problem_4"
 .PHONY : tests/CMakeFiles/run_test_nonlinear_boundary_value_problem_4.dir/all
 
 # Build rule for subdir invocation for target.
@@ -348,15 +350,44 @@ tests/CMakeFiles/run_test_nonlinear_boundary_value_problem_4.dir/clean:
 .PHONY : tests/CMakeFiles/run_test_nonlinear_boundary_value_problem_4.dir/clean
 
 #=============================================================================
+# Target rules for target tests/CMakeFiles/run_test_gmres.dir
+
+# All Build rule for target.
+tests/CMakeFiles/run_test_gmres.dir/all: src/CMakeFiles/my_project.dir/all
+tests/CMakeFiles/run_test_gmres.dir/all: tests/googletest-master/googletest/CMakeFiles/gtest_main.dir/all
+tests/CMakeFiles/run_test_gmres.dir/all: tests/googletest-master/googletest/CMakeFiles/gtest.dir/all
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/run_test_gmres.dir/build.make tests/CMakeFiles/run_test_gmres.dir/depend
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/run_test_gmres.dir/build.make tests/CMakeFiles/run_test_gmres.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/CMakeFiles --progress-num=25,26 "Built target run_test_gmres"
+.PHONY : tests/CMakeFiles/run_test_gmres.dir/all
+
+# Build rule for subdir invocation for target.
+tests/CMakeFiles/run_test_gmres.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/CMakeFiles 12
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/CMakeFiles/run_test_gmres.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/CMakeFiles 0
+.PHONY : tests/CMakeFiles/run_test_gmres.dir/rule
+
+# Convenience name for target.
+run_test_gmres: tests/CMakeFiles/run_test_gmres.dir/rule
+
+.PHONY : run_test_gmres
+
+# clean rule for target.
+tests/CMakeFiles/run_test_gmres.dir/clean:
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/run_test_gmres.dir/build.make tests/CMakeFiles/run_test_gmres.dir/clean
+.PHONY : tests/CMakeFiles/run_test_gmres.dir/clean
+
+#=============================================================================
 # Target rules for target tests/CMakeFiles/run_test_nonlinear_boundary_value_problem_2.dir
 
 # All Build rule for target.
+tests/CMakeFiles/run_test_nonlinear_boundary_value_problem_2.dir/all: src/CMakeFiles/my_project.dir/all
 tests/CMakeFiles/run_test_nonlinear_boundary_value_problem_2.dir/all: tests/googletest-master/googletest/CMakeFiles/gtest_main.dir/all
 tests/CMakeFiles/run_test_nonlinear_boundary_value_problem_2.dir/all: tests/googletest-master/googletest/CMakeFiles/gtest.dir/all
-tests/CMakeFiles/run_test_nonlinear_boundary_value_problem_2.dir/all: src/CMakeFiles/my_project.dir/all
 	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/run_test_nonlinear_boundary_value_problem_2.dir/build.make tests/CMakeFiles/run_test_nonlinear_boundary_value_problem_2.dir/depend
 	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/run_test_nonlinear_boundary_value_problem_2.dir/build.make tests/CMakeFiles/run_test_nonlinear_boundary_value_problem_2.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/CMakeFiles --progress-num=25,26 "Built target run_test_nonlinear_boundary_value_problem_2"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/CMakeFiles --progress-num=27,28 "Built target run_test_nonlinear_boundary_value_problem_2"
 .PHONY : tests/CMakeFiles/run_test_nonlinear_boundary_value_problem_2.dir/all
 
 # Build rule for subdir invocation for target.
@@ -380,9 +411,9 @@ tests/CMakeFiles/run_test_nonlinear_boundary_value_problem_2.dir/clean:
 # Target rules for target tests/CMakeFiles/run_test_five_diag_matrix.dir
 
 # All Build rule for target.
+tests/CMakeFiles/run_test_five_diag_matrix.dir/all: src/CMakeFiles/my_project.dir/all
 tests/CMakeFiles/run_test_five_diag_matrix.dir/all: tests/googletest-master/googletest/CMakeFiles/gtest_main.dir/all
 tests/CMakeFiles/run_test_five_diag_matrix.dir/all: tests/googletest-master/googletest/CMakeFiles/gtest.dir/all
-tests/CMakeFiles/run_test_five_diag_matrix.dir/all: src/CMakeFiles/my_project.dir/all
 	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/run_test_five_diag_matrix.dir/build.make tests/CMakeFiles/run_test_five_diag_matrix.dir/depend
 	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/run_test_five_diag_matrix.dir/build.make tests/CMakeFiles/run_test_five_diag_matrix.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/CMakeFiles --progress-num=23,24 "Built target run_test_five_diag_matrix"
@@ -409,9 +440,9 @@ tests/CMakeFiles/run_test_five_diag_matrix.dir/clean:
 # Target rules for target tests/CMakeFiles/run_test_dense_matrix.dir
 
 # All Build rule for target.
+tests/CMakeFiles/run_test_dense_matrix.dir/all: src/CMakeFiles/my_project.dir/all
 tests/CMakeFiles/run_test_dense_matrix.dir/all: tests/googletest-master/googletest/CMakeFiles/gtest_main.dir/all
 tests/CMakeFiles/run_test_dense_matrix.dir/all: tests/googletest-master/googletest/CMakeFiles/gtest.dir/all
-tests/CMakeFiles/run_test_dense_matrix.dir/all: src/CMakeFiles/my_project.dir/all
 	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/run_test_dense_matrix.dir/build.make tests/CMakeFiles/run_test_dense_matrix.dir/depend
 	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/run_test_dense_matrix.dir/build.make tests/CMakeFiles/run_test_dense_matrix.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/CMakeFiles --progress-num=19,20 "Built target run_test_dense_matrix"
@@ -438,9 +469,9 @@ tests/CMakeFiles/run_test_dense_matrix.dir/clean:
 # Target rules for target tests/CMakeFiles/run_test_exception.dir
 
 # All Build rule for target.
+tests/CMakeFiles/run_test_exception.dir/all: src/CMakeFiles/my_project.dir/all
 tests/CMakeFiles/run_test_exception.dir/all: tests/googletest-master/googletest/CMakeFiles/gtest_main.dir/all
 tests/CMakeFiles/run_test_exception.dir/all: tests/googletest-master/googletest/CMakeFiles/gtest.dir/all
-tests/CMakeFiles/run_test_exception.dir/all: src/CMakeFiles/my_project.dir/all
 	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/run_test_exception.dir/build.make tests/CMakeFiles/run_test_exception.dir/depend
 	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/run_test_exception.dir/build.make tests/CMakeFiles/run_test_exception.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/CMakeFiles --progress-num=21,22 "Built target run_test_exception"
@@ -467,9 +498,9 @@ tests/CMakeFiles/run_test_exception.dir/clean:
 # Target rules for target tests/CMakeFiles/run_test_csr_matrix.dir
 
 # All Build rule for target.
+tests/CMakeFiles/run_test_csr_matrix.dir/all: src/CMakeFiles/my_project.dir/all
 tests/CMakeFiles/run_test_csr_matrix.dir/all: tests/googletest-master/googletest/CMakeFiles/gtest_main.dir/all
 tests/CMakeFiles/run_test_csr_matrix.dir/all: tests/googletest-master/googletest/CMakeFiles/gtest.dir/all
-tests/CMakeFiles/run_test_csr_matrix.dir/all: src/CMakeFiles/my_project.dir/all
 	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/run_test_csr_matrix.dir/build.make tests/CMakeFiles/run_test_csr_matrix.dir/depend
 	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/run_test_csr_matrix.dir/build.make tests/CMakeFiles/run_test_csr_matrix.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/CMakeFiles --progress-num=17,18 "Built target run_test_csr_matrix"

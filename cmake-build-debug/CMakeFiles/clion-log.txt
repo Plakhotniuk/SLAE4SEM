@@ -1,30 +1,11 @@
 /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DWITH_TESTS=ON -G "CodeBlocks - Unix Makefiles" /Users/arseniy/Desktop/SLAE4SEM
--- The C compiler identification is AppleClang 12.0.5.12050022
--- The CXX compiler identification is AppleClang 12.0.5.12050022
--- Check for working C compiler: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc
--- Check for working C compiler: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc - works
--- Detecting C compiler ABI info
--- Detecting C compiler ABI info - done
--- Detecting C compile features
--- Detecting C compile features - done
--- Check for working CXX compiler: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++
--- Check for working CXX compiler: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ - works
--- Detecting CXX compiler ABI info
--- Detecting CXX compiler ABI info - done
--- Detecting CXX compile features
--- Detecting CXX compile features - done
 TESTING: ON
--- Found Python: /Users/arseniy/opt/anaconda3/bin/python3.9 (found version "3.9.7") found components: Interpreter 
--- Looking for pthread.h
--- Looking for pthread.h - found
--- Performing Test CMAKE_HAVE_LIBC_PTHREAD
--- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
--- Found Threads: TRUE  
 TEST_FILE: /Users/arseniy/Desktop/SLAE4SEM/tests/test_cg.cpp
 TEST_FILE: /Users/arseniy/Desktop/SLAE4SEM/tests/test_csr_matrix.cpp
 TEST_FILE: /Users/arseniy/Desktop/SLAE4SEM/tests/test_dense_matrix.cpp
 TEST_FILE: /Users/arseniy/Desktop/SLAE4SEM/tests/test_exception.cpp
 TEST_FILE: /Users/arseniy/Desktop/SLAE4SEM/tests/test_five_diag_matrix.cpp
+TEST_FILE: /Users/arseniy/Desktop/SLAE4SEM/tests/test_gmres.cpp
 TEST_FILE: /Users/arseniy/Desktop/SLAE4SEM/tests/test_nonlinear_boundary_value_problem_2.cpp
 TEST_FILE: /Users/arseniy/Desktop/SLAE4SEM/tests/test_nonlinear_boundary_value_problem_4.cpp
 TEST_FILE: /Users/arseniy/Desktop/SLAE4SEM/tests/test_simple_iteration_method.cpp

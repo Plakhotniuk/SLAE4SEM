@@ -253,6 +253,19 @@ run_test_nonlinear_boundary_value_problem_4/fast:
 .PHONY : run_test_nonlinear_boundary_value_problem_4/fast
 
 #=============================================================================
+# Target rules for targets named run_test_gmres
+
+# Build rule for target.
+run_test_gmres: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 run_test_gmres
+.PHONY : run_test_gmres
+
+# fast build rule for target.
+run_test_gmres/fast:
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/run_test_gmres.dir/build.make tests/CMakeFiles/run_test_gmres.dir/build
+.PHONY : run_test_gmres/fast
+
+#=============================================================================
 # Target rules for targets named run_test_nonlinear_boundary_value_problem_2
 
 # Build rule for target.
@@ -392,6 +405,7 @@ help:
 	@echo "... run_test_dense_matrix"
 	@echo "... run_test_exception"
 	@echo "... run_test_five_diag_matrix"
+	@echo "... run_test_gmres"
 	@echo "... run_test_nonlinear_boundary_value_problem_2"
 	@echo "... run_test_nonlinear_boundary_value_problem_4"
 	@echo "... run_test_simple_iteration_method"

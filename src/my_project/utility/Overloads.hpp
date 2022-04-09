@@ -23,6 +23,15 @@ std::vector<T> operator*(const T &k, const std::vector<T> &b){
     return res;
 };
 
+template<typename T>
+std::vector<T> operator/(const std::vector<T> &b, const T &k){
+    std::vector<T> res(b.size());
+    for (size_t i = 0; i < b.size(); ++i) {
+        res[i] = b[i] / k;
+    }
+    return res;
+};
+
 /***
  * Умножение вектора на число
  * @tparam T Тип числа

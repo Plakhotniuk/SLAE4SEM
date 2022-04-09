@@ -8,6 +8,9 @@ using std::cout;
 using std::array;
 using std::vector;
 
+
+
+
 namespace Slae::Matrix{
     FiveDiagonalMatrix::FiveDiagonalMatrix(unsigned int size): data_(size) {};
 
@@ -98,10 +101,10 @@ namespace Slae::Matrix{
         data_[ind][3] = d;
         data_[ind][4] = e;
     }
-    void FiveDiagonalMatrix::check_diagonal_domimance() const {
+    DIAG_DOM FiveDiagonalMatrix::check_diagonal_domimance() const {
         bool one_strict_inequality = false;
         bool non_strict_inequality = true;
-        for(int i = 0; i < this->rows(); ++i){
+        for(int i = 0; i < rows(); ++i){
             if(abs(data_[i][2]) <  abs(data_[i][0]) +  abs(data_[i][1]) +
             abs(data_[i][3]) +  abs(data_[i][4])){
                 cout << "The sufficient condition of diagonal dominance is not fulfilled in row: " << i << std::endl;
@@ -114,8 +117,7 @@ namespace Slae::Matrix{
             }
         }
         if(one_strict_inequality && non_strict_inequality){
-            cout << "The sufficient condition of diagonal dominance is fulfilled!"
-                    "Strict inequality is satisfied in at least one row! " << std::endl;
+            return DIAG_DOM::NO_DIAG_DOM;
         }
     }
     void FiveDiagonalMatrix::multiply_row_by_value(unsigned int ind, double val) {

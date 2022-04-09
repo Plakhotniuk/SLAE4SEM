@@ -89,7 +89,7 @@ public:
      * @return Вектор - результат перемножения
      */
     std::vector<elm_t> operator*(const std::vector<elm_t> &b) const{
-        std::vector<elm_t> res(this->H);
+        std::vector<elm_t> res(H);
         for(idx_t i = 0; i < H; ++i){
             idx_t skip = this->rows[i];
             idx_t count = this->rows[i+1] - skip;

@@ -323,6 +323,54 @@
 					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
+			<Target title="run_test_gmres">
+				<Option output="/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/run_test_gmres" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/arseniy/Desktop/SLAE4SEM/src"/>
+					<Add directory="/Users/arseniy/Desktop/SLAE4SEM/tests/googletest-master/googletest/include"/>
+					<Add directory="/Users/arseniy/Desktop/SLAE4SEM/tests/googletest-master/googletest"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/12.0.5/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 run_test_gmres"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="run_test_gmres/fast">
+				<Option output="/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/run_test_gmres" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/arseniy/Desktop/SLAE4SEM/src"/>
+					<Add directory="/Users/arseniy/Desktop/SLAE4SEM/tests/googletest-master/googletest/include"/>
+					<Add directory="/Users/arseniy/Desktop/SLAE4SEM/tests/googletest-master/googletest"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/12.0.5/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 run_test_gmres/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
 			<Target title="run_test_nonlinear_boundary_value_problem_2">
 				<Option output="/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/run_test_nonlinear_boundary_value_problem_2" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests"/>
@@ -789,6 +837,9 @@
 		<Unit filename="/Users/arseniy/Desktop/SLAE4SEM/src/my_project/solvers/FiveDiagonalSolver.hpp">
 			<Option target="my_project"/>
 		</Unit>
+		<Unit filename="/Users/arseniy/Desktop/SLAE4SEM/src/my_project/solvers/GMRES.h">
+			<Option target="my_project"/>
+		</Unit>
 		<Unit filename="/Users/arseniy/Desktop/SLAE4SEM/src/my_project/solvers/GaussSeidel.hpp">
 			<Option target="my_project"/>
 		</Unit>
@@ -851,6 +902,9 @@
 		</Unit>
 		<Unit filename="/Users/arseniy/Desktop/SLAE4SEM/tests/test_five_diag_matrix.cpp">
 			<Option target="run_test_five_diag_matrix"/>
+		</Unit>
+		<Unit filename="/Users/arseniy/Desktop/SLAE4SEM/tests/test_gmres.cpp">
+			<Option target="run_test_gmres"/>
 		</Unit>
 		<Unit filename="/Users/arseniy/Desktop/SLAE4SEM/tests/test_nonlinear_boundary_value_problem_2.cpp">
 			<Option target="run_test_nonlinear_boundary_value_problem_2"/>
