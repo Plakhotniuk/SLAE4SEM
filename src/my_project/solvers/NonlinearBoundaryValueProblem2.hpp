@@ -14,17 +14,33 @@
 #include "my_project/solvers/ThreeDiadonalSolver.hpp"
 #include "ostream"
 
-double GetCoef1(std::function<double(double)>& a, double h, double x){
+enum COLUMNINDEX {
+    C_FIRST = 1,
+    C_SECOND = 2,
+    C_THIRD = 3,
+};
+
+template<int C_Index>
+struct Calc{
+    static double calc(std::function<double(double)>& a,
+                       std::function<double(double)>& b, double h, double x);
+};
+
+template<>
+double Calc<COLUMNINDEX::C_FIRST>::calc(std::function<double(double)>& a,
+                                                                std::function<double(double)>& b, double h, double x){
     return 1/(h*h) - a(x)/(2*h);
 }
 
-
-double GetCoef2(std::function<double(double)>& b, double h, double x){
+template<>
+double Calc<COLUMNINDEX::C_SECOND>::calc(std::function<double(double)>& a,
+                                                                 std::function<double(double)>& b, double h, double x){
     return -2/(h*h) + b(x);
 }
 
-
-double GetCoef3(std::function<double(double)>& a, double h, double x){
+template<>
+double Calc<COLUMNINDEX::C_THIRD>::calc(std::function<double(double)>& a,
+                                                                std::function<double(double)>& b, double h, double x){
     return 1/(h*h) + a(x)/(2*h);
 }
 
@@ -34,24 +50,24 @@ std::vector<double> NonlinearBoundaryValueProblem2(double left_bound_x, double r
                                                    std::function<double(double)>& f) {
     // шаг разбиения
     auto h = (right_bound_x - left_bound_x) / number_of_splits;
-    std::vector<double> x(number_of_splits + 1);
-    for(int i = 0; i < x.size(); ++i){
-        x[i] = left_bound_x + h * i;
-    }
+
     // Матрица коэффициентов
     Slae::Matrix::ThreeDiagonalMatrix data = Slae::Matrix::ThreeDiagonalMatrix(number_of_splits + 1);
+
     // Коэф в начале
     data(0, 1) = 1;
     //Коэф в конце
     data(data.rows() - 1, 1) = 1;
     //Заполение остальных
     for(int i = 1; i < data.rows() - 1; ++i){
-            data.fill_row(i, GetCoef1(a, h, x[i]), GetCoef2(b, h, x[i]), GetCoef3(a, h, x[i]));
+            data.fill_row(i, Calc<COLUMNINDEX::C_FIRST>::calc(a, b, h, left_bound_x + h * i),
+                          Calc<COLUMNINDEX::C_SECOND>::calc(a, b, h, left_bound_x + h * i),
+                          Calc<COLUMNINDEX::C_THIRD>::calc(a, b, h, left_bound_x + h * i));
     }
     std::vector<double> y(number_of_splits + 1);
     y[0] = left_bound_y;
     for(int i = 1; i < y.size() - 1; ++i){
-        y[i] = f(x[i]);
+        y[i] = f(left_bound_x + h * i);
     }
     y[y.size() - 1] = right_bound_y;
     return Slae::Solvers::solveThreeDiagonal(data, y);

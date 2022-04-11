@@ -12,10 +12,7 @@
 namespace Slae::Solvers
 {
     /** @brief Метод решает систему уравнений при помощи метода прогонки
-* Решает систему линейных алгебраических уравнений при помощи метода прогонки. О методе прогонки можно узнать из
-* https://mipt.ru/education/chair/computational_mathematics/study/materials/compmath/other/Aristova_Zavyalova_Lobanov_2014.pdf
-*
-* @param matrix трехдиагональная матрица
+* @param matrix пятидиагональная матрица
 * @param col столбец правой части
 * @return решение СЛАУ
 *
