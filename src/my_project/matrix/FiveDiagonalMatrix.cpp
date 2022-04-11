@@ -104,22 +104,22 @@ namespace Slae::Matrix{
     DIAG_DOM FiveDiagonalMatrix::check_diagonal_domimance() const {
         bool one_strict_inequality = false;
         bool non_strict_inequality = true;
-        for(int i = 0; i < rows(); ++i){
+        for(int i = 0; i < rows(); ++i)
+        {
             if(abs(data_[i][2]) <  abs(data_[i][0]) +  abs(data_[i][1]) +
-            abs(data_[i][3]) +  abs(data_[i][4])){
-                cout << "The sufficient condition of diagonal dominance is not fulfilled in row: " << i << std::endl;
+            abs(data_[i][3]) +  abs(data_[i][4]))
+            {
                 non_strict_inequality =!non_strict_inequality;
                 break;
             }
             if(abs(data_[i][2]) >  abs(data_[i][0]) +  abs(data_[i][1]) +
-                                   abs(data_[i][3]) +  abs(data_[i][4])){
+                                   abs(data_[i][3]) +  abs(data_[i][4]))
                 one_strict_inequality = !one_strict_inequality;
-            }
         }
-        if(one_strict_inequality && non_strict_inequality){
-            return DIAG_DOM::NO_DIAG_DOM;
-        }
+        if(one_strict_inequality && non_strict_inequality) return DIAG_DOM::DIAG_DOM;
+        else return DIAG_DOM::NO_DIAG_DOM;
     }
+
     void FiveDiagonalMatrix::multiply_row_by_value(unsigned int ind, double val) {
         for(int i = 0; i < 5; ++i)
             data_[ind][i] *= val;

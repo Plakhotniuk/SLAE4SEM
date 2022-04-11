@@ -84,7 +84,7 @@ set(CMAKE_DEPEND_INFO_FILES
   "src/CMakeFiles/my_project.dir/DependInfo.cmake"
   "tests/CMakeFiles/run_test_solver.dir/DependInfo.cmake"
   "tests/CMakeFiles/run_test_simple_iteration_method.dir/DependInfo.cmake"
-  "tests/CMakeFiles/run_test_cg.dir/DependInfo.cmake"
+  "tests/CMakeFiles/run_test_code_optimize.dir/DependInfo.cmake"
   "tests/CMakeFiles/run_test_nonlinear_boundary_value_problem_4.dir/DependInfo.cmake"
   "tests/CMakeFiles/run_test_gmres.dir/DependInfo.cmake"
   "tests/CMakeFiles/run_test_nonlinear_boundary_value_problem_2.dir/DependInfo.cmake"

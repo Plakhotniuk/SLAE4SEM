@@ -227,8 +227,8 @@
 					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="run_test_cg">
-				<Option output="/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/run_test_cg" prefix_auto="0" extension_auto="0"/>
+			<Target title="run_test_code_optimize">
+				<Option output="/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/run_test_code_optimize" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
@@ -245,14 +245,14 @@
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 run_test_cg"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 run_test_code_optimize"/>
 					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j4 -f &quot;/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="run_test_cg/fast">
-				<Option output="/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/run_test_cg" prefix_auto="0" extension_auto="0"/>
+			<Target title="run_test_code_optimize/fast">
+				<Option output="/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/run_test_code_optimize" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
@@ -269,7 +269,7 @@
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 run_test_cg/fast"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 run_test_code_optimize/fast"/>
 					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j4 -f &quot;/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 clean"/>
@@ -837,7 +837,7 @@
 		<Unit filename="/Users/arseniy/Desktop/SLAE4SEM/src/my_project/solvers/FiveDiagonalSolver.hpp">
 			<Option target="my_project"/>
 		</Unit>
-		<Unit filename="/Users/arseniy/Desktop/SLAE4SEM/src/my_project/solvers/GMRES.h">
+		<Unit filename="/Users/arseniy/Desktop/SLAE4SEM/src/my_project/solvers/GMRES.hpp">
 			<Option target="my_project"/>
 		</Unit>
 		<Unit filename="/Users/arseniy/Desktop/SLAE4SEM/src/my_project/solvers/GaussSeidel.hpp">
@@ -888,8 +888,8 @@
 		<Unit filename="/Users/arseniy/Desktop/SLAE4SEM/tests/googletest-master/googletest/src/gtest_main.cc">
 			<Option target="gtest_main"/>
 		</Unit>
-		<Unit filename="/Users/arseniy/Desktop/SLAE4SEM/tests/test_cg.cpp">
-			<Option target="run_test_cg"/>
+		<Unit filename="/Users/arseniy/Desktop/SLAE4SEM/tests/test_code_optimize.cpp">
+			<Option target="run_test_code_optimize"/>
 		</Unit>
 		<Unit filename="/Users/arseniy/Desktop/SLAE4SEM/tests/test_csr_matrix.cpp">
 			<Option target="run_test_csr_matrix"/>

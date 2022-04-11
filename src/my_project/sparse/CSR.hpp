@@ -120,10 +120,11 @@ public:
 template<typename T>
 std::ostream &operator<<(std::ostream &os, const CSR<T> &A){
     for(int i = 0; i < A.sizeH(); ++i){
+        os << "|| ";
         for(int j = 0; j < A.sizeW(); ++j){
             os << A(i, j) << " ";
         }
-        os <<"\n";
+        os <<"||" << std::endl;
     }
     return os;
 };

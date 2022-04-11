@@ -13,7 +13,6 @@
 namespace Slae::Matrix{
 
     enum class DIAG_DOM {
-        DIAG_DOM_STRICT=0,
         DIAG_DOM = 1,
         NO_DIAG_DOM = 2
     };

@@ -10,12 +10,13 @@
 #include "../dense/Densematrix.hpp"
 #include "my_project/utility/Norm.hpp"
 #include "my_project/utility/Overloads.hpp"
+#include <ostream>
 template<typename T>
 std::vector<T> Gmres(const CSR<T> &A, const std::vector<T> &b, const std::vector<T> &initialState, const T &tolerance){
     std::vector<T> r = A * initialState - b;
     std::vector<T> currentState = initialState;
     std::vector<std::vector<T>> v(currentState.size() + 1);
-    DenseMatrix<T> h(currentState.size() + 1, currentState.size());
+    DenseMatrix<T> h(currentState.size(), currentState.size() + 1);
     std::vector<std::vector<T>> R(currentState.size());
     std::vector<T> y(currentState.size());
     int N;
@@ -23,12 +24,13 @@ std::vector<T> Gmres(const CSR<T> &A, const std::vector<T> &b, const std::vector
     bool solution = true;
     std::vector<T> z;
     double gamma;
+    int j = 0;
     while(solution){
-        double betta = norm(r, NormType::SecondNorm);
-        v[0] = r / betta;
+        double beta = norm(r, NormType::SecondNorm);
+        v[0] = r / beta;
         std::vector<double> e;
         e[0] = 1.;
-        z = betta * e;
+        z = beta * e;
         for(int i = 0; i < m; ++i)
         {
             if(solution)
@@ -36,8 +38,8 @@ std::vector<T> Gmres(const CSR<T> &A, const std::vector<T> &b, const std::vector
                 std::vector<T> t = A * v[i];
                 for(int k = 0; k < i; ++k)
                 {
-                    h(k,i) = t * v[k];
-                    t = t - h(k,i) * v[k];
+                    h(k,j) = t * v[k];
+                    t = t - h(k,j) * v[k];
                 }
                 h(i+1, i) = norm(t, NormType::SecondNorm);
                 v[i+1] = t / h(i+1, i);
@@ -72,10 +74,10 @@ std::vector<T> Gmres(const CSR<T> &A, const std::vector<T> &b, const std::vector
         }
         if(!solution)
         {
-            for(int k = N; k > 0; k--)
+            for(int k = N - 1; k > 0; k--)
             {
                 double sum1 = 0.;
-                for(int i = k+1 ; i < N; ++i)
+                for(int i = k + 1; i < N; ++i)
                 {
                     sum1 = sum1 + R[k][i] * y[i];
                 }
@@ -92,5 +94,6 @@ std::vector<T> Gmres(const CSR<T> &A, const std::vector<T> &b, const std::vector
             r = A * currentState - b;
             solution = !solution;
         }
+        ++j;
     }
 }

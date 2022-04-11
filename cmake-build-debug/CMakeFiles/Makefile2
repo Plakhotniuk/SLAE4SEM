@@ -114,7 +114,7 @@ src/clean: src/CMakeFiles/my_project.dir/clean
 # Recursive "all" directory target.
 tests/all: tests/CMakeFiles/run_test_solver.dir/all
 tests/all: tests/CMakeFiles/run_test_simple_iteration_method.dir/all
-tests/all: tests/CMakeFiles/run_test_cg.dir/all
+tests/all: tests/CMakeFiles/run_test_code_optimize.dir/all
 tests/all: tests/CMakeFiles/run_test_nonlinear_boundary_value_problem_4.dir/all
 tests/all: tests/CMakeFiles/run_test_gmres.dir/all
 tests/all: tests/CMakeFiles/run_test_nonlinear_boundary_value_problem_2.dir/all
@@ -134,7 +134,7 @@ tests/preinstall: tests/googletest-master/preinstall
 # Recursive "clean" directory target.
 tests/clean: tests/CMakeFiles/run_test_solver.dir/clean
 tests/clean: tests/CMakeFiles/run_test_simple_iteration_method.dir/clean
-tests/clean: tests/CMakeFiles/run_test_cg.dir/clean
+tests/clean: tests/CMakeFiles/run_test_code_optimize.dir/clean
 tests/clean: tests/CMakeFiles/run_test_nonlinear_boundary_value_problem_4.dir/clean
 tests/clean: tests/CMakeFiles/run_test_gmres.dir/clean
 tests/clean: tests/CMakeFiles/run_test_nonlinear_boundary_value_problem_2.dir/clean
@@ -292,33 +292,33 @@ tests/CMakeFiles/run_test_simple_iteration_method.dir/clean:
 .PHONY : tests/CMakeFiles/run_test_simple_iteration_method.dir/clean
 
 #=============================================================================
-# Target rules for target tests/CMakeFiles/run_test_cg.dir
+# Target rules for target tests/CMakeFiles/run_test_code_optimize.dir
 
 # All Build rule for target.
-tests/CMakeFiles/run_test_cg.dir/all: src/CMakeFiles/my_project.dir/all
-tests/CMakeFiles/run_test_cg.dir/all: tests/googletest-master/googletest/CMakeFiles/gtest_main.dir/all
-tests/CMakeFiles/run_test_cg.dir/all: tests/googletest-master/googletest/CMakeFiles/gtest.dir/all
-	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/run_test_cg.dir/build.make tests/CMakeFiles/run_test_cg.dir/depend
-	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/run_test_cg.dir/build.make tests/CMakeFiles/run_test_cg.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/CMakeFiles --progress-num=15,16 "Built target run_test_cg"
-.PHONY : tests/CMakeFiles/run_test_cg.dir/all
+tests/CMakeFiles/run_test_code_optimize.dir/all: src/CMakeFiles/my_project.dir/all
+tests/CMakeFiles/run_test_code_optimize.dir/all: tests/googletest-master/googletest/CMakeFiles/gtest_main.dir/all
+tests/CMakeFiles/run_test_code_optimize.dir/all: tests/googletest-master/googletest/CMakeFiles/gtest.dir/all
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/run_test_code_optimize.dir/build.make tests/CMakeFiles/run_test_code_optimize.dir/depend
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/run_test_code_optimize.dir/build.make tests/CMakeFiles/run_test_code_optimize.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/CMakeFiles --progress-num=15,16 "Built target run_test_code_optimize"
+.PHONY : tests/CMakeFiles/run_test_code_optimize.dir/all
 
 # Build rule for subdir invocation for target.
-tests/CMakeFiles/run_test_cg.dir/rule: cmake_check_build_system
+tests/CMakeFiles/run_test_code_optimize.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/CMakeFiles 12
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/CMakeFiles/run_test_cg.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/CMakeFiles/run_test_code_optimize.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/CMakeFiles 0
-.PHONY : tests/CMakeFiles/run_test_cg.dir/rule
+.PHONY : tests/CMakeFiles/run_test_code_optimize.dir/rule
 
 # Convenience name for target.
-run_test_cg: tests/CMakeFiles/run_test_cg.dir/rule
+run_test_code_optimize: tests/CMakeFiles/run_test_code_optimize.dir/rule
 
-.PHONY : run_test_cg
+.PHONY : run_test_code_optimize
 
 # clean rule for target.
-tests/CMakeFiles/run_test_cg.dir/clean:
-	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/run_test_cg.dir/build.make tests/CMakeFiles/run_test_cg.dir/clean
-.PHONY : tests/CMakeFiles/run_test_cg.dir/clean
+tests/CMakeFiles/run_test_code_optimize.dir/clean:
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/run_test_code_optimize.dir/build.make tests/CMakeFiles/run_test_code_optimize.dir/clean
+.PHONY : tests/CMakeFiles/run_test_code_optimize.dir/clean
 
 #=============================================================================
 # Target rules for target tests/CMakeFiles/run_test_nonlinear_boundary_value_problem_4.dir

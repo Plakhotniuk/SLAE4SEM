@@ -19,7 +19,7 @@
 /Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/CMakeFiles/edit_cache.dir
 /Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/CMakeFiles/run_test_solver.dir
 /Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/CMakeFiles/run_test_simple_iteration_method.dir
-/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/CMakeFiles/run_test_cg.dir
+/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/CMakeFiles/run_test_code_optimize.dir
 /Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/CMakeFiles/run_test_nonlinear_boundary_value_problem_4.dir
 /Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/CMakeFiles/run_test_gmres.dir
 /Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/CMakeFiles/run_test_nonlinear_boundary_value_problem_2.dir

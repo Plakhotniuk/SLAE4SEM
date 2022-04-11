@@ -227,17 +227,17 @@ run_test_simple_iteration_method/fast:
 .PHONY : run_test_simple_iteration_method/fast
 
 #=============================================================================
-# Target rules for targets named run_test_cg
+# Target rules for targets named run_test_code_optimize
 
 # Build rule for target.
-run_test_cg: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 run_test_cg
-.PHONY : run_test_cg
+run_test_code_optimize: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 run_test_code_optimize
+.PHONY : run_test_code_optimize
 
 # fast build rule for target.
-run_test_cg/fast:
-	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/run_test_cg.dir/build.make tests/CMakeFiles/run_test_cg.dir/build
-.PHONY : run_test_cg/fast
+run_test_code_optimize/fast:
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/run_test_code_optimize.dir/build.make tests/CMakeFiles/run_test_code_optimize.dir/build
+.PHONY : run_test_code_optimize/fast
 
 #=============================================================================
 # Target rules for targets named run_test_nonlinear_boundary_value_problem_4
@@ -400,7 +400,7 @@ help:
 	@echo "... gtest"
 	@echo "... gtest_main"
 	@echo "... my_project"
-	@echo "... run_test_cg"
+	@echo "... run_test_code_optimize"
 	@echo "... run_test_csr_matrix"
 	@echo "... run_test_dense_matrix"
 	@echo "... run_test_exception"
