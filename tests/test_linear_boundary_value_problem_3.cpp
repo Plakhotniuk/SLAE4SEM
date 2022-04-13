@@ -3,7 +3,7 @@
 //
 #include "gtest/gtest.h"
 #include <my_project/utility/Overloads.hpp>
-#include <my_project/solvers/LinearBoundaryValueProblem2.hpp>
+#include "my_project/matrix/LinearBoundaryValueProblemMatrix3.hpp"
 #include <iostream>
 #include "functional"
 #include <cmath>
@@ -11,7 +11,7 @@
 #include <algorithm>
 
 
-TEST(NONLINEARBOUNDARYVALUEPROBLEM, TEST) {
+TEST(LINEARBOUNDARYVALUEPROBLEM, TEST) {
     std::function<double(double)> f = [](double x) { return 2*x; };
 
     std::function<double(double)> a = [](double x) { return 0.; };
@@ -34,7 +34,7 @@ TEST(NONLINEARBOUNDARYVALUEPROBLEM, TEST) {
             y[i] = y_func(left_bound_x + h * i);
         }
     std::pair<Slae::Matrix::ThreeDiagonalMatrix, std::vector<double>> matrix =
-            ExpandedMatrixForLinearBoundaryValueProblem2(left_bound_x, right_bound_x,
+            ExpandedMatrixForLinearBoundaryValueProblem3(left_bound_x, right_bound_x,
                                                          left_bound_y, right_bound_y,
                                                          max_number_of_splits, a, b, f);
 
@@ -46,7 +46,7 @@ TEST(NONLINEARBOUNDARYVALUEPROBLEM, TEST) {
     file.close();
 }
 
-TEST(NONLINEARBOUNDARYVALUEPROBLEM2, TEST2) {
+TEST(LINEARBOUNDARYVALUEPROBLEM2, TEST2) {
     std::function<double(double)> f = [](double x) { return 2*x; };
 
     std::function<double(double)> a = [](double x) { return 0.; };
@@ -65,7 +65,7 @@ TEST(NONLINEARBOUNDARYVALUEPROBLEM2, TEST2) {
     file.open("test_2_err3.txt", std::fstream::out);
     for(int j = 20; j < max_number_of_splits; j += 10){
         std::pair<Slae::Matrix::ThreeDiagonalMatrix, std::vector<double>> matrix =
-                ExpandedMatrixForLinearBoundaryValueProblem2(left_bound_x, right_bound_x,
+                ExpandedMatrixForLinearBoundaryValueProblem3(left_bound_x, right_bound_x,
                                                              left_bound_y, right_bound_y,
                                                              j, a, b, f);
 

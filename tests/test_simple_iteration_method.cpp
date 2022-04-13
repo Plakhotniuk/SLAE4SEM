@@ -4,7 +4,7 @@
 #include "gtest/gtest.h"
 #include <my_project/solvers/SimpleIteration.hpp>
 #include <my_project/utility/Overloads.hpp>
-#include <my_project/solvers/steepest_gradient_descent.hpp>
+#include <my_project/solvers/Steepest_gradient_descent.hpp>
 #include <my_project/solvers/CG.hpp>
 TEST(SIMPLEITERATION, TEST) {
     double tolerance = 1e-5;

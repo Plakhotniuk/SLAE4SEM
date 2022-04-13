@@ -2,15 +2,15 @@
 // Created by Арсений Плахотнюк on 24.03.2022.
 //
 
-#ifndef MY_PROJECT_LINEARBOUNDARYVALUEPROBLEM4_HPP
-#define MY_PROJECT_LINEARBOUNDARYVALUEPROBLEM4_HPP
+#ifndef MY_PROJECT_LINEARBOUNDARYVALUEPROBLEMMATRIX5_HPP
+#define MY_PROJECT_LINEARBOUNDARYVALUEPROBLEMMATRIX5_HPP
 
-#include <my_project/utility/Overloads.hpp>
-#include "../sparse/CSR.hpp"
+#include "my_project/utility/Overloads.hpp"
+#include "my_project/sparse/CSR.hpp"
 #include <sstream>
-#include <my_project/SlaeBaseException.hpp>
+#include "my_project/SlaeBaseException.hpp"
 #include <functional>
-#include <my_project/matrix/FiveDiagonalMatrix.hpp>
+#include "FiveDiagonalMatrix.hpp"
 #include "cmath"
 #include "my_project/solvers/FiveDiagonalSolver.hpp"
 #include "ostream"
@@ -279,4 +279,4 @@ std::pair<Slae::Matrix::FiveDiagonalMatrix, std::vector<double>> ExpandedMatrixF
     return {data, y};
 }
 
-#endif //MY_PROJECT_LINEARBOUNDARYVALUEPROBLEM4_HPP
+#endif //MY_PROJECT_LINEARBOUNDARYVALUEPROBLEMMATRIX5_HPP

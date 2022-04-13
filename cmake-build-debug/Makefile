@@ -211,17 +211,17 @@ run_test_simple_iteration_method/fast:
 .PHONY : run_test_simple_iteration_method/fast
 
 #=============================================================================
-# Target rules for targets named run_test_linear_boundary_value_problem_4
+# Target rules for targets named run_test_linear_boundary_value_problem_3
 
 # Build rule for target.
-run_test_linear_boundary_value_problem_4: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 run_test_linear_boundary_value_problem_4
-.PHONY : run_test_linear_boundary_value_problem_4
+run_test_linear_boundary_value_problem_3: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 run_test_linear_boundary_value_problem_3
+.PHONY : run_test_linear_boundary_value_problem_3
 
 # fast build rule for target.
-run_test_linear_boundary_value_problem_4/fast:
-	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/run_test_linear_boundary_value_problem_4.dir/build.make tests/CMakeFiles/run_test_linear_boundary_value_problem_4.dir/build
-.PHONY : run_test_linear_boundary_value_problem_4/fast
+run_test_linear_boundary_value_problem_3/fast:
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/run_test_linear_boundary_value_problem_3.dir/build.make tests/CMakeFiles/run_test_linear_boundary_value_problem_3.dir/build
+.PHONY : run_test_linear_boundary_value_problem_3/fast
 
 #=============================================================================
 # Target rules for targets named run_test_gmres
@@ -250,6 +250,19 @@ run_test_five_diag_matrix/fast:
 .PHONY : run_test_five_diag_matrix/fast
 
 #=============================================================================
+# Target rules for targets named run_test_linear_boundary_value_problem_5
+
+# Build rule for target.
+run_test_linear_boundary_value_problem_5: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 run_test_linear_boundary_value_problem_5
+.PHONY : run_test_linear_boundary_value_problem_5
+
+# fast build rule for target.
+run_test_linear_boundary_value_problem_5/fast:
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/run_test_linear_boundary_value_problem_5.dir/build.make tests/CMakeFiles/run_test_linear_boundary_value_problem_5.dir/build
+.PHONY : run_test_linear_boundary_value_problem_5/fast
+
+#=============================================================================
 # Target rules for targets named run_test_dense_matrix
 
 # Build rule for target.
@@ -263,6 +276,19 @@ run_test_dense_matrix/fast:
 .PHONY : run_test_dense_matrix/fast
 
 #=============================================================================
+# Target rules for targets named run_test_nonlinear_bvp3
+
+# Build rule for target.
+run_test_nonlinear_bvp3: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 run_test_nonlinear_bvp3
+.PHONY : run_test_nonlinear_bvp3
+
+# fast build rule for target.
+run_test_nonlinear_bvp3/fast:
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/run_test_nonlinear_bvp3.dir/build.make tests/CMakeFiles/run_test_nonlinear_bvp3.dir/build
+.PHONY : run_test_nonlinear_bvp3/fast
+
+#=============================================================================
 # Target rules for targets named run_test_exception
 
 # Build rule for target.
@@ -274,19 +300,6 @@ run_test_exception: cmake_check_build_system
 run_test_exception/fast:
 	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/run_test_exception.dir/build.make tests/CMakeFiles/run_test_exception.dir/build
 .PHONY : run_test_exception/fast
-
-#=============================================================================
-# Target rules for targets named run_test_linear_boundary_value_problem_2
-
-# Build rule for target.
-run_test_linear_boundary_value_problem_2: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 run_test_linear_boundary_value_problem_2
-.PHONY : run_test_linear_boundary_value_problem_2
-
-# fast build rule for target.
-run_test_linear_boundary_value_problem_2/fast:
-	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/run_test_linear_boundary_value_problem_2.dir/build.make tests/CMakeFiles/run_test_linear_boundary_value_problem_2.dir/build
-.PHONY : run_test_linear_boundary_value_problem_2/fast
 
 #=============================================================================
 # Target rules for targets named run_test_csr_matrix
@@ -376,8 +389,9 @@ help:
 	@echo "... run_test_exception"
 	@echo "... run_test_five_diag_matrix"
 	@echo "... run_test_gmres"
-	@echo "... run_test_linear_boundary_value_problem_2"
-	@echo "... run_test_linear_boundary_value_problem_4"
+	@echo "... run_test_linear_boundary_value_problem_3"
+	@echo "... run_test_linear_boundary_value_problem_5"
+	@echo "... run_test_nonlinear_bvp3"
 	@echo "... run_test_simple_iteration_method"
 	@echo "... run_test_solver"
 .PHONY : help

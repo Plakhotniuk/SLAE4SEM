@@ -227,8 +227,8 @@
 					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="run_test_linear_boundary_value_problem_4">
-				<Option output="/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/run_test_linear_boundary_value_problem_4" prefix_auto="0" extension_auto="0"/>
+			<Target title="run_test_linear_boundary_value_problem_3">
+				<Option output="/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/run_test_linear_boundary_value_problem_3" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
@@ -245,14 +245,14 @@
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 run_test_linear_boundary_value_problem_4"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 run_test_linear_boundary_value_problem_3"/>
 					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j4 -f &quot;/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="run_test_linear_boundary_value_problem_4/fast">
-				<Option output="/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/run_test_linear_boundary_value_problem_4" prefix_auto="0" extension_auto="0"/>
+			<Target title="run_test_linear_boundary_value_problem_3/fast">
+				<Option output="/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/run_test_linear_boundary_value_problem_3" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
@@ -269,7 +269,7 @@
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 run_test_linear_boundary_value_problem_4/fast"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 run_test_linear_boundary_value_problem_3/fast"/>
 					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j4 -f &quot;/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 clean"/>
@@ -371,6 +371,54 @@
 					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
+			<Target title="run_test_linear_boundary_value_problem_5">
+				<Option output="/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/run_test_linear_boundary_value_problem_5" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/arseniy/Desktop/SLAE4SEM/src"/>
+					<Add directory="/Users/arseniy/Desktop/SLAE4SEM/tests/googletest-master/googletest/include"/>
+					<Add directory="/Users/arseniy/Desktop/SLAE4SEM/tests/googletest-master/googletest"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/12.0.5/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 run_test_linear_boundary_value_problem_5"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="run_test_linear_boundary_value_problem_5/fast">
+				<Option output="/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/run_test_linear_boundary_value_problem_5" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/arseniy/Desktop/SLAE4SEM/src"/>
+					<Add directory="/Users/arseniy/Desktop/SLAE4SEM/tests/googletest-master/googletest/include"/>
+					<Add directory="/Users/arseniy/Desktop/SLAE4SEM/tests/googletest-master/googletest"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/12.0.5/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 run_test_linear_boundary_value_problem_5/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
 			<Target title="run_test_dense_matrix">
 				<Option output="/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/run_test_dense_matrix" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests"/>
@@ -419,6 +467,54 @@
 					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
+			<Target title="run_test_nonlinear_bvp3">
+				<Option output="/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/run_test_nonlinear_bvp3" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/arseniy/Desktop/SLAE4SEM/src"/>
+					<Add directory="/Users/arseniy/Desktop/SLAE4SEM/tests/googletest-master/googletest/include"/>
+					<Add directory="/Users/arseniy/Desktop/SLAE4SEM/tests/googletest-master/googletest"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/12.0.5/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 run_test_nonlinear_bvp3"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="run_test_nonlinear_bvp3/fast">
+				<Option output="/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/run_test_nonlinear_bvp3" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/arseniy/Desktop/SLAE4SEM/src"/>
+					<Add directory="/Users/arseniy/Desktop/SLAE4SEM/tests/googletest-master/googletest/include"/>
+					<Add directory="/Users/arseniy/Desktop/SLAE4SEM/tests/googletest-master/googletest"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/12.0.5/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 run_test_nonlinear_bvp3/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
 			<Target title="run_test_exception">
 				<Option output="/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/run_test_exception" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests"/>
@@ -462,54 +558,6 @@
 				</Compiler>
 				<MakeCommands>
 					<Build command="/usr/bin/make -j4 -f &quot;/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 run_test_exception/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="run_test_linear_boundary_value_problem_2">
-				<Option output="/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/run_test_linear_boundary_value_problem_2" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="/Users/arseniy/Desktop/SLAE4SEM/src"/>
-					<Add directory="/Users/arseniy/Desktop/SLAE4SEM/tests/googletest-master/googletest/include"/>
-					<Add directory="/Users/arseniy/Desktop/SLAE4SEM/tests/googletest-master/googletest"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/12.0.5/include"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
-					<Add directory="/System/Library/Frameworks"/>
-					<Add directory="/Library/Frameworks"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 run_test_linear_boundary_value_problem_2"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="run_test_linear_boundary_value_problem_2/fast">
-				<Option output="/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/run_test_linear_boundary_value_problem_2" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="/Users/arseniy/Desktop/SLAE4SEM/src"/>
-					<Add directory="/Users/arseniy/Desktop/SLAE4SEM/tests/googletest-master/googletest/include"/>
-					<Add directory="/Users/arseniy/Desktop/SLAE4SEM/tests/googletest-master/googletest"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/12.0.5/include"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
-					<Add directory="/System/Library/Frameworks"/>
-					<Add directory="/Library/Frameworks"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 run_test_linear_boundary_value_problem_2/fast"/>
 					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j4 -f &quot;/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 clean"/>
@@ -771,6 +819,15 @@
 		<Unit filename="/Users/arseniy/Desktop/SLAE4SEM/src/my_project/matrix/FiveDiagonalMatrix.hpp">
 			<Option target="my_project"/>
 		</Unit>
+		<Unit filename="/Users/arseniy/Desktop/SLAE4SEM/src/my_project/matrix/LinearBoundaryValueProblemMatrix3.hpp">
+			<Option target="my_project"/>
+		</Unit>
+		<Unit filename="/Users/arseniy/Desktop/SLAE4SEM/src/my_project/matrix/LinearBoundaryValueProblemMatrix5.hpp">
+			<Option target="my_project"/>
+		</Unit>
+		<Unit filename="/Users/arseniy/Desktop/SLAE4SEM/src/my_project/matrix/NonLinearBoundaryValueProblemMatrix3.hpp">
+			<Option target="my_project"/>
+		</Unit>
 		<Unit filename="/Users/arseniy/Desktop/SLAE4SEM/src/my_project/matrix/ThreeDiagonalMatrix.cpp">
 			<Option target="my_project"/>
 		</Unit>
@@ -798,22 +855,16 @@
 		<Unit filename="/Users/arseniy/Desktop/SLAE4SEM/src/my_project/solvers/Jacobi.hpp">
 			<Option target="my_project"/>
 		</Unit>
-		<Unit filename="/Users/arseniy/Desktop/SLAE4SEM/src/my_project/solvers/LinearBoundaryValueProblem2.hpp">
-			<Option target="my_project"/>
-		</Unit>
-		<Unit filename="/Users/arseniy/Desktop/SLAE4SEM/src/my_project/solvers/LinearBoundaryValueProblem4.hpp">
-			<Option target="my_project"/>
-		</Unit>
 		<Unit filename="/Users/arseniy/Desktop/SLAE4SEM/src/my_project/solvers/SimpleIteration.hpp">
+			<Option target="my_project"/>
+		</Unit>
+		<Unit filename="/Users/arseniy/Desktop/SLAE4SEM/src/my_project/solvers/Steepest_gradient_descent.hpp">
 			<Option target="my_project"/>
 		</Unit>
 		<Unit filename="/Users/arseniy/Desktop/SLAE4SEM/src/my_project/solvers/ThreeDiadonalSolver.cpp">
 			<Option target="my_project"/>
 		</Unit>
 		<Unit filename="/Users/arseniy/Desktop/SLAE4SEM/src/my_project/solvers/ThreeDiadonalSolver.hpp">
-			<Option target="my_project"/>
-		</Unit>
-		<Unit filename="/Users/arseniy/Desktop/SLAE4SEM/src/my_project/solvers/steepest_gradient_descent.hpp">
 			<Option target="my_project"/>
 		</Unit>
 		<Unit filename="/Users/arseniy/Desktop/SLAE4SEM/src/my_project/sparse/CSR.hpp">
@@ -855,11 +906,23 @@
 		<Unit filename="/Users/arseniy/Desktop/SLAE4SEM/tests/test_gmres.cpp">
 			<Option target="run_test_gmres"/>
 		</Unit>
-		<Unit filename="/Users/arseniy/Desktop/SLAE4SEM/tests/test_linear_boundary_value_problem_2.cpp">
-			<Option target="run_test_linear_boundary_value_problem_2"/>
+		<Unit filename="/Users/arseniy/Desktop/SLAE4SEM/tests/test_linear_boundary_value_problem_3.cpp">
+			<Option target="run_test_linear_boundary_value_problem_3"/>
 		</Unit>
-		<Unit filename="/Users/arseniy/Desktop/SLAE4SEM/tests/test_linear_boundary_value_problem_4.cpp">
-			<Option target="run_test_linear_boundary_value_problem_4"/>
+		<Unit filename="/Users/arseniy/Desktop/SLAE4SEM/tests/test_linear_boundary_value_problem_5.cpp">
+			<Option target="run_test_linear_boundary_value_problem_5"/>
+		</Unit>
+		<Unit filename="/Users/arseniy/Desktop/SLAE4SEM/tests/test_nonlinear_bvp3.cpp">
+			<Option target="run_test_solver"/>
+			<Option target="run_test_simple_iteration_method"/>
+			<Option target="run_test_linear_boundary_value_problem_3"/>
+			<Option target="run_test_gmres"/>
+			<Option target="run_test_five_diag_matrix"/>
+			<Option target="run_test_linear_boundary_value_problem_5"/>
+			<Option target="run_test_dense_matrix"/>
+			<Option target="run_test_nonlinear_bvp3"/>
+			<Option target="run_test_exception"/>
+			<Option target="run_test_csr_matrix"/>
 		</Unit>
 		<Unit filename="/Users/arseniy/Desktop/SLAE4SEM/tests/test_simple_iteration_method.cpp">
 			<Option target="run_test_simple_iteration_method"/>

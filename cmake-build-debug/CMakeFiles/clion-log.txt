@@ -5,8 +5,9 @@ TEST_FILE: /Users/arseniy/Desktop/SLAE4SEM/tests/test_dense_matrix.cpp
 TEST_FILE: /Users/arseniy/Desktop/SLAE4SEM/tests/test_exception.cpp
 TEST_FILE: /Users/arseniy/Desktop/SLAE4SEM/tests/test_five_diag_matrix.cpp
 TEST_FILE: /Users/arseniy/Desktop/SLAE4SEM/tests/test_gmres.cpp
-TEST_FILE: /Users/arseniy/Desktop/SLAE4SEM/tests/test_linear_boundary_value_problem_2.cpp
-TEST_FILE: /Users/arseniy/Desktop/SLAE4SEM/tests/test_linear_boundary_value_problem_4.cpp
+TEST_FILE: /Users/arseniy/Desktop/SLAE4SEM/tests/test_linear_boundary_value_problem_3.cpp
+TEST_FILE: /Users/arseniy/Desktop/SLAE4SEM/tests/test_linear_boundary_value_problem_5.cpp
+TEST_FILE: /Users/arseniy/Desktop/SLAE4SEM/tests/test_nonlinear_bvp3.cpp
 TEST_FILE: /Users/arseniy/Desktop/SLAE4SEM/tests/test_simple_iteration_method.cpp
 TEST_FILE: /Users/arseniy/Desktop/SLAE4SEM/tests/test_solver.cpp
 -- Configuring done

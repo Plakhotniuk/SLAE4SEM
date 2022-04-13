@@ -3,7 +3,7 @@
 //
 #include "gtest/gtest.h"
 #include <my_project/utility/Overloads.hpp>
-#include <my_project/solvers/LinearBoundaryValueProblem4.hpp>
+#include "my_project/matrix/LinearBoundaryValueProblemMatrix5.hpp"
 #include <iostream>
 #include "functional"
 #include <cmath>
