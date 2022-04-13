@@ -2,8 +2,8 @@
 // Created by Арсений Плахотнюк on 24.03.2022.
 //
 
-#ifndef MY_PROJECT_NONLINEARBOUNDARYVALUEPROBLEM4_HPP
-#define MY_PROJECT_NONLINEARBOUNDARYVALUEPROBLEM4_HPP
+#ifndef MY_PROJECT_LINEARBOUNDARYVALUEPROBLEM4_HPP
+#define MY_PROJECT_LINEARBOUNDARYVALUEPROBLEM4_HPP
 
 #include <my_project/utility/Overloads.hpp>
 #include "../sparse/CSR.hpp"
@@ -197,10 +197,10 @@ double GetCoef(std::pair<std::string, int> index, std::function<double(double)>&
     return 0.;
 }
 
-std::vector<double> NonlinearBoundaryValueProblem4(double left_bound_x,double right_bound_x, double left_bound_y,
-                                                  double right_bound_y, int number_of_splits,
-                                                  std::function<double(double)>& a, std::function<double(double)>& b,
-                                                  std::function<double(double)>& f) {
+std::pair<Slae::Matrix::FiveDiagonalMatrix, std::vector<double>> ExpandedMatrixForLinearBoundaryValueProblem4(double left_bound_x, double right_bound_x, double left_bound_y,
+                                                         double right_bound_y, int number_of_splits,
+                                                         std::function<double(double)>& a, std::function<double(double)>& b,
+                                                         std::function<double(double)>& f) {
     auto h = (right_bound_x - left_bound_x) / number_of_splits;
 
     Slae::Matrix::FiveDiagonalMatrix data = Slae::Matrix::FiveDiagonalMatrix(number_of_splits + 1);
@@ -276,8 +276,7 @@ std::vector<double> NonlinearBoundaryValueProblem4(double left_bound_x,double ri
 
     y[data.rows() - 2] -= y[data.rows() - 3];
 
-
-    return Slae::Solvers::solveFiveDiagonal(data, y);
+    return {data, y};
 }
 
-#endif //MY_PROJECT_NONLINEARBOUNDARYVALUEPROBLEM4_HPP
+#endif //MY_PROJECT_LINEARBOUNDARYVALUEPROBLEM4_HPP

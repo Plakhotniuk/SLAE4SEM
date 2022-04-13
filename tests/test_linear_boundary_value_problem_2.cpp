@@ -3,7 +3,7 @@
 //
 #include "gtest/gtest.h"
 #include <my_project/utility/Overloads.hpp>
-#include <my_project/solvers/NonlinearBoundaryValueProblem2.hpp>
+#include <my_project/solvers/LinearBoundaryValueProblem2.hpp>
 #include <iostream>
 #include "functional"
 #include <cmath>
@@ -29,17 +29,18 @@ TEST(NONLINEARBOUNDARYVALUEPROBLEM, TEST) {
     std::vector<double> y(max_number_of_splits + 1);
     std::fstream file;
     file.open("test_2_func3.txt", std::fstream::out);
-       std::vector<double> x(max_number_of_splits + 1);
         double h = (right_bound_x - left_bound_x)/max_number_of_splits;
-        for(int i = 0; i < x.size(); ++i){
-            x[i] = left_bound_x + h * i;
-            y[i] = y_func(x[i]);
+        for(int i = 0; i < y.size(); ++i){
+            y[i] = y_func(left_bound_x + h * i);
         }
-    std::vector<double> solution = NonlinearBoundaryValueProblem2(left_bound_x, right_bound_x,
-                                                                      left_bound_y, right_bound_y,
-                                                                     max_number_of_splits, a, b, f);
+    std::pair<Slae::Matrix::ThreeDiagonalMatrix, std::vector<double>> matrix =
+            ExpandedMatrixForLinearBoundaryValueProblem2(left_bound_x, right_bound_x,
+                                                         left_bound_y, right_bound_y,
+                                                         max_number_of_splits, a, b, f);
+
+    std::vector<double> solution = Slae::Solvers::solveThreeDiagonal(matrix.first, matrix.second);
     for(int i=0; i < solution.size(); ++i){
-        file << solution[i] << " " << x[i] << " "<<y[i];
+        file << solution[i] << " " << left_bound_x + h * i << " "<<y[i];
         file << '\n';
     }
     file.close();
@@ -63,16 +64,16 @@ TEST(NONLINEARBOUNDARYVALUEPROBLEM2, TEST2) {
     std::fstream file;
     file.open("test_2_err3.txt", std::fstream::out);
     for(int j = 20; j < max_number_of_splits; j += 10){
-        std::vector<double> solution = NonlinearBoundaryValueProblem2(left_bound_x, right_bound_x,
-                                                                      left_bound_y, right_bound_y,
-                                                                      j, a, b, f);
-        std::vector<double> x(j + 1);
-        std::vector<double> y(j + 1);
+        std::pair<Slae::Matrix::ThreeDiagonalMatrix, std::vector<double>> matrix =
+                ExpandedMatrixForLinearBoundaryValueProblem2(left_bound_x, right_bound_x,
+                                                             left_bound_y, right_bound_y,
+                                                             j, a, b, f);
 
+        std::vector<double> solution = Slae::Solvers::solveThreeDiagonal(matrix.first, matrix.second);
+        std::vector<double> y(j + 1);
         double h = (right_bound_x - left_bound_x)/j;
-        for(int i = 0; i < x.size(); ++i){
-            x[i] = left_bound_x + h * i;
-            y[i] = y_func(x[i]);
+        for(int i = 0; i < y.size(); ++i){
+            y[i] = y_func(left_bound_x + h * i);
         }
         std::vector<double> err(j);
         for(int i=0; i<j; i++){

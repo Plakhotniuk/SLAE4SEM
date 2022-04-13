@@ -3,7 +3,7 @@
 //
 #include "gtest/gtest.h"
 #include <my_project/utility/Overloads.hpp>
-#include <my_project/solvers/NonlinearBoundaryValueProblem4.hpp>
+#include <my_project/solvers/LinearBoundaryValueProblem4.hpp>
 #include <iostream>
 #include "functional"
 #include <cmath>
@@ -11,7 +11,7 @@
 #include <algorithm>
 
 
-TEST(NONLINEARBOUNDARYVALUEPROBLEM2, TEST) {
+TEST(NONLINEARBOUNDARYVALUEPROBLEM4, TEST) {
     std::function<double(double)> f = [](double x) { return 0.; };
 
     std::function<double(double)> a = [](double x) { return 0.; };
@@ -28,11 +28,12 @@ TEST(NONLINEARBOUNDARYVALUEPROBLEM2, TEST) {
     int max_number_of_splits = 500;
     std::fstream file;
     file.open("test_4_func3.txt", std::fstream::out);
+    std::pair<Slae::Matrix::FiveDiagonalMatrix, std::vector<double>> matrix =
+            ExpandedMatrixForLinearBoundaryValueProblem4(left_bound_x, right_bound_x,
+                                                         left_bound_y, right_bound_y,
+                                                         max_number_of_splits, a, b, f);
+    std::vector<double> solution = Slae::Solvers::solveFiveDiagonal(matrix.first, matrix.second);
 
-    std::vector<double> solution = NonlinearBoundaryValueProblem4(left_bound_x, right_bound_x,
-                                                                  left_bound_y, right_bound_y,
-                                                                  max_number_of_splits, a, b, f);
-//    std::vector<double> x(max_number_of_splits + 1);
     std::vector<double> y(max_number_of_splits + 1);
 
     double h = (right_bound_x - left_bound_x)/max_number_of_splits;
@@ -50,12 +51,10 @@ TEST(NONLINEARBOUNDARYVALUEPROBLEM2, TEST) {
     std::cout << "]";
     std::cout<< std::endl;
     file << std::endl;
-
-    
     file.close();
 }
 
-TEST(MAXERROR, TEST){
+TEST(MAXERROR4, TEST){
     std::function<double(double)> f = [](double x) { return 2*x; };
 
     std::function<double(double)> a = [](double x) { return 0.; };
@@ -74,9 +73,10 @@ TEST(MAXERROR, TEST){
     file.open("test_4_err3.txt", std::fstream::out);
 
     for(int j = 20; j < max_number_of_splits; j += 10){
-        std::vector<double> solution = NonlinearBoundaryValueProblem4(left_bound_x, right_bound_x,
-                                                                      left_bound_y, right_bound_y,
-                                                                      j, a, b, f);
+        std::pair<Slae::Matrix::FiveDiagonalMatrix, std::vector<double>> matrix =
+                ExpandedMatrixForLinearBoundaryValueProblem4(left_bound_x, right_bound_x,left_bound_y,
+                                                             right_bound_y,j, a, b, f);
+        std::vector<double> solution = Slae::Solvers::solveFiveDiagonal(matrix.first, matrix.second);
         std::vector<double> y(j + 1);
 
         double h = (right_bound_x - left_bound_x)/j;

@@ -211,17 +211,17 @@ run_test_simple_iteration_method/fast:
 .PHONY : run_test_simple_iteration_method/fast
 
 #=============================================================================
-# Target rules for targets named run_test_nonlinear_boundary_value_problem_4
+# Target rules for targets named run_test_linear_boundary_value_problem_4
 
 # Build rule for target.
-run_test_nonlinear_boundary_value_problem_4: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 run_test_nonlinear_boundary_value_problem_4
-.PHONY : run_test_nonlinear_boundary_value_problem_4
+run_test_linear_boundary_value_problem_4: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 run_test_linear_boundary_value_problem_4
+.PHONY : run_test_linear_boundary_value_problem_4
 
 # fast build rule for target.
-run_test_nonlinear_boundary_value_problem_4/fast:
-	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/run_test_nonlinear_boundary_value_problem_4.dir/build.make tests/CMakeFiles/run_test_nonlinear_boundary_value_problem_4.dir/build
-.PHONY : run_test_nonlinear_boundary_value_problem_4/fast
+run_test_linear_boundary_value_problem_4/fast:
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/run_test_linear_boundary_value_problem_4.dir/build.make tests/CMakeFiles/run_test_linear_boundary_value_problem_4.dir/build
+.PHONY : run_test_linear_boundary_value_problem_4/fast
 
 #=============================================================================
 # Target rules for targets named run_test_gmres
@@ -235,19 +235,6 @@ run_test_gmres: cmake_check_build_system
 run_test_gmres/fast:
 	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/run_test_gmres.dir/build.make tests/CMakeFiles/run_test_gmres.dir/build
 .PHONY : run_test_gmres/fast
-
-#=============================================================================
-# Target rules for targets named run_test_nonlinear_boundary_value_problem_2
-
-# Build rule for target.
-run_test_nonlinear_boundary_value_problem_2: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 run_test_nonlinear_boundary_value_problem_2
-.PHONY : run_test_nonlinear_boundary_value_problem_2
-
-# fast build rule for target.
-run_test_nonlinear_boundary_value_problem_2/fast:
-	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/run_test_nonlinear_boundary_value_problem_2.dir/build.make tests/CMakeFiles/run_test_nonlinear_boundary_value_problem_2.dir/build
-.PHONY : run_test_nonlinear_boundary_value_problem_2/fast
 
 #=============================================================================
 # Target rules for targets named run_test_five_diag_matrix
@@ -287,6 +274,19 @@ run_test_exception: cmake_check_build_system
 run_test_exception/fast:
 	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/run_test_exception.dir/build.make tests/CMakeFiles/run_test_exception.dir/build
 .PHONY : run_test_exception/fast
+
+#=============================================================================
+# Target rules for targets named run_test_linear_boundary_value_problem_2
+
+# Build rule for target.
+run_test_linear_boundary_value_problem_2: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 run_test_linear_boundary_value_problem_2
+.PHONY : run_test_linear_boundary_value_problem_2
+
+# fast build rule for target.
+run_test_linear_boundary_value_problem_2/fast:
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/run_test_linear_boundary_value_problem_2.dir/build.make tests/CMakeFiles/run_test_linear_boundary_value_problem_2.dir/build
+.PHONY : run_test_linear_boundary_value_problem_2/fast
 
 #=============================================================================
 # Target rules for targets named run_test_csr_matrix
@@ -376,8 +376,8 @@ help:
 	@echo "... run_test_exception"
 	@echo "... run_test_five_diag_matrix"
 	@echo "... run_test_gmres"
-	@echo "... run_test_nonlinear_boundary_value_problem_2"
-	@echo "... run_test_nonlinear_boundary_value_problem_4"
+	@echo "... run_test_linear_boundary_value_problem_2"
+	@echo "... run_test_linear_boundary_value_problem_4"
 	@echo "... run_test_simple_iteration_method"
 	@echo "... run_test_solver"
 .PHONY : help

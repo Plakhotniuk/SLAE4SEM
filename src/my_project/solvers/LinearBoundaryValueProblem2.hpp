@@ -2,8 +2,8 @@
 // Created by Арсений Плахотнюк on 11.03.2022.
 //
 
-#ifndef MY_PROJECT_NONLINEARBOUNDARYVALUEPROBLEM2_HPP
-#define MY_PROJECT_NONLINEARBOUNDARYVALUEPROBLEM2_HPP
+#ifndef MY_PROJECT_LINEARBOUNDARYVALUEPROBLEM2_HPP
+#define MY_PROJECT_LINEARBOUNDARYVALUEPROBLEM2_HPP
 #include <my_project/utility/Overloads.hpp>
 #include "../sparse/CSR.hpp"
 #include <sstream>
@@ -44,10 +44,10 @@ double Calc<COLUMNINDEX::C_THIRD>::calc(std::function<double(double)>& a,
     return 1/(h*h) + a(x)/(2*h);
 }
 
-std::vector<double> NonlinearBoundaryValueProblem2(double left_bound_x, double right_bound_x, double left_bound_y,
-                                                   double right_bound_y, int number_of_splits,
-                                                   std::function<double(double)>& a, std::function<double(double)>& b,
-                                                   std::function<double(double)>& f) {
+std::pair<Slae::Matrix::ThreeDiagonalMatrix, std::vector<double>> ExpandedMatrixForLinearBoundaryValueProblem2(double left_bound_x, double right_bound_x, double left_bound_y,
+                                                                 double right_bound_y, int number_of_splits,
+                                                                 std::function<double(double)>& a, std::function<double(double)>& b,
+                                                                 std::function<double(double)>& f) {
     // шаг разбиения
     auto h = (right_bound_x - left_bound_x) / number_of_splits;
 
@@ -69,7 +69,7 @@ std::vector<double> NonlinearBoundaryValueProblem2(double left_bound_x, double r
     for(int i = 1; i < y.size() - 1; ++i){
         y[i] = f(left_bound_x + h * i);
     }
-    y[y.size() - 1] = right_bound_y;
-    return Slae::Solvers::solveThreeDiagonal(data, y);
+    y.back() = right_bound_y;
+    return {data, y};
 }
-#endif //MY_PROJECT_NONLINEARBOUNDARYVALUEPROBLEM2_HPP
+#endif //MY_PROJECT_LINEARBOUNDARYVALUEPROBLEM2_HPP
