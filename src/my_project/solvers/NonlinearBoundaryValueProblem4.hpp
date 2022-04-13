@@ -21,6 +21,7 @@ enum ROWINDEX {
     R_N_2 = 3,
     R_THREE_DIAG = 4
 };
+
 enum COLUMNINDEX {
     C_FIRST = 1,
     C_SECOND = 2,
@@ -233,15 +234,15 @@ std::vector<double> NonlinearBoundaryValueProblem4(double left_bound_x,double ri
 //                  Calc<ROWINDEX::R_FIRST, COLUMNINDEX::C_SECOND>::calc(a, b, h, left_bound_x + h),
 //                  Calc<ROWINDEX::R_FIRST, COLUMNINDEX::C_THIRD>::calc(a, b, h, left_bound_x + h),
 //                  Calc<ROWINDEX::R_FIRST, COLUMNINDEX::C_FOURTH>::calc(a, b, h, left_bound_x + h));
-
+//
 //    data.multiply_row_by_value(1, Calc<ROWINDEX::R_I, COLUMNINDEX::C_FIFTH>::calc(a, b, h, left_bound_x + h * 2) /
 //            Calc<ROWINDEX::R_FIRST, COLUMNINDEX::C_FIFTH>::calc(a, b, h, left_bound_x + h));
 //    data.fill_row(1, 0, data(1, 1) - data(2, 0),
 //                  data(1, 2) - data(2, 1),
 //                  data(1, 3) - data(2, 2),
 //                  data(1, 4) - data(2, 3));
-
-    // i = n - 2
+//
+//    // i = n - 2
 //    data.fill_row(data.rows() - 2, Calc<ROWINDEX::R_N_2, COLUMNINDEX::C_SECOND>::calc(a, b, h, left_bound_x + h *(data.rows() - 2)),
 //                  Calc<ROWINDEX::R_N_2, COLUMNINDEX::C_THIRD>::calc(a, b, h, left_bound_x + h *(data.rows() - 2)) ,
 //                  Calc<ROWINDEX::R_N_2, COLUMNINDEX::C_FOURTH>::calc(a, b, h, left_bound_x + h *(data.rows() - 2)),
@@ -263,10 +264,10 @@ std::vector<double> NonlinearBoundaryValueProblem4(double left_bound_x,double ri
         y[i] = f(left_bound_x + h * i);
     }
 
-    y[y.size() - 1] = right_bound_y;
+    y.back() = right_bound_y;
 
-    y[1] *= GetCoef({"i", 5}, a, b, h, left_bound_x + h * 2) /
-            GetCoef({"1", 5}, a, b, h, left_bound_x + h * 1);
+    y[1] *= Calc<ROWINDEX::R_I, COLUMNINDEX::C_FIFTH>::calc(a, b, h, left_bound_x + h * 2) /
+            Calc<ROWINDEX::R_FIRST, COLUMNINDEX::C_FIFTH>::calc(a, b, h, left_bound_x + h * 1);
 
     y[1] -= y[2];
 

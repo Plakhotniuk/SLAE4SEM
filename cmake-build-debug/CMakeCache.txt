@@ -42,7 +42,7 @@ CMAKE_CODEBLOCKS_MAKE_ARGUMENTS:STRING=-j4
 CMAKE_COLOR_MAKEFILE:BOOL=ON
 
 //CXX compiler
-CMAKE_CXX_COMPILER:FILEPATH=/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++
+CMAKE_CXX_COMPILER:STRING=/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++
 
 //Flags used by the CXX compiler during all build types.
 CMAKE_CXX_FLAGS:STRING=
@@ -60,7 +60,7 @@ CMAKE_CXX_FLAGS_RELEASE:STRING=-O3 -DNDEBUG
 CMAKE_CXX_FLAGS_RELWITHDEBINFO:STRING=-O2 -g -DNDEBUG
 
 //C compiler
-CMAKE_C_COMPILER:FILEPATH=/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc
+CMAKE_C_COMPILER:STRING=/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc
 
 //Flags used by the C compiler during all build types.
 CMAKE_C_FLAGS:STRING=
@@ -300,6 +300,9 @@ WITH_TESTS:UNINITIALIZED=ON
 //Value Computed by CMake
 gmock_BINARY_DIR:STATIC=/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/googletest-master/googlemock
 
+//Value Computed by CMake
+gmock_IS_TOP_LEVEL:STATIC=OFF
+
 //Dependencies for the target
 gmock_LIB_DEPENDS:STATIC=general;gtest;
 
@@ -316,10 +319,16 @@ gmock_main_LIB_DEPENDS:STATIC=general;gmock;
 googletest-distribution_BINARY_DIR:STATIC=/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/googletest-master
 
 //Value Computed by CMake
+googletest-distribution_IS_TOP_LEVEL:STATIC=OFF
+
+//Value Computed by CMake
 googletest-distribution_SOURCE_DIR:STATIC=/Users/arseniy/Desktop/SLAE4SEM/tests/googletest-master
 
 //Value Computed by CMake
 gtest_BINARY_DIR:STATIC=/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/googletest-master/googletest
+
+//Value Computed by CMake
+gtest_IS_TOP_LEVEL:STATIC=OFF
 
 //Value Computed by CMake
 gtest_SOURCE_DIR:STATIC=/Users/arseniy/Desktop/SLAE4SEM/tests/googletest-master/googletest
@@ -347,6 +356,9 @@ gtest_main_LIB_DEPENDS:STATIC=general;gtest;
 my_project_BINARY_DIR:STATIC=/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests
 
 //Value Computed by CMake
+my_project_IS_TOP_LEVEL:STATIC=OFF
+
+//Value Computed by CMake
 my_project_SOURCE_DIR:STATIC=/Users/arseniy/Desktop/SLAE4SEM/tests
 
 
@@ -363,9 +375,9 @@ CMAKE_CACHEFILE_DIR:INTERNAL=/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug
 //Major version of cmake used to create the current loaded cache
 CMAKE_CACHE_MAJOR_VERSION:INTERNAL=3
 //Minor version of cmake used to create the current loaded cache
-CMAKE_CACHE_MINOR_VERSION:INTERNAL=17
+CMAKE_CACHE_MINOR_VERSION:INTERNAL=21
 //Patch version of cmake used to create the current loaded cache
-CMAKE_CACHE_PATCH_VERSION:INTERNAL=3
+CMAKE_CACHE_PATCH_VERSION:INTERNAL=1
 //ADVANCED property for variable: CMAKE_COLOR_MAKEFILE
 CMAKE_COLOR_MAKEFILE-ADVANCED:INTERNAL=1
 //Path to CMake executable.
@@ -500,7 +512,7 @@ CMAKE_RANLIB-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_READELF
 CMAKE_READELF-ADVANCED:INTERNAL=1
 //Path to CMake installation.
-CMAKE_ROOT:INTERNAL=/Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.17
+CMAKE_ROOT:INTERNAL=/Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21
 //ADVANCED property for variable: CMAKE_SHARED_LINKER_FLAGS
 CMAKE_SHARED_LINKER_FLAGS-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_SHARED_LINKER_FLAGS_DEBUG
@@ -543,7 +555,7 @@ _GNUInstallDirs_LAST_CMAKE_INSTALL_PREFIX:INTERNAL=/usr/local
 _Python_EXECUTABLE:INTERNAL=/Users/arseniy/opt/anaconda3/bin/python3.9
 //Python Properties
 _Python_INTERPRETER_PROPERTIES:INTERNAL=Python;3;9;7;64;;cpython-39-darwin;/Users/arseniy/opt/anaconda3/lib/python3.9;/Users/arseniy/opt/anaconda3/lib/python3.9;/Users/arseniy/opt/anaconda3/lib/python3.9/site-packages;/Users/arseniy/opt/anaconda3/lib/python3.9/site-packages
-_Python_INTERPRETER_SIGNATURE:INTERNAL=008e2aa12391bdeba59a836785aaeab3
+_Python_INTERPRETER_SIGNATURE:INTERNAL=a9e543deeb2d19435062baf207b52627
 cmake_package_name:INTERNAL=GTest
 generated_dir:INTERNAL=/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/googletest-master/googletest/generated
 //ADVANCED property for variable: gmock_build_tests

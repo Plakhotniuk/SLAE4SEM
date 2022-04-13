@@ -12,20 +12,20 @@
 
 
 TEST(NONLINEARBOUNDARYVALUEPROBLEM2, TEST) {
-    std::function<double(double)> f = [](double x) { return 2*x; };
+    std::function<double(double)> f = [](double x) { return 0.; };
 
     std::function<double(double)> a = [](double x) { return 0.; };
 
-    std::function<double(double)> b = [](double x) { return -1.; };
+    std::function<double(double)> b = [](double x) { return 1.; };
 
-    std::function<double(double)> y_func = [](double x) { return sinh(x) / sinh(1.) - 2*x; };
+    std::function<double(double)> y_func = [](double x) { return cos(x); };
 
     double left_bound_x = 0.;
-    double right_bound_x = 1.;
-    double left_bound_y = 0.;
+    double right_bound_x = M_PI;
+    double left_bound_y = 1.;
     double right_bound_y = -1.;
 
-    int max_number_of_splits = 250;
+    int max_number_of_splits = 500;
     std::fstream file;
     file.open("test_4_func3.txt", std::fstream::out);
 

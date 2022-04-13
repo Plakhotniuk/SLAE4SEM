@@ -1,20 +1,18 @@
+
+# Consider dependencies only in project.
+set(CMAKE_DEPENDS_IN_PROJECT_ONLY OFF)
+
 # The set of languages for which implicit dependencies are needed:
 set(CMAKE_DEPENDS_LANGUAGES
-  "CXX"
   )
-# The set of files for implicit dependencies of each language:
-set(CMAKE_DEPENDS_CHECK_CXX
-  "/Users/arseniy/Desktop/SLAE4SEM/src/my_project/SlaeBaseException.cpp" "/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/src/CMakeFiles/my_project.dir/my_project/SlaeBaseException.cpp.o"
-  "/Users/arseniy/Desktop/SLAE4SEM/src/my_project/matrix/FiveDiagonalMatrix.cpp" "/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/src/CMakeFiles/my_project.dir/my_project/matrix/FiveDiagonalMatrix.cpp.o"
-  "/Users/arseniy/Desktop/SLAE4SEM/src/my_project/matrix/ThreeDiagonalMatrix.cpp" "/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/src/CMakeFiles/my_project.dir/my_project/matrix/ThreeDiagonalMatrix.cpp.o"
-  "/Users/arseniy/Desktop/SLAE4SEM/src/my_project/solvers/FiveDiagonalSolver.cpp" "/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/src/CMakeFiles/my_project.dir/my_project/solvers/FiveDiagonalSolver.cpp.o"
-  "/Users/arseniy/Desktop/SLAE4SEM/src/my_project/solvers/ThreeDiadonalSolver.cpp" "/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/src/CMakeFiles/my_project.dir/my_project/solvers/ThreeDiadonalSolver.cpp.o"
-  )
-set(CMAKE_CXX_COMPILER_ID "AppleClang")
 
-# The include file search paths:
-set(CMAKE_CXX_TARGET_INCLUDE_PATH
-  "../src"
+# The set of dependency files which are needed:
+set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/Users/arseniy/Desktop/SLAE4SEM/src/my_project/SlaeBaseException.cpp" "src/CMakeFiles/my_project.dir/my_project/SlaeBaseException.cpp.o" "gcc" "src/CMakeFiles/my_project.dir/my_project/SlaeBaseException.cpp.o.d"
+  "/Users/arseniy/Desktop/SLAE4SEM/src/my_project/matrix/FiveDiagonalMatrix.cpp" "src/CMakeFiles/my_project.dir/my_project/matrix/FiveDiagonalMatrix.cpp.o" "gcc" "src/CMakeFiles/my_project.dir/my_project/matrix/FiveDiagonalMatrix.cpp.o.d"
+  "/Users/arseniy/Desktop/SLAE4SEM/src/my_project/matrix/ThreeDiagonalMatrix.cpp" "src/CMakeFiles/my_project.dir/my_project/matrix/ThreeDiagonalMatrix.cpp.o" "gcc" "src/CMakeFiles/my_project.dir/my_project/matrix/ThreeDiagonalMatrix.cpp.o.d"
+  "/Users/arseniy/Desktop/SLAE4SEM/src/my_project/solvers/FiveDiagonalSolver.cpp" "src/CMakeFiles/my_project.dir/my_project/solvers/FiveDiagonalSolver.cpp.o" "gcc" "src/CMakeFiles/my_project.dir/my_project/solvers/FiveDiagonalSolver.cpp.o.d"
+  "/Users/arseniy/Desktop/SLAE4SEM/src/my_project/solvers/ThreeDiadonalSolver.cpp" "src/CMakeFiles/my_project.dir/my_project/solvers/ThreeDiadonalSolver.cpp.o" "gcc" "src/CMakeFiles/my_project.dir/my_project/solvers/ThreeDiadonalSolver.cpp.o.d"
   )
 
 # Targets to which this target links.

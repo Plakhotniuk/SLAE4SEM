@@ -2,7 +2,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 plt.figure()
 fig, ax = plt.subplots(figsize=(12,8))
-data = np.loadtxt(f'/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/test_4_func2.txt')
+data = np.loadtxt(f'/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/test_4_func3.txt')
 # ax.plot(data[0, :], data[1, :], '-')
 x = data[:, 1]
 y = data[:, 2]

@@ -8,8 +8,9 @@
 #include "my_project/dense/Densematrix.hpp"
 #include "my_project/utility/Triplet.hpp"
 
-TEST(GMRES, HI) {
-    double tolerance = 1e-5;
+TEST(GMRES, HI)
+{
+    double tolerance = 1e-3;
     std::set<Triplet<double>> data{{0, 0, 7.}, {1, 1, 5.}, {2, 2, 9.}};
     CSR<double> matrix(3, 3, data);
     std::vector<double> col = {0.1, 0.2, 0.3};

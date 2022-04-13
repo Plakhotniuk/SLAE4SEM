@@ -8,9 +8,9 @@
 
 #include "../sparse/CSR.hpp"
 #include "../utility/Norm.hpp"
-#include </Users/arseniy/Desktop/SLAE4SEM/SLAE4SEM/src/my_project/utility/Overloads.hpp>
+#include <my_project/utility/Overloads.hpp>
 #include <sstream>
-#include </Users/arseniy/Desktop/SLAE4SEM/SLAE4SEM/src/my_project/SlaeBaseException.hpp>
+#include <my_project/SlaeBaseException.hpp>
 
 template <typename T>
 std::vector<T> Steepest_gradient_descent(const CSR<T> &A, const std::vector<T> &b, const std::vector<T> &init, const T &tolerance) {

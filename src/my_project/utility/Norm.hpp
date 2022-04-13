@@ -13,7 +13,7 @@ enum class NormType{
     ThirdNorm = 3,
 };
 /**
- * функция, реализующая различные нормы вектора
+ * Функция, реализующая различные нормы вектора
  * @tparam T шаблонный тип
  * @param vector вектор
  * @param normType тип нормы
@@ -41,6 +41,5 @@ const T& norm(const std::vector<T>& vector, NormType normType){
     }
     return norm;
 }
-
 
 #endif//SLAE_NORM_HPP
