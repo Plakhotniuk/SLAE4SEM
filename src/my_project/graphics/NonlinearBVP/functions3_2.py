@@ -2,7 +2,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 plt.figure()
 fig, ax = plt.subplots(figsize=(12,8))
-data = np.loadtxt(f'/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/test_nonlin_3.txt')
+data = np.loadtxt(f'/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/test_nonlin_3_2.txt')
 
 n_iterations = data.shape[0] - 2
 for i in range(2, data.shape[0]):
