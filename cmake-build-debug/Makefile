@@ -302,6 +302,19 @@ run_test_exception/fast:
 .PHONY : run_test_exception/fast
 
 #=============================================================================
+# Target rules for targets named run_test_nonlinear_bvp5
+
+# Build rule for target.
+run_test_nonlinear_bvp5: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 run_test_nonlinear_bvp5
+.PHONY : run_test_nonlinear_bvp5
+
+# fast build rule for target.
+run_test_nonlinear_bvp5/fast:
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/run_test_nonlinear_bvp5.dir/build.make tests/CMakeFiles/run_test_nonlinear_bvp5.dir/build
+.PHONY : run_test_nonlinear_bvp5/fast
+
+#=============================================================================
 # Target rules for targets named run_test_csr_matrix
 
 # Build rule for target.
@@ -392,6 +405,7 @@ help:
 	@echo "... run_test_linear_boundary_value_problem_3"
 	@echo "... run_test_linear_boundary_value_problem_5"
 	@echo "... run_test_nonlinear_bvp3"
+	@echo "... run_test_nonlinear_bvp5"
 	@echo "... run_test_simple_iteration_method"
 	@echo "... run_test_solver"
 .PHONY : help

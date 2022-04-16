@@ -1,17 +1,18 @@
 //
-// Created by Арсений Плахотнюк on 14.04.2022.
+// Created by Арсений Плахотнюк on 17.04.2022.
 //
+
 #include "gtest/gtest.h"
 #include <my_project/utility/Overloads.hpp>
-#include "my_project/matrix/NonLinearBoundaryValueProblemMatrix3.hpp"
-#include "my_project/matrix/NonLinearBoundaryValueProblemMatrix3.hpp"
+#include "my_project/matrix/NonLinearBoundaryValueProblemMatrix5.hpp"
+
 #include <iostream>
 #include "functional"
 #include <cmath>
 #include <fstream>
 
 
-TEST(NONLINEARBOUNDARYVALUEPROBLEM1, NONLINEARBOUNDARYVALUEPROBLEM1) {
+TEST(NONLINEARBOUNDARYVALUEPROBLEM51, NONLINEARBOUNDARYVALUEPROBLEM51) {
 std::function<double(double, double)> f = [](double x, double y) { return 0.; };
 
 std::function<double(double, double, double)> a = [](double x, double y, double y_dev) { return y; };
@@ -31,7 +32,7 @@ std::vector<double> y(max_number_of_splits + 1);
 double h = (right_bound_x - left_bound_x)/max_number_of_splits;
 
 std::fstream file;
-file.open("test_nonlin_3.txt", std::fstream::out);
+file.open("test_nonlin_5.txt", std::fstream::out);
 
 //x
 //for(int j=0; j < y.size(); ++j){
@@ -49,7 +50,7 @@ file << '\n';
 //for(int k = 10; k < max_number_of_splits; k+=10){
     std::pair<std::vector<double>, std::vector<double>> solution;
 
-    std::pair<std::vector<double>, std::vector<double>> y_0_y_0_der = InitialApproach_y3(left_bound_x, right_bound_x,
+    std::pair<std::vector<double>, std::vector<double>> y_0_y_0_der = InitialApproach_y5(left_bound_x, right_bound_x,
                                                                                         left_bound_y, right_bound_y,
                                                                                         max_number_of_splits, y_func);
 
@@ -57,11 +58,11 @@ file << '\n';
     solution = y_0_y_0_der;
 
     for(int i = 1; i < n_iterations; ++i){
-        std::pair<Slae::Matrix::ThreeDiagonalMatrix, std::vector<double>> matrix =
-                ExpMatrixNonLinearBVP3(left_bound_x, right_bound_x,
+        std::pair<Slae::Matrix::FiveDiagonalMatrix, std::vector<double>> matrix =
+                ExpMatrixNonLinearBVP5(left_bound_x, right_bound_x,
                                        left_bound_y, right_bound_y,
                                        max_number_of_splits, a, b, f, solution);
-        solution.first = Slae::Solvers::solveThreeDiagonal(matrix.first, matrix.second);
+        solution.first = Slae::Solvers::solveFiveDiagonal(matrix.first, matrix.second);
     }
     for(int i = 0; i < solution.first.size(); ++i){
         file<< solution.first[i]<< " ";
@@ -79,7 +80,7 @@ file << '\n';
 file.close();
 }
 
-TEST(NONLINEARBOUNDARYVALUEPROBLEM_ERROR2, NONLINEARBOUNDARYVALUEPROBLEM_ERROR2) {
+TEST(NONLINEARBOUNDARYVALUEPROBLEM_ERROR52, NONLINEARBOUNDARYVALUEPROBLEM_ERROR52) {
 
     std::function<double(double, double, double)> a = [](double x, double y, double y_der) { return y_der; };
 
@@ -98,24 +99,24 @@ TEST(NONLINEARBOUNDARYVALUEPROBLEM_ERROR2, NONLINEARBOUNDARYVALUEPROBLEM_ERROR2)
     int max_number_of_splits = 1050;
 
     std::fstream file;
-    file.open("test_nonlin_3_2.txt", std::fstream::out);
+    file.open("test_nonlin_5_2.txt", std::fstream::out);
 
 
 for(int k = 20; k < max_number_of_splits; k+=20) {
 
     //approach
-    std::pair<std::vector<double>, std::vector<double>> solution = InitialApproach_y3(left_bound_x, right_bound_x,
+    std::pair<std::vector<double>, std::vector<double>> solution = InitialApproach_y5(left_bound_x, right_bound_x,
                                                                                      left_bound_y, right_bound_y,
                                                                                      k, y_sol);;
     double h = (right_bound_x - left_bound_x)/k;
     for (int i = 0; i < n_iterations; ++i)
     {
-        std::pair<Slae::Matrix::ThreeDiagonalMatrix, std::vector<double>> matrix =
-                ExpMatrixNonLinearBVP3(left_bound_x, right_bound_x,
+        std::pair<Slae::Matrix::FiveDiagonalMatrix, std::vector<double>> matrix =
+                ExpMatrixNonLinearBVP5(left_bound_x, right_bound_x,
                                        left_bound_y, right_bound_y,
                                        k, a, b, f, solution);
-        solution.first = Slae::Solvers::solveThreeDiagonal(matrix.first, matrix.second);
-        solution.second = Approach_y_der3(solution.first, h);
+        solution.first = Slae::Solvers::solveFiveDiagonal(matrix.first, matrix.second);
+        solution.second = Approach_y_der5(solution.first, h);
     }
 
 
@@ -130,7 +131,7 @@ for(int k = 20; k < max_number_of_splits; k+=20) {
     file.close();
 }
 
-TEST(NONLINEARBOUNDARYVALUEPROBLEM3, NONLINEARBOUNDARYVALUEPROBLEM3) {
+TEST(NONLINEARBOUNDARYVALUEPROBLEM53, NONLINEARBOUNDARYVALUEPROBLEM53) {
     std::function<double(double, double, double)> a = [](double x, double y, double y_der) { return -y_der / (2*y); };
 
     std::function<double(double, double, double)> b = [](double x, double y, double y_der) { return 0.; };
@@ -150,7 +151,7 @@ TEST(NONLINEARBOUNDARYVALUEPROBLEM3, NONLINEARBOUNDARYVALUEPROBLEM3) {
     double h = (right_bound_x - left_bound_x)/max_number_of_splits;
 
     std::fstream file;
-    file.open("test_nonlin_3_3.txt", std::fstream::out);
+    file.open("test_nonlin_5_3.txt", std::fstream::out);
 
 //x
 for(int j=0; j < y.size(); ++j){
@@ -162,18 +163,18 @@ file << '\n';
 
 //approach
 //{y, y'}
-std::pair<std::vector<double>, std::vector<double>> solution = InitialApproach_y3(left_bound_x, right_bound_x,
+std::pair<std::vector<double>, std::vector<double>> solution = InitialApproach_y5(left_bound_x, right_bound_x,
                                                                                left_bound_y, right_bound_y,
                                                                                max_number_of_splits, y_sol);
 
 for(int i = 0; i < n_iterations; ++i){
-    std::pair<Slae::Matrix::ThreeDiagonalMatrix, std::vector<double>> matrix =
-            ExpMatrixNonLinearBVP3(left_bound_x, right_bound_x,
+    std::pair<Slae::Matrix::FiveDiagonalMatrix, std::vector<double>> matrix =
+            ExpMatrixNonLinearBVP5(left_bound_x, right_bound_x,
                                    left_bound_y, right_bound_y,
                                    max_number_of_splits, a, b, f, solution);
-    solution.first = Slae::Solvers::solveThreeDiagonal(matrix.first, matrix.second);
+    solution.first = Slae::Solvers::solveFiveDiagonal(matrix.first, matrix.second);
 
-    solution.second = Approach_y_der3(solution.first, h);
+    solution.second = Approach_y_der5(solution.first, h);
 
 }
 

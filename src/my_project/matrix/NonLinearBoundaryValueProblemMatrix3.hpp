@@ -47,7 +47,7 @@ double Calc<COLUMNINDEX::C_THIRD>::calc(std::function<double(double, double, dou
     return 1/(h*h) + a(x, y, y_der)/(2*h);
 }
 
-std::vector<double> Approach_y_der(std::vector<double> y_prev, double h){
+std::vector<double> Approach_y_der3(std::vector<double> y_prev, double h){
     std::vector<double> y_der(y_prev.size());
     y_der[0] = (y_prev[1] - y_prev[0]) / h;
     y_der[1] = (y_prev[2] - y_prev[0]) / (2*h);
@@ -61,7 +61,7 @@ std::vector<double> Approach_y_der(std::vector<double> y_prev, double h){
     return y_der;
 }
 
-std::pair<std::vector<double>, std::vector<double>> InitialApproach_y(double left_bound_x, double right_bound_x,
+std::pair<std::vector<double>, std::vector<double>> InitialApproach_y3(double left_bound_x, double right_bound_x,
                                                                       double left_bound_y, double right_bound_y,
                                                                       unsigned int number_of_splits,
                                                                       std::function<double(double)>& func){

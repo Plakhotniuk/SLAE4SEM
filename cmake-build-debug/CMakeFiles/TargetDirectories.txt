@@ -29,6 +29,7 @@
 /Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/CMakeFiles/rebuild_cache.dir
 /Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/CMakeFiles/run_test_exception.dir
 /Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/CMakeFiles/list_install_components.dir
+/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/CMakeFiles/run_test_nonlinear_bvp5.dir
 /Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/CMakeFiles/run_test_csr_matrix.dir
 /Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/googletest-master/CMakeFiles/install/strip.dir
 /Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/googletest-master/CMakeFiles/install.dir

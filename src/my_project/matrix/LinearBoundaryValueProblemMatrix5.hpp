@@ -144,63 +144,10 @@ double Calc<ROWINDEX::R_THREE_DIAG, COLUMNINDEX::C_THIRD>::calc(std::function<do
     return 1/(h*h) + a(x)/(2*h);
 }
 
-double GetCoef(std::pair<std::string, int> index, std::function<double(double)>& a,
-               std::function<double(double)>& b, double h, double x){
-    if(index.first == "1")
-    {
-        if(index.second == 1) return 11/(12*(h*h)) - 0.25*a(x)/h;
-
-        if(index.second == 2) return -5 / (3*(h*h)) - 5/(6*h) * a(x) + b(x);
-
-        if(index.second == 3) return 0.5/(h*h) + 1.5 * a(x) / h;
-
-        if(index.second == 4) return 1/(3*(h*h)) - 0.5/h * a(x);
-
-        if(index.second == 5) return -1/(12*(h*h)) + 1/(12*h) * a(x);
-    }
-
-    if(index.first == "i")
-    {
-        if(index.second == 1) return -1/(12*(h*h)) + a(x)/(12*h);
-
-        if(index.second == 2) return 4/(3 * (h*h)) - 2/(3*h) * a(x);
-
-        if(index.second == 3) return  b(x) - 2.5/(h*h);
-
-        if(index.second == 4) return 4/(3*(h*h)) + 2/(3*h) * a(x);
-
-        if(index.second == 5) return -1/(12*(h*h)) - 1/(12*h) * a(x);
-    }
-
-    if(index.first == "n-2")
-    {
-        if(index.second == 1) return -1/(12*(h*h)) - a(x)*1/(12*h);
-
-        if(index.second == 2) return 1 / (3*(h*h)) + 1/(2*h) * a(x);
-
-        if(index.second == 3) return  0.5/(h*h) - 1.5 * a(x) / h;
-
-        if(index.second == 4) return -5/(3*(h*h)) + 5/(6*h) * a(x) + b(x);
-
-        if(index.second == 5) return 11/(12*(h*h)) + 1/(4*h) * a(x);
-    }
-
-    if(index.first == "three diag")
-    {
-        if(index.second == 1) return 1/(h*h) - a(x)/(2*h);
-
-        if(index.second == 2) return -2/(h*h) + b(x);
-
-        if(index.second == 3) return 1/(h*h) + a(x)/(2*h);
-    }
-
-    return 0.;
-}
-
-std::pair<Slae::Matrix::FiveDiagonalMatrix, std::vector<double>> ExpandedMatrixForLinearBoundaryValueProblem4(double left_bound_x, double right_bound_x, double left_bound_y,
-                                                         double right_bound_y, int number_of_splits,
-                                                         std::function<double(double)>& a, std::function<double(double)>& b,
-                                                         std::function<double(double)>& f) {
+std::pair<Slae::Matrix::FiveDiagonalMatrix, std::vector<double>> ExpandedMatrixForLinearBoundaryValueProblem5(double left_bound_x, double right_bound_x, double left_bound_y,
+                                                                                                              double right_bound_y, int number_of_splits,
+                                                                                                              std::function<double(double)>& a, std::function<double(double)>& b,
+                                                                                                              std::function<double(double)>& f) {
     auto h = (right_bound_x - left_bound_x) / number_of_splits;
 
     Slae::Matrix::FiveDiagonalMatrix data = Slae::Matrix::FiveDiagonalMatrix(number_of_splits + 1);
@@ -271,8 +218,8 @@ std::pair<Slae::Matrix::FiveDiagonalMatrix, std::vector<double>> ExpandedMatrixF
 
     y[1] -= y[2];
 
-    y[data.rows() - 2] *= Calc<ROWINDEX::R_I, COLUMNINDEX::C_FIRST>::calc( a, b, h,left_bound_x + h * (data.rows() - 3) /
-    Calc<ROWINDEX::R_N_2, COLUMNINDEX::C_FIFTH>::calc(a, b, h, left_bound_x + h * (data.rows() - 2)));
+    y[data.rows() - 2] *= Calc<ROWINDEX::R_I, COLUMNINDEX::C_FIRST>::calc( a, b, h,left_bound_x + h * (data.rows() - 3)) /
+    Calc<ROWINDEX::R_N_2, COLUMNINDEX::C_FIFTH>::calc(a, b, h, left_bound_x + h * (data.rows() - 2));
 
     y[data.rows() - 2] -= y[data.rows() - 3];
 

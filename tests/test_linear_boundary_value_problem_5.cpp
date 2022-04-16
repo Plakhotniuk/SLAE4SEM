@@ -29,7 +29,7 @@ TEST(NONLINEARBOUNDARYVALUEPROBLEM4, TEST) {
     std::fstream file;
     file.open("test_4_func3.txt", std::fstream::out);
     std::pair<Slae::Matrix::FiveDiagonalMatrix, std::vector<double>> matrix =
-            ExpandedMatrixForLinearBoundaryValueProblem4(left_bound_x, right_bound_x,
+            ExpandedMatrixForLinearBoundaryValueProblem5(left_bound_x, right_bound_x,
                                                          left_bound_y, right_bound_y,
                                                          max_number_of_splits, a, b, f);
     std::vector<double> solution = Slae::Solvers::solveFiveDiagonal(matrix.first, matrix.second);
@@ -74,8 +74,8 @@ TEST(MAXERROR4, TEST){
 
     for(int j = 20; j < max_number_of_splits; j += 10){
         std::pair<Slae::Matrix::FiveDiagonalMatrix, std::vector<double>> matrix =
-                ExpandedMatrixForLinearBoundaryValueProblem4(left_bound_x, right_bound_x,left_bound_y,
-                                                             right_bound_y,j, a, b, f);
+                ExpandedMatrixForLinearBoundaryValueProblem5(left_bound_x, right_bound_x, left_bound_y,
+                                                             right_bound_y, j, a, b, f);
         std::vector<double> solution = Slae::Solvers::solveFiveDiagonal(matrix.first, matrix.second);
         std::vector<double> y(j + 1);
 

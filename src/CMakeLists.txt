@@ -12,7 +12,7 @@ if (WIN32)
     set(CMAKE_CXX_STANDARD_LIBRARIES "-static-libgcc -static-libstdc++ -lwsock32 -lws2_32 -lrt ${CMAKE_CXX_STANDARD_LIBRARIES}")
 endif (WIN32)
 
-add_library(my_project ${MY_PROJECT_SOURCES})
+add_library(my_project ${MY_PROJECT_SOURCES} my_project/matrix/NonLinearBoundaryValueProblemMatrix5.hpp)
 target_link_libraries(my_project PUBLIC )
 
 target_include_directories(my_project PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
