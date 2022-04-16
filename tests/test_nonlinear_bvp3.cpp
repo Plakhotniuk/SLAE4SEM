@@ -4,6 +4,7 @@
 #include "gtest/gtest.h"
 #include <my_project/utility/Overloads.hpp>
 #include "my_project/matrix/NonLinearBoundaryValueProblemMatrix3.hpp"
+#include "my_project/matrix/NonLinearBoundaryValueProblemMatrix3.hpp"
 #include <iostream>
 #include "functional"
 #include <cmath>
@@ -48,9 +49,9 @@ file << '\n';
 //for(int k = 10; k < max_number_of_splits; k+=10){
     std::pair<std::vector<double>, std::vector<double>> solution;
 
-    std::pair<std::vector<double>, std::vector<double>> y_0_y_0_der = InitialApproach(left_bound_x, right_bound_x,
-                                                                                      left_bound_y, right_bound_y,
-                                                                                      max_number_of_splits);
+    std::pair<std::vector<double>, std::vector<double>> y_0_y_0_der = InitialApproach_y(left_bound_x, right_bound_x,
+                                                                                        left_bound_y, right_bound_y,
+                                                                                        max_number_of_splits, y_func);
 
 //approach
     solution = y_0_y_0_der;
@@ -79,48 +80,48 @@ file.close();
 }
 
 TEST(NONLINEARBOUNDARYVALUEPROBLEM_ERROR2, NONLINEARBOUNDARYVALUEPROBLEM_ERROR2) {
-    std::function<double(double, double)> f = [](double x, double y) { return -1/(2*y); };
 
-    std::function<double(double, double, double)> a = [](double x, double y, double y_der) { return 1/(2*y) * y_der; };
+    std::function<double(double, double, double)> a = [](double x, double y, double y_der) { return y_der / (2*y); };
 
     std::function<double(double, double, double)> b = [](double x, double y, double y_der) { return 0.; };
 
+    std::function<double(double, double)> f = [](double x, double y) { return -1/(2*y); };
 
-    double left_bound_x = 0.;
-    double right_bound_x = 5.;
-    double left_bound_y = 1.;
-    double right_bound_y = 6.;
+    std::function<double(double)> y_sol = [](double x) { return log(1.+ x) + 1; };
 
-    int n_iterations = 7;
-    int max_number_of_splits = 200;
-    std::vector<double> y(max_number_of_splits + 1);
-    double h = (right_bound_x - left_bound_x)/max_number_of_splits;
+    double left_bound_x = M_PI / 4 + sqrt(2) / 2;
+    double right_bound_x = M_PI;
+    double left_bound_y = 1 - sqrt(2) / 2;
+    double right_bound_y = 2;
+
+    int n_iterations = 20;
+    int max_number_of_splits = 1050;
 
     std::fstream file;
     file.open("test_nonlin_3_2.txt", std::fstream::out);
 
 
-for(int k = 10; k < max_number_of_splits; k+=10) {
-    std::pair<std::vector<double>, std::vector<double>> solution;
+for(int k = 20; k < max_number_of_splits; k+=20) {
 
-    std::pair<std::vector<double>, std::vector<double>> y_0_y_0_der = InitialApproach(left_bound_x, right_bound_x,
-                                                                                      left_bound_y, right_bound_y,
-                                                                                      k);
-
-//approach
-    solution = y_0_y_0_der;
-
-    for (int i = 0; i < n_iterations; ++i) {
+    //approach
+    std::pair<std::vector<double>, std::vector<double>> solution = InitialApproach_y(left_bound_x, right_bound_x,
+                                                                                     left_bound_y, right_bound_y,
+                                                                                     k, y_sol);;
+    double h = (right_bound_x - left_bound_x)/k;
+    for (int i = 0; i < n_iterations; ++i)
+    {
         std::pair<Slae::Matrix::ThreeDiagonalMatrix, std::vector<double>> matrix =
                 ExpMatrixNonLinearBVP3(left_bound_x, right_bound_x,
                                        left_bound_y, right_bound_y,
                                        k, a, b, f, solution);
         solution.first = Slae::Solvers::solveThreeDiagonal(matrix.first, matrix.second);
-        solution.second = y_der(solution.first, k);
+        solution.second = Approach_y_der(solution.first, h);
     }
-    std::vector<double> err(k);
+
+
+    std::vector<double> err(k + 1);
     for(int i=0; i<k; i++){
-        err[i] = abs(solution.first[i] - y[i]);
+        err[i] = abs(solution.first[i] - y_sol(left_bound_x + h * i));
     }
     double max = *std::max_element(err.begin(), err.end());
     file << k << " "<< max << " ";
@@ -130,19 +131,20 @@ for(int k = 10; k < max_number_of_splits; k+=10) {
 }
 
 TEST(NONLINEARBOUNDARYVALUEPROBLEM3, NONLINEARBOUNDARYVALUEPROBLEM3) {
-    std::function<double(double, double)> f = [](double x, double y) { return -1/(2*y); };
-
-    std::function<double(double, double, double)> a = [](double x, double y, double y_der) { return 1/(2*y) * y_der; };
+    std::function<double(double, double, double)> a = [](double x, double y, double y_der) { return -y_der / (2*y); };
 
     std::function<double(double, double, double)> b = [](double x, double y, double y_der) { return 0.; };
 
+    std::function<double(double, double)> f = [](double x, double y) { return 1/(2*y); };
 
-    double left_bound_x = 0.;
-    double right_bound_x = 5.;
-    double left_bound_y = 1.;
-    double right_bound_y = 6.;
+    std::function<double(double)> y_sol = [](double x) { return x*x; };
 
-    int n_iterations = 7;
+    double left_bound_x = 0;
+    double right_bound_x = 6;
+    double left_bound_y = 5;
+    double right_bound_y = 2;
+
+    int n_iterations = 35;
     int max_number_of_splits = 200;
     std::vector<double> y(max_number_of_splits + 1);
     double h = (right_bound_x - left_bound_x)/max_number_of_splits;
@@ -157,14 +159,12 @@ for(int j=0; j < y.size(); ++j){
 file << '\n';
 
 //for(int k = 10; k < max_number_of_splits; k+=10){
-std::pair<std::vector<double>, std::vector<double>> solution;
-
-std::pair<std::vector<double>, std::vector<double>> y_0_y_0_der = InitialApproach(left_bound_x, right_bound_x,
-                                          left_bound_y, right_bound_y,
-                                          max_number_of_splits);
 
 //approach
-solution = y_0_y_0_der;
+//{y, y'}
+std::pair<std::vector<double>, std::vector<double>> solution = InitialApproach_y(left_bound_x, right_bound_x,
+                                                                               left_bound_y, right_bound_y,
+                                                                               max_number_of_splits, y_sol);
 
 for(int i = 0; i < n_iterations; ++i){
     std::pair<Slae::Matrix::ThreeDiagonalMatrix, std::vector<double>> matrix =
@@ -172,13 +172,19 @@ for(int i = 0; i < n_iterations; ++i){
                                    left_bound_y, right_bound_y,
                                    max_number_of_splits, a, b, f, solution);
     solution.first = Slae::Solvers::solveThreeDiagonal(matrix.first, matrix.second);
-    solution.second = y_der(solution.first, max_number_of_splits);
+
+    solution.second = Approach_y_der(solution.first, h);
+
 }
 
 for(int i = 0; i < solution.first.size(); ++i){
     file<< solution.first[i]<< " ";
 }
 file<<"\n";
+    for(int i = 0; i < solution.first.size(); ++i){
+        file<< y_sol(left_bound_x + h * i)<< " ";
+    }
+    file<<"\n";
 
 file.close();
 }
