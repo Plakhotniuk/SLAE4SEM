@@ -185,29 +185,29 @@ my_project/fast:
 	cd /Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/my_project.dir/build.make src/CMakeFiles/my_project.dir/build
 .PHONY : my_project/fast
 
-my_project/SlaeBaseException.o: my_project/SlaeBaseException.cpp.o
-.PHONY : my_project/SlaeBaseException.o
+my_project/Exceptions/SlaeBaseException.o: my_project/Exceptions/SlaeBaseException.cpp.o
+.PHONY : my_project/Exceptions/SlaeBaseException.o
 
 # target to build an object file
-my_project/SlaeBaseException.cpp.o:
-	cd /Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/my_project.dir/build.make src/CMakeFiles/my_project.dir/my_project/SlaeBaseException.cpp.o
-.PHONY : my_project/SlaeBaseException.cpp.o
+my_project/Exceptions/SlaeBaseException.cpp.o:
+	cd /Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/my_project.dir/build.make src/CMakeFiles/my_project.dir/my_project/Exceptions/SlaeBaseException.cpp.o
+.PHONY : my_project/Exceptions/SlaeBaseException.cpp.o
 
-my_project/SlaeBaseException.i: my_project/SlaeBaseException.cpp.i
-.PHONY : my_project/SlaeBaseException.i
+my_project/Exceptions/SlaeBaseException.i: my_project/Exceptions/SlaeBaseException.cpp.i
+.PHONY : my_project/Exceptions/SlaeBaseException.i
 
 # target to preprocess a source file
-my_project/SlaeBaseException.cpp.i:
-	cd /Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/my_project.dir/build.make src/CMakeFiles/my_project.dir/my_project/SlaeBaseException.cpp.i
-.PHONY : my_project/SlaeBaseException.cpp.i
+my_project/Exceptions/SlaeBaseException.cpp.i:
+	cd /Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/my_project.dir/build.make src/CMakeFiles/my_project.dir/my_project/Exceptions/SlaeBaseException.cpp.i
+.PHONY : my_project/Exceptions/SlaeBaseException.cpp.i
 
-my_project/SlaeBaseException.s: my_project/SlaeBaseException.cpp.s
-.PHONY : my_project/SlaeBaseException.s
+my_project/Exceptions/SlaeBaseException.s: my_project/Exceptions/SlaeBaseException.cpp.s
+.PHONY : my_project/Exceptions/SlaeBaseException.s
 
 # target to generate assembly for a file
-my_project/SlaeBaseException.cpp.s:
-	cd /Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/my_project.dir/build.make src/CMakeFiles/my_project.dir/my_project/SlaeBaseException.cpp.s
-.PHONY : my_project/SlaeBaseException.cpp.s
+my_project/Exceptions/SlaeBaseException.cpp.s:
+	cd /Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/my_project.dir/build.make src/CMakeFiles/my_project.dir/my_project/Exceptions/SlaeBaseException.cpp.s
+.PHONY : my_project/Exceptions/SlaeBaseException.cpp.s
 
 my_project/matrix/FiveDiagonalMatrix.o: my_project/matrix/FiveDiagonalMatrix.cpp.o
 .PHONY : my_project/matrix/FiveDiagonalMatrix.o
@@ -319,9 +319,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... test"
 	@echo "... my_project"
-	@echo "... my_project/SlaeBaseException.o"
-	@echo "... my_project/SlaeBaseException.i"
-	@echo "... my_project/SlaeBaseException.s"
+	@echo "... my_project/Exceptions/SlaeBaseException.o"
+	@echo "... my_project/Exceptions/SlaeBaseException.i"
+	@echo "... my_project/Exceptions/SlaeBaseException.s"
 	@echo "... my_project/matrix/FiveDiagonalMatrix.o"
 	@echo "... my_project/matrix/FiveDiagonalMatrix.i"
 	@echo "... my_project/matrix/FiveDiagonalMatrix.s"

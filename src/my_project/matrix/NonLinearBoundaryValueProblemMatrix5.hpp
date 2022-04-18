@@ -9,7 +9,7 @@
 #include "my_project/utility/Overloads.hpp"
 #include "my_project/sparse/CSR.hpp"
 #include <sstream>
-#include "my_project/SlaeBaseException.hpp"
+#include "my_project/Exceptions/SlaeBaseException.hpp"
 #include <functional>
 #include "FiveDiagonalMatrix.hpp"
 #include "cmath"
@@ -170,12 +170,12 @@ std::pair<std::vector<double>, std::vector<double>> InitialApproach_y5(double le
     std::vector<double> y_0(number_of_splits + 1);
     for(unsigned int i = 0; i < y_0.size(); ++i)
     {
-//        y_0[i] = func(left_bound_x + h * i);
-        y_0[i] = left_bound_y + (left_bound_x + h * i - left_bound_x) /
-                                (right_bound_x - left_bound_x) * (right_bound_y - left_bound_y);
+        y_0[i] = func(left_bound_x + h * i);
+//        y_0[i] = left_bound_y + (left_bound_x + h * i - left_bound_x) /
+//                                (right_bound_x - left_bound_x) * (right_bound_y - left_bound_y);
     }
-    std::vector<double> y_0_der(number_of_splits + 1, (right_bound_y - left_bound_y) / (right_bound_x - left_bound_x));
-//    std::vector<double> y_0_der = Approach_y_der(y_0, h);
+//    std::vector<double> y_0_der(number_of_splits + 1, (right_bound_y - left_bound_y) / (right_bound_x - left_bound_x));
+    std::vector<double> y_0_der = Approach_y_der5(y_0, h);
     return {y_0, y_0_der};
 }
 

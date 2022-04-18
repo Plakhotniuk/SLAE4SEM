@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/my_project.dir/my_project/SlaeBaseException.cpp.o"
-  "CMakeFiles/my_project.dir/my_project/SlaeBaseException.cpp.o.d"
+  "CMakeFiles/my_project.dir/my_project/Exceptions/SlaeBaseException.cpp.o"
+  "CMakeFiles/my_project.dir/my_project/Exceptions/SlaeBaseException.cpp.o.d"
   "CMakeFiles/my_project.dir/my_project/matrix/FiveDiagonalMatrix.cpp.o"
   "CMakeFiles/my_project.dir/my_project/matrix/FiveDiagonalMatrix.cpp.o.d"
   "CMakeFiles/my_project.dir/my_project/matrix/ThreeDiagonalMatrix.cpp.o"

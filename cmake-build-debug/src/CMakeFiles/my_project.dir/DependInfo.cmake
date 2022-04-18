@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/Users/arseniy/Desktop/SLAE4SEM/src/my_project/SlaeBaseException.cpp" "src/CMakeFiles/my_project.dir/my_project/SlaeBaseException.cpp.o" "gcc" "src/CMakeFiles/my_project.dir/my_project/SlaeBaseException.cpp.o.d"
+  "/Users/arseniy/Desktop/SLAE4SEM/src/my_project/Exceptions/SlaeBaseException.cpp" "src/CMakeFiles/my_project.dir/my_project/Exceptions/SlaeBaseException.cpp.o" "gcc" "src/CMakeFiles/my_project.dir/my_project/Exceptions/SlaeBaseException.cpp.o.d"
   "/Users/arseniy/Desktop/SLAE4SEM/src/my_project/matrix/FiveDiagonalMatrix.cpp" "src/CMakeFiles/my_project.dir/my_project/matrix/FiveDiagonalMatrix.cpp.o" "gcc" "src/CMakeFiles/my_project.dir/my_project/matrix/FiveDiagonalMatrix.cpp.o.d"
   "/Users/arseniy/Desktop/SLAE4SEM/src/my_project/matrix/ThreeDiagonalMatrix.cpp" "src/CMakeFiles/my_project.dir/my_project/matrix/ThreeDiagonalMatrix.cpp.o" "gcc" "src/CMakeFiles/my_project.dir/my_project/matrix/ThreeDiagonalMatrix.cpp.o.d"
   "/Users/arseniy/Desktop/SLAE4SEM/src/my_project/solvers/FiveDiagonalSolver.cpp" "src/CMakeFiles/my_project.dir/my_project/solvers/FiveDiagonalSolver.cpp.o" "gcc" "src/CMakeFiles/my_project.dir/my_project/solvers/FiveDiagonalSolver.cpp.o.d"

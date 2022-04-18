@@ -6,7 +6,7 @@
 #define MY_PROJECT_THREEDIADONALSOLVER_HPP
 
 #include "my_project/matrix/ThreeDiagonalMatrix.hpp"
-#include "my_project/SlaeBaseException.hpp"
+#include "my_project/Exceptions/SlaeBaseException.hpp"
 #include <sstream>
 #include <vector>
 

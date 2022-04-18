@@ -69,19 +69,19 @@ include src/CMakeFiles/my_project.dir/progress.make
 # Include the compile flags for this target's objects.
 include src/CMakeFiles/my_project.dir/flags.make
 
-src/CMakeFiles/my_project.dir/my_project/SlaeBaseException.cpp.o: src/CMakeFiles/my_project.dir/flags.make
-src/CMakeFiles/my_project.dir/my_project/SlaeBaseException.cpp.o: ../src/my_project/SlaeBaseException.cpp
-src/CMakeFiles/my_project.dir/my_project/SlaeBaseException.cpp.o: src/CMakeFiles/my_project.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object src/CMakeFiles/my_project.dir/my_project/SlaeBaseException.cpp.o"
-	cd /Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/my_project.dir/my_project/SlaeBaseException.cpp.o -MF CMakeFiles/my_project.dir/my_project/SlaeBaseException.cpp.o.d -o CMakeFiles/my_project.dir/my_project/SlaeBaseException.cpp.o -c /Users/arseniy/Desktop/SLAE4SEM/src/my_project/SlaeBaseException.cpp
+src/CMakeFiles/my_project.dir/my_project/Exceptions/SlaeBaseException.cpp.o: src/CMakeFiles/my_project.dir/flags.make
+src/CMakeFiles/my_project.dir/my_project/Exceptions/SlaeBaseException.cpp.o: ../src/my_project/Exceptions/SlaeBaseException.cpp
+src/CMakeFiles/my_project.dir/my_project/Exceptions/SlaeBaseException.cpp.o: src/CMakeFiles/my_project.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object src/CMakeFiles/my_project.dir/my_project/Exceptions/SlaeBaseException.cpp.o"
+	cd /Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/my_project.dir/my_project/Exceptions/SlaeBaseException.cpp.o -MF CMakeFiles/my_project.dir/my_project/Exceptions/SlaeBaseException.cpp.o.d -o CMakeFiles/my_project.dir/my_project/Exceptions/SlaeBaseException.cpp.o -c /Users/arseniy/Desktop/SLAE4SEM/src/my_project/Exceptions/SlaeBaseException.cpp
 
-src/CMakeFiles/my_project.dir/my_project/SlaeBaseException.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/my_project.dir/my_project/SlaeBaseException.cpp.i"
-	cd /Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/arseniy/Desktop/SLAE4SEM/src/my_project/SlaeBaseException.cpp > CMakeFiles/my_project.dir/my_project/SlaeBaseException.cpp.i
+src/CMakeFiles/my_project.dir/my_project/Exceptions/SlaeBaseException.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/my_project.dir/my_project/Exceptions/SlaeBaseException.cpp.i"
+	cd /Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/arseniy/Desktop/SLAE4SEM/src/my_project/Exceptions/SlaeBaseException.cpp > CMakeFiles/my_project.dir/my_project/Exceptions/SlaeBaseException.cpp.i
 
-src/CMakeFiles/my_project.dir/my_project/SlaeBaseException.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/my_project.dir/my_project/SlaeBaseException.cpp.s"
-	cd /Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/arseniy/Desktop/SLAE4SEM/src/my_project/SlaeBaseException.cpp -o CMakeFiles/my_project.dir/my_project/SlaeBaseException.cpp.s
+src/CMakeFiles/my_project.dir/my_project/Exceptions/SlaeBaseException.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/my_project.dir/my_project/Exceptions/SlaeBaseException.cpp.s"
+	cd /Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/arseniy/Desktop/SLAE4SEM/src/my_project/Exceptions/SlaeBaseException.cpp -o CMakeFiles/my_project.dir/my_project/Exceptions/SlaeBaseException.cpp.s
 
 src/CMakeFiles/my_project.dir/my_project/matrix/FiveDiagonalMatrix.cpp.o: src/CMakeFiles/my_project.dir/flags.make
 src/CMakeFiles/my_project.dir/my_project/matrix/FiveDiagonalMatrix.cpp.o: ../src/my_project/matrix/FiveDiagonalMatrix.cpp
@@ -141,7 +141,7 @@ src/CMakeFiles/my_project.dir/my_project/solvers/ThreeDiadonalSolver.cpp.s: cmak
 
 # Object files for target my_project
 my_project_OBJECTS = \
-"CMakeFiles/my_project.dir/my_project/SlaeBaseException.cpp.o" \
+"CMakeFiles/my_project.dir/my_project/Exceptions/SlaeBaseException.cpp.o" \
 "CMakeFiles/my_project.dir/my_project/matrix/FiveDiagonalMatrix.cpp.o" \
 "CMakeFiles/my_project.dir/my_project/matrix/ThreeDiagonalMatrix.cpp.o" \
 "CMakeFiles/my_project.dir/my_project/solvers/FiveDiagonalSolver.cpp.o" \
@@ -150,7 +150,7 @@ my_project_OBJECTS = \
 # External object files for target my_project
 my_project_EXTERNAL_OBJECTS =
 
-src/libmy_project.a: src/CMakeFiles/my_project.dir/my_project/SlaeBaseException.cpp.o
+src/libmy_project.a: src/CMakeFiles/my_project.dir/my_project/Exceptions/SlaeBaseException.cpp.o
 src/libmy_project.a: src/CMakeFiles/my_project.dir/my_project/matrix/FiveDiagonalMatrix.cpp.o
 src/libmy_project.a: src/CMakeFiles/my_project.dir/my_project/matrix/ThreeDiagonalMatrix.cpp.o
 src/libmy_project.a: src/CMakeFiles/my_project.dir/my_project/solvers/FiveDiagonalSolver.cpp.o

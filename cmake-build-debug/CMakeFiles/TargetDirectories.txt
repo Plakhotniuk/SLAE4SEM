@@ -23,6 +23,7 @@
 /Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/CMakeFiles/run_test_gmres.dir
 /Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/CMakeFiles/run_test_five_diag_matrix.dir
 /Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/CMakeFiles/run_test_linear_boundary_value_problem_5.dir
+/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/CMakeFiles/run_test_beam_bending.dir
 /Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/CMakeFiles/run_test_dense_matrix.dir
 /Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/CMakeFiles/test.dir
 /Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/CMakeFiles/run_test_nonlinear_bvp3.dir

@@ -8,7 +8,7 @@
 #include "my_project/utility/Overloads.hpp"
 #include "my_project/sparse/CSR.hpp"
 #include <sstream>
-#include "my_project/SlaeBaseException.hpp"
+#include "my_project/Exceptions/SlaeBaseException.hpp"
 #include <functional>
 #include "FiveDiagonalMatrix.hpp"
 #include "cmath"

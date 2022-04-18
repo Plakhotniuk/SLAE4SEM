@@ -263,6 +263,19 @@ run_test_linear_boundary_value_problem_5/fast:
 .PHONY : run_test_linear_boundary_value_problem_5/fast
 
 #=============================================================================
+# Target rules for targets named run_test_beam_bending
+
+# Build rule for target.
+run_test_beam_bending: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 run_test_beam_bending
+.PHONY : run_test_beam_bending
+
+# fast build rule for target.
+run_test_beam_bending/fast:
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/run_test_beam_bending.dir/build.make tests/CMakeFiles/run_test_beam_bending.dir/build
+.PHONY : run_test_beam_bending/fast
+
+#=============================================================================
 # Target rules for targets named run_test_dense_matrix
 
 # Build rule for target.
@@ -397,6 +410,7 @@ help:
 	@echo "... gtest"
 	@echo "... gtest_main"
 	@echo "... my_project"
+	@echo "... run_test_beam_bending"
 	@echo "... run_test_csr_matrix"
 	@echo "... run_test_dense_matrix"
 	@echo "... run_test_exception"

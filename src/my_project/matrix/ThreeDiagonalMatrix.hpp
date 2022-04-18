@@ -4,7 +4,7 @@
 
 #ifndef MY_PROJECT_THREEDIAGONALMATRIX_HPP
 #define MY_PROJECT_THREEDIAGONALMATRIX_HPP
-#include "my_project/SlaeBaseException.hpp"
+#include "my_project/Exceptions/SlaeBaseException.hpp"
 #include <vector>
 #include <array>
 #include <sstream>

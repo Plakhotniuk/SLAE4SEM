@@ -8,7 +8,7 @@
 #include <my_project/utility/Norm.hpp>
 #include "../sparse/CSR.hpp"
 #include <sstream>
-#include <my_project/SlaeBaseException.hpp>
+#include "my_project/Exceptions/SlaeBaseException.hpp"
 
 
 

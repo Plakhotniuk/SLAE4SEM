@@ -10,7 +10,7 @@
 #include "../utility/Norm.hpp"
 #include <my_project/utility/Overloads.hpp>
 #include <sstream>
-#include <my_project/SlaeBaseException.hpp>
+#include "my_project/Exceptions/SlaeBaseException.hpp"
 
 template <typename T>
 std::vector<T> Steepest_gradient_descent(const CSR<T> &A, const std::vector<T> &b, const std::vector<T> &init, const T &tolerance) {

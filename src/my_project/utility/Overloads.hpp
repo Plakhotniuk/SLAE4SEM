@@ -6,7 +6,7 @@
 #define SLAE_OVERLOADS_HPP
 #include <iosfwd>
 #include <vector>
-#include "../SlaeBaseException.hpp"
+#include "my_project/Exceptions/SlaeBaseException.hpp"
 /***
  * Умножение числа на вектор
  * @tparam T Тип числа

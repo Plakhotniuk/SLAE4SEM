@@ -7,7 +7,7 @@
 #include "/Users/arseniy/Desktop/SLAE4SEM/src/my_project/utility/Overloads.hpp"
 #include "/Users/arseniy/Desktop/SLAE4SEM/src/my_project/sparse/CSR.hpp"
 #include <sstream>
-#include "/Users/arseniy/Desktop/SLAE4SEM/src/my_project/SlaeBaseException.hpp"
+#include "my_project/Exceptions/SlaeBaseException.hpp"
 #include <functional>
 #include "ThreeDiagonalMatrix.hpp"
 #include "cmath"

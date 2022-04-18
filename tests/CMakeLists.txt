@@ -15,7 +15,7 @@ file(GLOB_RECURSE TEST_SOURCES test_*.cpp)  # В переменной TEST_SOURC
 foreach(TEST_FILE IN LISTS TEST_SOURCES)
     get_filename_component(TEST_FILE_NAME ${TEST_FILE} NAME_WE)
     set(EXECUTABLE_NAME run_${TEST_FILE_NAME})
-    add_executable(${EXECUTABLE_NAME} ${TEST_FILE} test_nonlinear_bvp3.cpp test_nonlinear_bvp5.cpp)
+    add_executable(${EXECUTABLE_NAME} ${TEST_FILE})
     target_link_libraries(
             ${EXECUTABLE_NAME}
             my_project	# Подключаем проект

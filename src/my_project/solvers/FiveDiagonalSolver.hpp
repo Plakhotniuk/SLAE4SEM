@@ -5,7 +5,7 @@
 #ifndef MY_PROJECT_FIVEDIAGONALSOLVER_HPP
 #define MY_PROJECT_FIVEDIAGONALSOLVER_HPP
 #include "my_project/matrix/FiveDiagonalMatrix.hpp"
-#include "my_project/SlaeBaseException.hpp"
+#include "my_project/Exceptions/SlaeBaseException.hpp"
 #include <sstream>
 #include <vector>
 
