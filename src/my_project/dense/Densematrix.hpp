@@ -50,6 +50,16 @@ public:
      * @return Значение элемента в позиции (i, j)
      */
     elm_t& operator()(const idx_t& i, const idx_t& j){
+#ifndef NDEBUG
+        if (i * H + j > matrix.size())
+        {
+            std::stringstream buff;
+            buff << "Index exceeds matrix size! Received index: " << i << "x" << j << ". Matrix size: "
+                 << W << "x" << H << ". File: " << __FILE__ << ". Line: " << __LINE__;
+
+            throw Slae::SlaeBaseExceptionCpp(buff.str());
+        }
+#endif //NDEBUG
         return matrix[i*W + j];
     };
 
@@ -60,6 +70,16 @@ public:
      * @return Значение элемента в позиции (i, j)
      */
     const elm_t& operator()(const idx_t& i, const idx_t& j) const{
+#ifndef NDEBUG
+        if (i * H + j > matrix.size())
+        {
+            std::stringstream buff;
+            buff << "Index exceeds matrix size! Received index: " << i << "x" << j << ". Matrix size: "
+                 << W << "x" << H << ". File: " << __FILE__ << ". Line: " << __LINE__;
+
+            throw Slae::SlaeBaseExceptionCpp(buff.str());
+        }
+#endif //NDEBUG
         return matrix[i*W + j];
     };
 
@@ -78,6 +98,27 @@ public:
     [[nodiscard]] const idx_t& sizeW() const{
         return W;
     };
+
+    void write_col(std::vector<T>& col, int ind)
+    {
+#ifndef NDEBUG
+        if (col.size() != H)
+        {
+            std::stringstream buff;
+            buff << "Given column has different size from matrix! " << __FILE__ << ". Line: " << __LINE__;
+            throw Slae::SlaeBaseExceptionCpp(buff.str());
+        }
+        if (ind > W)
+        {
+            std::stringstream buff;
+            buff << "Index exceeds matrix size! Received index: " << ind << ". Matrix has: "
+                 << W << "columns. File: " << __FILE__ << ". Line: " << __LINE__;
+            throw Slae::SlaeBaseExceptionCpp(buff.str());
+        }
+#endif //NDEBUG
+        for(int i = 0; i < sizeH(); ++i)
+            matrix[i * H + ind] = col[i];
+    }
 
     /***
      * Метод, меняющий местами две строки матрицы

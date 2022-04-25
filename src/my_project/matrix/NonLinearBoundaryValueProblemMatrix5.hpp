@@ -159,6 +159,19 @@ std::vector<double> Approach_y_der5(std::vector<double> y_prev, double h){
     return y_der;
 }
 
+std::vector<double> Approach_y_second_der5(std::vector<double> y_prev, double h){
+    std::vector<double> y_second_der(y_prev.size());
+    y_second_der[0] = (y_prev[2] - 2*y_prev[1] + y_prev[0]) / (h*h);
+    y_second_der[1] = (y_prev[2] - 2*y_prev[1] + y_prev[0]) / (h*h);
+
+    for(int i = 2; i < y_prev.size() - 3; ++i)
+        y_second_der[i] = (-y_prev[i+2] + 16*y_prev[i+1] - 30*y_prev[i] + 16*y_prev[i-1] - y_prev[i-2]) / (12*h*h);
+    y_second_der[y_prev.size() - 2] = (y_prev.back() - 2*y_prev[y_prev.size() - 2] + y_prev[y_prev.size() - 3]) / (h*h);
+    y_second_der.back() = (y_prev.back() - 2*y_prev[y_prev.size() - 2] + y_prev[y_prev.size() - 3]) / (h*h);
+
+    return y_second_der;
+}
+
 std::pair<std::vector<double>, std::vector<double>> InitialApproach_y5(double left_bound_x, double right_bound_x,
                                                                       double left_bound_y, double right_bound_y,
                                                                       unsigned int number_of_splits,

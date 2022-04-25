@@ -12,11 +12,12 @@
 TEST(BEAMBENDING, BEAM) {
     int number_of_loops = 200;
     std::fstream file;
-    file.open("test_beam9.txt", std::fstream::out);
+    file.open("test_beam6.txt", std::fstream::out);
+
     for(int q = 0; q < number_of_loops; q++) {
 
         std::function<double(double, double)> f = [q](double x, double y) {
-            return -(0.025*q)*(0.025*q) * sin(y);
+            return -(0.03*q)*(0.03*q) * sin(y);
         };
 
         std::function<double(double, double, double)> a = [](double x, double y, double y_dev) { return 0.; };
@@ -26,7 +27,7 @@ TEST(BEAMBENDING, BEAM) {
         std::function<double(double)> y_func = [](double x) { return asin(x); };
 
         double left_bound_x = 0.;
-        double right_bound_x = 1.;
+        double right_bound_x = 1;
         double left_bound_y = 0.;
         double right_bound_y = M_PI;
 
@@ -34,21 +35,6 @@ TEST(BEAMBENDING, BEAM) {
         int n_iterations = 30;
 
         double h = (right_bound_x - left_bound_x) / max_number_of_splits;
-
-
-
-        ///x
-        //for(int j=0; j < y.size(); ++j){
-        //    file << left_bound_x + h * j << " ";
-        //}
-        //file << '\n';
-        //
-        ///analytical solution
-        //    for(int i = 0; i < y.size(); ++i){
-        //        y[i] = y_func(left_bound_x + h * i);
-        //        file << y[i] << " ";
-        //    }
-        //    file << '\n';
 
         std::pair<std::vector<double>, std::vector<double>> solution;
 
@@ -97,8 +83,22 @@ TEST(BEAMBENDING, BEAM) {
 //        }
 
         file << "\n";
-    }
 
+        ///Write l and M(x)/(EI) to file
+        for (int i = 0; i < y_x.size(); ++i) {
+            file << left_bound_x + h * i << " ";
+        }
+        file << "\n";
+
+        std::vector<double> y_second_der = Approach_y_second_der5(y_x, h);
+        std::vector<double> y_der = Approach_y_der5(y_x, h);
+        for (int i = 0; i < y_x.size(); ++i) {
+            file << y_second_der[i] / pow(1 + y_der*y_der, 1.5) << " ";
+        }
+        file << "\n";
+
+    }
     file.close();
+
 }
 
