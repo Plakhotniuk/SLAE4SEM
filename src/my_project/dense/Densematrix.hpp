@@ -99,7 +99,7 @@ public:
         return W;
     };
 
-    void write_col(std::vector<T>& col, int ind)
+    void write_col(const std::vector<T>& col, int ind)
     {
 #ifndef NDEBUG
         if (col.size() != H)
@@ -108,7 +108,7 @@ public:
             buff << "Given column has different size from matrix! " << __FILE__ << ". Line: " << __LINE__;
             throw Slae::SlaeBaseExceptionCpp(buff.str());
         }
-        if (ind > W)
+        if (ind >= W)
         {
             std::stringstream buff;
             buff << "Index exceeds matrix size! Received index: " << ind << ". Matrix has: "
@@ -117,7 +117,24 @@ public:
         }
 #endif //NDEBUG
         for(int i = 0; i < sizeH(); ++i)
-            matrix[i * H + ind] = col[i];
+            matrix[i * W + ind] = col[i];
+    }
+
+    std::vector<T> get_col(int ind)
+    {
+#ifndef NDEBUG
+        if (ind >= W)
+        {
+            std::stringstream buff;
+            buff << "Index exceeds matrix size! Received index: " << ind << ". Matrix has: "
+                 << W << "columns. File: " << __FILE__ << ". Line: " << __LINE__;
+            throw Slae::SlaeBaseExceptionCpp(buff.str());
+        }
+#endif //NDEBUG
+        std::vector<T> col(H);
+        for(int i = 0; i < sizeH(); ++i)
+            col[i] = matrix[i * W + ind];
+        return col;
     }
 
     /***

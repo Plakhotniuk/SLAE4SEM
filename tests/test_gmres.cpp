@@ -15,6 +15,6 @@ TEST(GMRES, HI)
     CSR<double> matrix(3, 3, data);
     std::vector<double> col = {0.1, 0.2, 0.3};
     std::vector<double> init = {0., 0., 0.};
-    std::vector<double> res = Gmres(matrix, col, init, tolerance);
+    std::vector<double> res = GMRES<double>(matrix, col, init, tolerance);
     ASSERT_NEAR(norm(res - std::vector<double>{0.014, 0.04, 0.033}, NormType::SecondNorm), 0., tolerance);
 }
