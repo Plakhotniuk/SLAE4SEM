@@ -51,7 +51,7 @@ public:
      */
     elm_t& operator()(const idx_t& i, const idx_t& j){
 #ifndef NDEBUG
-        if (i * H + j > matrix.size())
+        if (i * W + j > matrix.size())
         {
             std::stringstream buff;
             buff << "Index exceeds matrix size! Received index: " << i << "x" << j << ". Matrix size: "
@@ -120,22 +120,26 @@ public:
             matrix[i * W + ind] = col[i];
     }
 
-    std::vector<T> get_col(int ind)
+    std::vector<T> get_col(unsigned i) const
     {
 #ifndef NDEBUG
-        if (ind >= W)
+        if (i >= W)
         {
             std::stringstream buff;
-            buff << "Index exceeds matrix size! Received index: " << ind << ". Matrix has: "
-                 << W << "columns. File: " << __FILE__ << ". Line: " << __LINE__;
+            buff << "Index exceeds matrix col_size! Received index: " << i << ". Matrix size: "
+                 << H << "x" << W << ". File: " << __FILE__ << ". Line: " << __LINE__;
+
             throw Slae::SlaeBaseExceptionCpp(buff.str());
         }
 #endif //NDEBUG
         std::vector<T> col(H);
-        for(int i = 0; i < sizeH(); ++i)
-            col[i] = matrix[i * W + ind];
+
+        for (unsigned j = 0; j < H; j++)
+            col[j] = matrix[j * W + i];
+
         return col;
     }
+
 
     /***
      * Метод, меняющий местами две строки матрицы

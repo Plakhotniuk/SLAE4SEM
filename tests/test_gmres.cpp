@@ -10,11 +10,12 @@
 
 TEST(GMRES, HI)
 {
-    double tolerance = 1e-3;
+    double tolerance = 1e-6;
     std::set<Triplet<double>> data{{0, 0, 7.}, {1, 1, 5.}, {2, 2, 9.}};
     CSR<double> matrix(3, 3, data);
-    std::vector<double> col = {0.1, 0.2, 0.3};
-    std::vector<double> init = {0., 0., 0.};
+    std::vector<double> col = {7., 5., 9.};
+    std::vector<double> init = {100., 10., 1000.};
     std::vector<double> res = GMRES<double>(matrix, col, init, tolerance);
-    ASSERT_NEAR(norm(res - std::vector<double>{0.014, 0.04, 0.033}, NormType::SecondNorm), 0., tolerance);
+    double to_compare = Norm<double, NormType::ThirdNorm>::get_norm(res - std::vector<double>{1., 1., 1.});
+    ASSERT_NEAR(to_compare, 0., tolerance);
 }

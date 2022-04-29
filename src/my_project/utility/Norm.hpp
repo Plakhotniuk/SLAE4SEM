@@ -4,10 +4,12 @@
 
 #ifndef SLAE_NORM_HPP
 #define SLAE_NORM_HPP
+
 #include "vector"
 #include "cmath"
 
-enum class NormType{
+enum NormType
+{
     FirstNorm = 1,
     SecondNorm = 2,
     ThirdNorm = 3,
@@ -19,27 +21,68 @@ enum class NormType{
  * @param normType тип нормы
  * @return norm соответствующая норма вектора
  */
-template <typename T>
-const T& norm(const std::vector<T>& vector, NormType normType){
-    T norm = static_cast<T>(0);
-    if(normType == NormType::FirstNorm){
-        for(const auto& elm: vector){
-            T abs = std::abs(elm);
-            if(abs > norm) norm = abs;
-        }
-    }
-    if(normType == NormType::SecondNorm){
-        for(const auto& elm: vector){
-            norm += std::abs(elm);
-        }
-    }
-    if(normType == NormType::ThirdNorm){
-        for(const auto& elm: vector){
-            norm += elm*elm;
-        }
-        norm = std::sqrt(norm);
+
+
+template <typename T, int Type>
+struct Norm{
+    static double get_norm(const std::vector<T>& vector);
+};
+
+template<>
+double Norm<double, NormType::FirstNorm>::get_norm(const std::vector<double> &vector) {
+    double norm = static_cast<double>(0);
+    for (const auto& elm: vector)
+    {
+        double abs = std::abs(elm);
+        if (abs > norm) norm = abs;
     }
     return norm;
 }
+
+template<>
+double Norm<double, NormType::SecondNorm>::get_norm(const std::vector<double> &vector) {
+    double norm = static_cast<double>(0);
+    for (const auto& elm: vector)
+        norm += std::abs(elm);
+    return norm;
+}
+
+template<>
+double Norm<double, NormType::ThirdNorm>::get_norm(const std::vector<double> &vector) {
+    double norm = 0.;
+    for(int i = 0; i < vector.size(); ++i)
+        norm += vector[i] * vector[i];
+    return std::sqrt(norm);
+}
+//{
+//    T norm = static_cast<T>(0);
+//    if (normType == NormType::FirstNorm)
+//    {
+//        for (const auto& elm: vector)
+//        {
+//            T abs = std::abs(elm);
+//            if (abs > norm) norm = abs;
+//        }
+//    }
+//
+//    if (normType == NormType::SecondNorm)
+//    {
+//        for (const auto& elm: vector)
+//        {
+//            norm += std::abs(elm);
+//        }
+//    }
+//
+//    if (normType == NormType::ThirdNorm)
+//    {
+//        for(const auto& elm: vector)
+//        {
+//            norm += elm * elm;
+//        }
+//        norm = std::sqrt(norm);
+//    }
+//
+//    return norm;
+//}
 
 #endif//SLAE_NORM_HPP

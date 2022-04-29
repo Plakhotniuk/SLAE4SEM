@@ -14,31 +14,46 @@
 
 template<typename T>
 void AddVecToKrylovSubspace(const CSR<T>& A, DenseMatrix<T>& V, DenseMatrix<T>& H, int j){
-    V.write_col(A * V.get_col(j), j + 1);
+    std::vector<T> temp(H.sizeW());
+    temp = A * V.get_col(j);
 
     for(int k = 0; k < j + 1; ++k)
     {
-        H(k, j) = V.get_col(k) * V.get_col(j + 1);
-        V.write_col(V.get_col(j + 1) - H(k,j) * V.get_col(k), j + 1);
+        H(k, j) = V.get_col(k) * temp;
+        temp = temp - H(k, j)*V.get_col(k);
     }
 
-    H(j + 1, j) = norm(V.get_col(j + 1), NormType::SecondNorm);
-    V.write_col(V.get_col(j) / H(j + 1, j), j + 1);
+    H(j + 1, j) = Norm<T, NormType::ThirdNorm>::get_norm(temp);
+    V.write_col(temp / H(j + 1, j), j + 1);
 }
 
 
 template<typename T>
-void GivensRotation(DenseMatrix<T>& H, std::vector<T>& z, std::vector<std::pair<T, T>>& rotate_cos_sin, int j){
-    rotate_cos_sin[j].first = H(j, j) / sqrt(H(j, j)* H(j, j) + H(j + 1, j)* H(j + 1, j));
-    rotate_cos_sin[j].second = -H(j + 1, j) / sqrt(H(j, j)* H(j, j) + H(j + 1, j)* H(j + 1, j));
-
-    for(int i = 0; i < j + 1; ++i)
+void GivensRotation(DenseMatrix<T>& H, std::vector<T>& z, std::vector<std::pair<T, T>>& rotate_cos_sin, int k){
+    double cos;
+    double sin;
+    double alpha;
+    double beta;
+    for (int i = 0; i < k; i++)
     {
-        H(i, j) = H(i, j) * rotate_cos_sin[i].first - H(i + 1, j) * rotate_cos_sin[i].second;
-        H(i + 1, j) = H(i, j) * rotate_cos_sin[i].second +  H(i + 1, j) * rotate_cos_sin[i].first;
+        beta = H(i, k);
+        H(i, k) = H(i, k) * rotate_cos_sin[i].first - H(i + 1, k) * rotate_cos_sin[i].second;
+        H(i + 1, k) = beta * rotate_cos_sin[i].second + H(i + 1, k) * rotate_cos_sin[i].first;
     }
-    z[j] = z[j] * rotate_cos_sin[j].first -  z[j + 1] * rotate_cos_sin[j].second;
-    z[j + 1] = z[j] * rotate_cos_sin[j].second + z[j + 1] * rotate_cos_sin[j].first;
+
+    alpha = std::sqrt(H(k, k) * H(k, k) + H(k + 1, k) * H(k + 1, k));
+    cos = H(k, k) / alpha;
+    sin = - H(k + 1, k) / alpha;
+
+    std::pair<double, double> a(cos, sin);
+    rotate_cos_sin[k] = a;
+    beta = H(k, k);
+    H(k, k) = H(k, k) * cos - H(k + 1, k) * sin;
+    H(k + 1, k) = beta * sin + H(k + 1, k) * cos;
+
+    beta = z[k];
+    z[k] = z[k] * cos - z[k + 1] * sin;
+    z[k + 1] = beta * sin + z[k + 1] * cos;
 }
 
 template <typename T>
@@ -51,7 +66,8 @@ std::vector<T> ReverseGauss(const DenseMatrix<T>& R, const std::vector<T>& b, co
         sol[n - i - 1] = b[n - i - 1];
         for (int k = n - 1; k > n - i - 1; k--)
             sol[n - i - 1] -=  R(n - i - 1, k) * sol[k];
-        sol[n - i - 1] /= R(n - i - 1, n - i - 1);
+        if (R(n - i - 1, n - i - 1) != 0.)
+            sol[n - i - 1] /= R(n - i - 1, n - i - 1);
     }
 
     return sol;
@@ -65,14 +81,17 @@ std::vector<T> GMRES(const CSR<T> &A, const std::vector<T> &b, const std::vector
     DenseMatrix<T> V(i, i + 1); // ОНБ в подпространстве крылова
     DenseMatrix<T> H(i + 1, i); // матрица Хессенберга
     bool finished = false;
-    std::vector<T> z(i + 1, 0);
-    std::vector<std::pair<T, T>> rotate_cos_sin(i + 1);
-    int n = 0;
+    std::vector<T> z(i + 1);
+    std::vector<std::pair<T, T>> rotate_cos_sin(i + 1, {0., 0.});
 
     while (!finished)
     {
-        z[0] = norm(r, NormType::SecondNorm);
-        V.write_col(r / norm(r, NormType::SecondNorm), 0);
+        std::fill(z.begin(), z.end(), 0.);
+        z[0] = Norm<T, ThirdNorm>::get_norm(r);
+        V.write_col(r, 0);
+        if (Norm<T, ThirdNorm>::get_norm(r) != 0.)
+            V.write_col(r / Norm<T, ThirdNorm>::get_norm(r), 0);
+
         for(int j = 1; j < i + 1; ++j)
         {
             AddVecToKrylovSubspace(A, V, H, j - 1);
@@ -86,8 +105,6 @@ std::vector<T> GMRES(const CSR<T> &A, const std::vector<T> &b, const std::vector
                 finished = true;
                 break;
             }
-            std::cout<<n<<std::endl;
-            ++n;
         }
         if (!finished)
         {
