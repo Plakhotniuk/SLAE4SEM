@@ -276,6 +276,19 @@ run_test_beam_bending/fast:
 .PHONY : run_test_beam_bending/fast
 
 #=============================================================================
+# Target rules for targets named run_test_cubic_spline
+
+# Build rule for target.
+run_test_cubic_spline: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 run_test_cubic_spline
+.PHONY : run_test_cubic_spline
+
+# fast build rule for target.
+run_test_cubic_spline/fast:
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/run_test_cubic_spline.dir/build.make tests/CMakeFiles/run_test_cubic_spline.dir/build
+.PHONY : run_test_cubic_spline/fast
+
+#=============================================================================
 # Target rules for targets named run_test_dense_matrix
 
 # Build rule for target.
@@ -287,45 +300,6 @@ run_test_dense_matrix: cmake_check_build_system
 run_test_dense_matrix/fast:
 	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/run_test_dense_matrix.dir/build.make tests/CMakeFiles/run_test_dense_matrix.dir/build
 .PHONY : run_test_dense_matrix/fast
-
-#=============================================================================
-# Target rules for targets named run_test_3diag_spline
-
-# Build rule for target.
-run_test_3diag_spline: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 run_test_3diag_spline
-.PHONY : run_test_3diag_spline
-
-# fast build rule for target.
-run_test_3diag_spline/fast:
-	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/run_test_3diag_spline.dir/build.make tests/CMakeFiles/run_test_3diag_spline.dir/build
-.PHONY : run_test_3diag_spline/fast
-
-#=============================================================================
-# Target rules for targets named run_test_nonlinear_bvp3
-
-# Build rule for target.
-run_test_nonlinear_bvp3: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 run_test_nonlinear_bvp3
-.PHONY : run_test_nonlinear_bvp3
-
-# fast build rule for target.
-run_test_nonlinear_bvp3/fast:
-	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/run_test_nonlinear_bvp3.dir/build.make tests/CMakeFiles/run_test_nonlinear_bvp3.dir/build
-.PHONY : run_test_nonlinear_bvp3/fast
-
-#=============================================================================
-# Target rules for targets named run_test_exception
-
-# Build rule for target.
-run_test_exception: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 run_test_exception
-.PHONY : run_test_exception
-
-# fast build rule for target.
-run_test_exception/fast:
-	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/run_test_exception.dir/build.make tests/CMakeFiles/run_test_exception.dir/build
-.PHONY : run_test_exception/fast
 
 #=============================================================================
 # Target rules for targets named run_test_nonlinear_bvp5
@@ -352,6 +326,32 @@ run_test_csr_matrix: cmake_check_build_system
 run_test_csr_matrix/fast:
 	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/run_test_csr_matrix.dir/build.make tests/CMakeFiles/run_test_csr_matrix.dir/build
 .PHONY : run_test_csr_matrix/fast
+
+#=============================================================================
+# Target rules for targets named run_test_nonlinear_bvp3
+
+# Build rule for target.
+run_test_nonlinear_bvp3: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 run_test_nonlinear_bvp3
+.PHONY : run_test_nonlinear_bvp3
+
+# fast build rule for target.
+run_test_nonlinear_bvp3/fast:
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/run_test_nonlinear_bvp3.dir/build.make tests/CMakeFiles/run_test_nonlinear_bvp3.dir/build
+.PHONY : run_test_nonlinear_bvp3/fast
+
+#=============================================================================
+# Target rules for targets named run_test_exception
+
+# Build rule for target.
+run_test_exception: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 run_test_exception
+.PHONY : run_test_exception
+
+# fast build rule for target.
+run_test_exception/fast:
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/run_test_exception.dir/build.make tests/CMakeFiles/run_test_exception.dir/build
+.PHONY : run_test_exception/fast
 
 #=============================================================================
 # Target rules for targets named gmock
@@ -423,9 +423,9 @@ help:
 	@echo "... gtest"
 	@echo "... gtest_main"
 	@echo "... my_project"
-	@echo "... run_test_3diag_spline"
 	@echo "... run_test_beam_bending"
 	@echo "... run_test_csr_matrix"
+	@echo "... run_test_cubic_spline"
 	@echo "... run_test_dense_matrix"
 	@echo "... run_test_exception"
 	@echo "... run_test_five_diag_matrix"

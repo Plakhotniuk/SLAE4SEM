@@ -29,7 +29,7 @@ double get_dif(const std::vector<double> &x, const std::vector<double> &f)
     }
 }
 
-TEST(THREEDIAGSPLINE, TEST) {
+TEST(THREECUBICSPLINE, TEST) {
 
     std::vector<double> x = {0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0};
     std::vector<double> y = {0.0, 0.033, 0.067, 0.1, 0.134, 0.168, 0.203, 0.238, 0.273, 0.309, 0.346};
@@ -80,7 +80,7 @@ TEST(THREEDIAGSPLINE, TEST) {
     }
     double res = a[i] + b[i] * (var - x[i]) +
             c[i] * (var - x[i])*(var - x[i]) / 2 + d[i] *(var - x[i])*(var - x[i])*(var - x[i])/6;
-    std::cout <<std::setprecision(9) << res <<std::endl;
+    std::cout <<std::setprecision(10) << res <<std::endl;
 }
 
 

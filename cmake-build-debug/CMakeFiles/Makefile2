@@ -103,12 +103,12 @@ tests/all: tests/CMakeFiles/run_test_gmres.dir/all
 tests/all: tests/CMakeFiles/run_test_five_diag_matrix.dir/all
 tests/all: tests/CMakeFiles/run_test_linear_boundary_value_problem_5.dir/all
 tests/all: tests/CMakeFiles/run_test_beam_bending.dir/all
+tests/all: tests/CMakeFiles/run_test_cubic_spline.dir/all
 tests/all: tests/CMakeFiles/run_test_dense_matrix.dir/all
-tests/all: tests/CMakeFiles/run_test_3diag_spline.dir/all
-tests/all: tests/CMakeFiles/run_test_nonlinear_bvp3.dir/all
-tests/all: tests/CMakeFiles/run_test_exception.dir/all
 tests/all: tests/CMakeFiles/run_test_nonlinear_bvp5.dir/all
 tests/all: tests/CMakeFiles/run_test_csr_matrix.dir/all
+tests/all: tests/CMakeFiles/run_test_nonlinear_bvp3.dir/all
+tests/all: tests/CMakeFiles/run_test_exception.dir/all
 tests/all: tests/googletest-master/all
 .PHONY : tests/all
 
@@ -124,12 +124,12 @@ tests/clean: tests/CMakeFiles/run_test_gmres.dir/clean
 tests/clean: tests/CMakeFiles/run_test_five_diag_matrix.dir/clean
 tests/clean: tests/CMakeFiles/run_test_linear_boundary_value_problem_5.dir/clean
 tests/clean: tests/CMakeFiles/run_test_beam_bending.dir/clean
+tests/clean: tests/CMakeFiles/run_test_cubic_spline.dir/clean
 tests/clean: tests/CMakeFiles/run_test_dense_matrix.dir/clean
-tests/clean: tests/CMakeFiles/run_test_3diag_spline.dir/clean
-tests/clean: tests/CMakeFiles/run_test_nonlinear_bvp3.dir/clean
-tests/clean: tests/CMakeFiles/run_test_exception.dir/clean
 tests/clean: tests/CMakeFiles/run_test_nonlinear_bvp5.dir/clean
 tests/clean: tests/CMakeFiles/run_test_csr_matrix.dir/clean
+tests/clean: tests/CMakeFiles/run_test_nonlinear_bvp3.dir/clean
+tests/clean: tests/CMakeFiles/run_test_exception.dir/clean
 tests/clean: tests/googletest-master/clean
 .PHONY : tests/clean
 
@@ -387,7 +387,7 @@ tests/CMakeFiles/run_test_beam_bending.dir/all: tests/googletest-master/googlete
 tests/CMakeFiles/run_test_beam_bending.dir/all: tests/googletest-master/googletest/CMakeFiles/gtest.dir/all
 	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/run_test_beam_bending.dir/build.make tests/CMakeFiles/run_test_beam_bending.dir/depend
 	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/run_test_beam_bending.dir/build.make tests/CMakeFiles/run_test_beam_bending.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/CMakeFiles --progress-num=17,18 "Built target run_test_beam_bending"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/CMakeFiles --progress-num=15,16 "Built target run_test_beam_bending"
 .PHONY : tests/CMakeFiles/run_test_beam_bending.dir/all
 
 # Build rule for subdir invocation for target.
@@ -405,6 +405,34 @@ run_test_beam_bending: tests/CMakeFiles/run_test_beam_bending.dir/rule
 tests/CMakeFiles/run_test_beam_bending.dir/clean:
 	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/run_test_beam_bending.dir/build.make tests/CMakeFiles/run_test_beam_bending.dir/clean
 .PHONY : tests/CMakeFiles/run_test_beam_bending.dir/clean
+
+#=============================================================================
+# Target rules for target tests/CMakeFiles/run_test_cubic_spline.dir
+
+# All Build rule for target.
+tests/CMakeFiles/run_test_cubic_spline.dir/all: src/CMakeFiles/my_project.dir/all
+tests/CMakeFiles/run_test_cubic_spline.dir/all: tests/googletest-master/googletest/CMakeFiles/gtest_main.dir/all
+tests/CMakeFiles/run_test_cubic_spline.dir/all: tests/googletest-master/googletest/CMakeFiles/gtest.dir/all
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/run_test_cubic_spline.dir/build.make tests/CMakeFiles/run_test_cubic_spline.dir/depend
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/run_test_cubic_spline.dir/build.make tests/CMakeFiles/run_test_cubic_spline.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/CMakeFiles --progress-num=19,20 "Built target run_test_cubic_spline"
+.PHONY : tests/CMakeFiles/run_test_cubic_spline.dir/all
+
+# Build rule for subdir invocation for target.
+tests/CMakeFiles/run_test_cubic_spline.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/CMakeFiles 12
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/CMakeFiles/run_test_cubic_spline.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/CMakeFiles 0
+.PHONY : tests/CMakeFiles/run_test_cubic_spline.dir/rule
+
+# Convenience name for target.
+run_test_cubic_spline: tests/CMakeFiles/run_test_cubic_spline.dir/rule
+.PHONY : run_test_cubic_spline
+
+# clean rule for target.
+tests/CMakeFiles/run_test_cubic_spline.dir/clean:
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/run_test_cubic_spline.dir/build.make tests/CMakeFiles/run_test_cubic_spline.dir/clean
+.PHONY : tests/CMakeFiles/run_test_cubic_spline.dir/clean
 
 #=============================================================================
 # Target rules for target tests/CMakeFiles/run_test_dense_matrix.dir
@@ -435,32 +463,60 @@ tests/CMakeFiles/run_test_dense_matrix.dir/clean:
 .PHONY : tests/CMakeFiles/run_test_dense_matrix.dir/clean
 
 #=============================================================================
-# Target rules for target tests/CMakeFiles/run_test_3diag_spline.dir
+# Target rules for target tests/CMakeFiles/run_test_nonlinear_bvp5.dir
 
 # All Build rule for target.
-tests/CMakeFiles/run_test_3diag_spline.dir/all: src/CMakeFiles/my_project.dir/all
-tests/CMakeFiles/run_test_3diag_spline.dir/all: tests/googletest-master/googletest/CMakeFiles/gtest_main.dir/all
-tests/CMakeFiles/run_test_3diag_spline.dir/all: tests/googletest-master/googletest/CMakeFiles/gtest.dir/all
-	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/run_test_3diag_spline.dir/build.make tests/CMakeFiles/run_test_3diag_spline.dir/depend
-	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/run_test_3diag_spline.dir/build.make tests/CMakeFiles/run_test_3diag_spline.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/CMakeFiles --progress-num=15,16 "Built target run_test_3diag_spline"
-.PHONY : tests/CMakeFiles/run_test_3diag_spline.dir/all
+tests/CMakeFiles/run_test_nonlinear_bvp5.dir/all: src/CMakeFiles/my_project.dir/all
+tests/CMakeFiles/run_test_nonlinear_bvp5.dir/all: tests/googletest-master/googletest/CMakeFiles/gtest_main.dir/all
+tests/CMakeFiles/run_test_nonlinear_bvp5.dir/all: tests/googletest-master/googletest/CMakeFiles/gtest.dir/all
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/run_test_nonlinear_bvp5.dir/build.make tests/CMakeFiles/run_test_nonlinear_bvp5.dir/depend
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/run_test_nonlinear_bvp5.dir/build.make tests/CMakeFiles/run_test_nonlinear_bvp5.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/CMakeFiles --progress-num=35,36 "Built target run_test_nonlinear_bvp5"
+.PHONY : tests/CMakeFiles/run_test_nonlinear_bvp5.dir/all
 
 # Build rule for subdir invocation for target.
-tests/CMakeFiles/run_test_3diag_spline.dir/rule: cmake_check_build_system
+tests/CMakeFiles/run_test_nonlinear_bvp5.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/CMakeFiles 12
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/CMakeFiles/run_test_3diag_spline.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/CMakeFiles/run_test_nonlinear_bvp5.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/CMakeFiles 0
-.PHONY : tests/CMakeFiles/run_test_3diag_spline.dir/rule
+.PHONY : tests/CMakeFiles/run_test_nonlinear_bvp5.dir/rule
 
 # Convenience name for target.
-run_test_3diag_spline: tests/CMakeFiles/run_test_3diag_spline.dir/rule
-.PHONY : run_test_3diag_spline
+run_test_nonlinear_bvp5: tests/CMakeFiles/run_test_nonlinear_bvp5.dir/rule
+.PHONY : run_test_nonlinear_bvp5
 
 # clean rule for target.
-tests/CMakeFiles/run_test_3diag_spline.dir/clean:
-	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/run_test_3diag_spline.dir/build.make tests/CMakeFiles/run_test_3diag_spline.dir/clean
-.PHONY : tests/CMakeFiles/run_test_3diag_spline.dir/clean
+tests/CMakeFiles/run_test_nonlinear_bvp5.dir/clean:
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/run_test_nonlinear_bvp5.dir/build.make tests/CMakeFiles/run_test_nonlinear_bvp5.dir/clean
+.PHONY : tests/CMakeFiles/run_test_nonlinear_bvp5.dir/clean
+
+#=============================================================================
+# Target rules for target tests/CMakeFiles/run_test_csr_matrix.dir
+
+# All Build rule for target.
+tests/CMakeFiles/run_test_csr_matrix.dir/all: src/CMakeFiles/my_project.dir/all
+tests/CMakeFiles/run_test_csr_matrix.dir/all: tests/googletest-master/googletest/CMakeFiles/gtest_main.dir/all
+tests/CMakeFiles/run_test_csr_matrix.dir/all: tests/googletest-master/googletest/CMakeFiles/gtest.dir/all
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/run_test_csr_matrix.dir/build.make tests/CMakeFiles/run_test_csr_matrix.dir/depend
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/run_test_csr_matrix.dir/build.make tests/CMakeFiles/run_test_csr_matrix.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/CMakeFiles --progress-num=17,18 "Built target run_test_csr_matrix"
+.PHONY : tests/CMakeFiles/run_test_csr_matrix.dir/all
+
+# Build rule for subdir invocation for target.
+tests/CMakeFiles/run_test_csr_matrix.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/CMakeFiles 12
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/CMakeFiles/run_test_csr_matrix.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/CMakeFiles 0
+.PHONY : tests/CMakeFiles/run_test_csr_matrix.dir/rule
+
+# Convenience name for target.
+run_test_csr_matrix: tests/CMakeFiles/run_test_csr_matrix.dir/rule
+.PHONY : run_test_csr_matrix
+
+# clean rule for target.
+tests/CMakeFiles/run_test_csr_matrix.dir/clean:
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/run_test_csr_matrix.dir/build.make tests/CMakeFiles/run_test_csr_matrix.dir/clean
+.PHONY : tests/CMakeFiles/run_test_csr_matrix.dir/clean
 
 #=============================================================================
 # Target rules for target tests/CMakeFiles/run_test_nonlinear_bvp3.dir
@@ -517,62 +573,6 @@ run_test_exception: tests/CMakeFiles/run_test_exception.dir/rule
 tests/CMakeFiles/run_test_exception.dir/clean:
 	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/run_test_exception.dir/build.make tests/CMakeFiles/run_test_exception.dir/clean
 .PHONY : tests/CMakeFiles/run_test_exception.dir/clean
-
-#=============================================================================
-# Target rules for target tests/CMakeFiles/run_test_nonlinear_bvp5.dir
-
-# All Build rule for target.
-tests/CMakeFiles/run_test_nonlinear_bvp5.dir/all: src/CMakeFiles/my_project.dir/all
-tests/CMakeFiles/run_test_nonlinear_bvp5.dir/all: tests/googletest-master/googletest/CMakeFiles/gtest_main.dir/all
-tests/CMakeFiles/run_test_nonlinear_bvp5.dir/all: tests/googletest-master/googletest/CMakeFiles/gtest.dir/all
-	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/run_test_nonlinear_bvp5.dir/build.make tests/CMakeFiles/run_test_nonlinear_bvp5.dir/depend
-	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/run_test_nonlinear_bvp5.dir/build.make tests/CMakeFiles/run_test_nonlinear_bvp5.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/CMakeFiles --progress-num=35,36 "Built target run_test_nonlinear_bvp5"
-.PHONY : tests/CMakeFiles/run_test_nonlinear_bvp5.dir/all
-
-# Build rule for subdir invocation for target.
-tests/CMakeFiles/run_test_nonlinear_bvp5.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/CMakeFiles 12
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/CMakeFiles/run_test_nonlinear_bvp5.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/CMakeFiles 0
-.PHONY : tests/CMakeFiles/run_test_nonlinear_bvp5.dir/rule
-
-# Convenience name for target.
-run_test_nonlinear_bvp5: tests/CMakeFiles/run_test_nonlinear_bvp5.dir/rule
-.PHONY : run_test_nonlinear_bvp5
-
-# clean rule for target.
-tests/CMakeFiles/run_test_nonlinear_bvp5.dir/clean:
-	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/run_test_nonlinear_bvp5.dir/build.make tests/CMakeFiles/run_test_nonlinear_bvp5.dir/clean
-.PHONY : tests/CMakeFiles/run_test_nonlinear_bvp5.dir/clean
-
-#=============================================================================
-# Target rules for target tests/CMakeFiles/run_test_csr_matrix.dir
-
-# All Build rule for target.
-tests/CMakeFiles/run_test_csr_matrix.dir/all: src/CMakeFiles/my_project.dir/all
-tests/CMakeFiles/run_test_csr_matrix.dir/all: tests/googletest-master/googletest/CMakeFiles/gtest_main.dir/all
-tests/CMakeFiles/run_test_csr_matrix.dir/all: tests/googletest-master/googletest/CMakeFiles/gtest.dir/all
-	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/run_test_csr_matrix.dir/build.make tests/CMakeFiles/run_test_csr_matrix.dir/depend
-	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/run_test_csr_matrix.dir/build.make tests/CMakeFiles/run_test_csr_matrix.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/CMakeFiles --progress-num=19,20 "Built target run_test_csr_matrix"
-.PHONY : tests/CMakeFiles/run_test_csr_matrix.dir/all
-
-# Build rule for subdir invocation for target.
-tests/CMakeFiles/run_test_csr_matrix.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/CMakeFiles 12
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/CMakeFiles/run_test_csr_matrix.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/CMakeFiles 0
-.PHONY : tests/CMakeFiles/run_test_csr_matrix.dir/rule
-
-# Convenience name for target.
-run_test_csr_matrix: tests/CMakeFiles/run_test_csr_matrix.dir/rule
-.PHONY : run_test_csr_matrix
-
-# clean rule for target.
-tests/CMakeFiles/run_test_csr_matrix.dir/clean:
-	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/run_test_csr_matrix.dir/build.make tests/CMakeFiles/run_test_csr_matrix.dir/clean
-.PHONY : tests/CMakeFiles/run_test_csr_matrix.dir/clean
 
 #=============================================================================
 # Target rules for target tests/googletest-master/googlemock/CMakeFiles/gmock.dir
