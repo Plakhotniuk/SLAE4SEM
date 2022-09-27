@@ -1,5 +1,6 @@
 /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DWITH_TESTS=ON -G "CodeBlocks - Unix Makefiles" /Users/arseniy/Desktop/SLAE4SEM
 TESTING: ON
+TEST_FILE: /Users/arseniy/Desktop/SLAE4SEM/tests/test_3diag_spline.cpp
 TEST_FILE: /Users/arseniy/Desktop/SLAE4SEM/tests/test_beam_bending.cpp
 TEST_FILE: /Users/arseniy/Desktop/SLAE4SEM/tests/test_csr_matrix.cpp
 TEST_FILE: /Users/arseniy/Desktop/SLAE4SEM/tests/test_dense_matrix.cpp

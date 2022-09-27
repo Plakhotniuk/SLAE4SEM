@@ -95,6 +95,7 @@ set(CMAKE_DEPEND_INFO_FILES
   "tests/CMakeFiles/run_test_linear_boundary_value_problem_5.dir/DependInfo.cmake"
   "tests/CMakeFiles/run_test_beam_bending.dir/DependInfo.cmake"
   "tests/CMakeFiles/run_test_dense_matrix.dir/DependInfo.cmake"
+  "tests/CMakeFiles/run_test_3diag_spline.dir/DependInfo.cmake"
   "tests/CMakeFiles/run_test_nonlinear_bvp3.dir/DependInfo.cmake"
   "tests/CMakeFiles/run_test_exception.dir/DependInfo.cmake"
   "tests/CMakeFiles/run_test_nonlinear_bvp5.dir/DependInfo.cmake"

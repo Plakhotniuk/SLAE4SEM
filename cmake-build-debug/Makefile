@@ -289,6 +289,19 @@ run_test_dense_matrix/fast:
 .PHONY : run_test_dense_matrix/fast
 
 #=============================================================================
+# Target rules for targets named run_test_3diag_spline
+
+# Build rule for target.
+run_test_3diag_spline: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 run_test_3diag_spline
+.PHONY : run_test_3diag_spline
+
+# fast build rule for target.
+run_test_3diag_spline/fast:
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/run_test_3diag_spline.dir/build.make tests/CMakeFiles/run_test_3diag_spline.dir/build
+.PHONY : run_test_3diag_spline/fast
+
+#=============================================================================
 # Target rules for targets named run_test_nonlinear_bvp3
 
 # Build rule for target.
@@ -410,6 +423,7 @@ help:
 	@echo "... gtest"
 	@echo "... gtest_main"
 	@echo "... my_project"
+	@echo "... run_test_3diag_spline"
 	@echo "... run_test_beam_bending"
 	@echo "... run_test_csr_matrix"
 	@echo "... run_test_dense_matrix"

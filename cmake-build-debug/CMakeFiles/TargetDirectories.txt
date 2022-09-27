@@ -26,6 +26,7 @@
 /Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/CMakeFiles/run_test_beam_bending.dir
 /Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/CMakeFiles/run_test_dense_matrix.dir
 /Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/CMakeFiles/test.dir
+/Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/CMakeFiles/run_test_3diag_spline.dir
 /Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/CMakeFiles/run_test_nonlinear_bvp3.dir
 /Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/CMakeFiles/rebuild_cache.dir
 /Users/arseniy/Desktop/SLAE4SEM/cmake-build-debug/tests/CMakeFiles/run_test_exception.dir
