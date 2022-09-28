@@ -1,2 +1,0 @@
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ar qc libmy_project.a CMakeFiles/my_project.dir/my_project/Exceptions/SlaeBaseException.cpp.o CMakeFiles/my_project.dir/my_project/matrix/FiveDiagonalMatrix.cpp.o CMakeFiles/my_project.dir/my_project/matrix/ThreeDiagonalMatrix.cpp.o CMakeFiles/my_project.dir/my_project/solvers/FiveDiagonalSolver.cpp.o CMakeFiles/my_project.dir/my_project/solvers/ThreeDiadonalSolver.cpp.o
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ranlib libmy_project.a
