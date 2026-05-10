@@ -3,8 +3,8 @@
 //
 
 #include "gtest/gtest.h"
-#include <my_project/utility/Overloads.hpp>
-#include "my_project/matrix/NonLinearBoundaryValueProblemMatrix5.hpp"
+#include <slea/utility/Overloads.hpp>
+#include "slea/matrix/NonLinearBoundaryValueProblemMatrix5.hpp"
 
 #include <iostream>
 #include "functional"

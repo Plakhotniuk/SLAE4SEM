@@ -2,10 +2,10 @@
 // Created by Арсений Плахотнюк on 09.03.2022.
 //
 #include "gtest/gtest.h"
-#include <my_project/solvers/SimpleIteration.hpp>
-#include <my_project/utility/Overloads.hpp>
-#include <my_project/solvers/Steepest_gradient_descent.hpp>
-#include <my_project/solvers/CG.hpp>
+#include <slea/solvers/SimpleIteration.hpp>
+#include <slea/utility/Overloads.hpp>
+#include <slea/solvers/Steepest_gradient_descent.hpp>
+#include <slea/solvers/CG.hpp>
 TEST(SIMPLEITERATION, TEST) {
     double tolerance = 1e-5;
     std::set<Triplet<double>> data{{0, 0, 7.}, {1, 1, 5.}, {2, 2, 9.}};

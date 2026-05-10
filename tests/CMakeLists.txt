@@ -4,7 +4,7 @@
 # GTest
 ################################
 cmake_minimum_required(VERSION 3.17)
-project(my_project)
+project(slea)
 ADD_SUBDIRECTORY (googletest-master)
 enable_testing()
 include_directories(${gtest_SOURCE_DIR}/include ${gtest_SOURCE_DIR})
@@ -18,7 +18,7 @@ foreach(TEST_FILE IN LISTS TEST_SOURCES)
     add_executable(${EXECUTABLE_NAME} ${TEST_FILE})
     target_link_libraries(
             ${EXECUTABLE_NAME}
-            my_project	# Подключаем проект
+            slea	# Подключаем проект
             gtest		# Подключаем библиотеку gtest
             gtest_main	# Подключаем библиотеку gtest
     )

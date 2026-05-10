@@ -3,7 +3,7 @@
 //
 
 #include "gtest/gtest.h"
-#include "my_project/Exceptions/SlaeBaseException.hpp"
+#include "slea/Exceptions/SlaeBaseException.hpp"
 void throwException() { throw Slae::SlaeBaseExceptionCpp("Hi"); }
 
 TEST(EXCEPTION, EXCEPTION_HI) {

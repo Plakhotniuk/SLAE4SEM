@@ -2,8 +2,8 @@
 // Created by Арсений Плахотнюк on 11.03.2022.
 //
 #include "gtest/gtest.h"
-#include <my_project/utility/Overloads.hpp>
-#include "my_project/matrix/LinearBoundaryValueProblemMatrix3.hpp"
+#include <slea/utility/Overloads.hpp>
+#include "slea/matrix/LinearBoundaryValueProblemMatrix3.hpp"
 #include <iostream>
 #include "functional"
 #include <cmath>

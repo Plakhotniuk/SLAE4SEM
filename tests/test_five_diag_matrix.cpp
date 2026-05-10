@@ -2,8 +2,8 @@
 // Created by Арсений Плахотнюк on 09.02.2022.
 //
 #include "gtest/gtest.h"
-#include "my_project/solvers/FiveDiagonalSolver.hpp"
-#include "my_project/matrix/FiveDiagonalMatrix.hpp"
+#include "slea/solvers/FiveDiagonalSolver.hpp"
+#include "slea/matrix/FiveDiagonalMatrix.hpp"
 #include<iostream>
 TEST(TEST_FIVEDIAGMATRIX, NODISCARD){
     auto a = Slae::Matrix::FiveDiagonalMatrix::FiveNumbers(5, 1., 1., 10., 1., 1.);

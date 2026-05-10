@@ -1,7 +1,7 @@
 #include "gtest/gtest.h"
-#include "my_project/sparse/CSR.hpp"
-#include "my_project/utility/Triplet.hpp"
-#include "my_project/dense/Densematrix.hpp"
+#include "slea/sparse/CSR.hpp"
+#include "slea/utility/Triplet.hpp"
+#include "slea/dense/Densematrix.hpp"
 #include<iostream>
 TEST(TEST_DENSE_MATRIX, NODISCARD){
     DenseMatrix<double> zero_matrix(5, 5);

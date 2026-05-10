@@ -3,10 +3,10 @@
 //
 
 #include "gtest/gtest.h"
-#include "my_project/Exceptions/SlaeBaseException.hpp"
-#include "my_project/solvers/GMRES.hpp"
-#include "my_project/dense/Densematrix.hpp"
-#include "my_project/utility/Triplet.hpp"
+#include "slea/Exceptions/SlaeBaseException.hpp"
+#include "slea/solvers/GMRES.hpp"
+#include "slea/dense/Densematrix.hpp"
+#include "slea/utility/Triplet.hpp"
 
 TEST(GMRES, HI)
 {

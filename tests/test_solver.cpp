@@ -1,10 +1,6 @@
-//
-// Created by kuznetsov on 04.02.2022.
-//
-
 #include "gtest/gtest.h"
-#include "my_project/Exceptions/SlaeBaseException.hpp"
-#include "my_project/solvers/ThreeDiadonalSolver.hpp"
+#include "slea/Exceptions/SlaeBaseException.hpp"
+#include "slea/solvers/ThreeDiadonalSolver.hpp"
 
 void throwException() { throw Slae::SlaeBaseExceptionCpp("Hi"); }
 

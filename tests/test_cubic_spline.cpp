@@ -2,8 +2,8 @@
 // Created by Арсений Плахотнюк on 27.09.2022.
 //
 #include "gtest/gtest.h"
-#include <my_project/utility/Overloads.hpp>
-#include "my_project/solvers/ThreeDiadonalSolver.hpp"
+#include <slea/utility/Overloads.hpp>
+#include "slea/solvers/ThreeDiadonalSolver.hpp"
 #include <iostream>
 #include "functional"
 #include <fstream>
